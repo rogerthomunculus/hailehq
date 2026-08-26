@@ -1,0 +1,22 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  themeColor?: string;
+}
+
+const { title, description, themeColor } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} themeColor={themeColor}>
+  <main>
+    <slot />
+  </main>
+  <footer>
+    <div class="wrap">
+      <slot name="footer">hailehq.com</slot>
+    </div>
+  </footer>
+</BaseLayout>

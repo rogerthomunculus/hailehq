@@ -1,0 +1,18 @@
+---
+interface Link {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  links: Link[];
+}
+
+const { links } = Astro.props;
+---
+
+<nav class="jump" aria-label="Sections">
+  <div class="wrap jump-inner">
+    {links.map((l) => <a href={l.href}>{l.label}</a>)}
+  </div>
+</nav>

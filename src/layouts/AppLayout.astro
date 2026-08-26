@@ -1,0 +1,28 @@
+---
+// Full-bleed layout for interactive apps. No site chrome padding assumptions —
+// the app island owns its own background, scrolling, and safe-area handling.
+interface Props {
+  title: string;
+  description?: string;
+  themeColor?: string;
+}
+
+const { title, description = 'An interactive app.', themeColor = '#16191d' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content={themeColor} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div class="app-frame">
+      <slot />
+    </div>
+  </body>
+</html>

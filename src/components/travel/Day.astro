@@ -1,0 +1,28 @@
+---
+interface Props {
+  n: number;
+  date: string;
+  base: 'rvk' | 'gla' | 'aku' | 'sna' | 'out';
+  intensity: 1 | 2 | 3 | 4;
+  title: string;
+  drive: string;
+}
+
+const { n, date, base, intensity, title, drive } = Astro.props;
+const num = String(n).padStart(2, '0');
+---
+
+<article class="day" data-base={base} data-level={intensity}>
+  <div class="spine">
+    <div class="dot">{num}</div>
+    <div class="intensity">
+      {Array.from({ length: 4 }).map((_, i) => <i class={i < intensity ? 'on' : ''} />)}
+    </div>
+  </div>
+  <div class="day-body">
+    <p class="day-when">{date}</p>
+    <h3>{title}</h3>
+    <p class="day-drive">{drive}</p>
+    <slot />
+  </div>
+</article>

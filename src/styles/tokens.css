@@ -1,0 +1,22 @@
+:root {
+  --basalt: #16191d;
+  --basalt-2: #242a31;
+  --ink: #2e353d;
+  --ink-soft: #5c6670;
+  --ink-faint: #8a939c;
+  --glacier: #edf1f2;
+  --glacier-2: #e1e8ea;
+  --ice: #ffffff;
+  --moss: #5e7355;
+  --moss-lt: #8aa37e;
+  --melt: #3f7285;
+  --sulfur: #a0611c;
+  --line: #cbd5d8;
+
+  --display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --body: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --wrap: min(68rem, 100% - 2.5rem);
+  --measure: 38rem;
+}

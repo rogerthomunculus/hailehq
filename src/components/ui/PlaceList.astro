@@ -1,0 +1,25 @@
+---
+interface Place {
+  name: string;
+  where?: string;
+  what: string;
+}
+
+interface Props {
+  places: Place[];
+}
+
+const { places } = Astro.props;
+---
+
+<ul class="places">
+  {
+    places.map((p) => (
+      <li>
+        <b>{p.name}</b>
+        {p.where && <span class="where">{p.where}</span>}
+        <span class="what">{p.what}</span>
+      </li>
+    ))
+  }
+</ul>

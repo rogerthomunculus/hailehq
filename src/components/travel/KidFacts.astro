@@ -1,0 +1,23 @@
+---
+interface Fact {
+  place: string;
+  fact: string;
+}
+
+interface Props {
+  facts: Fact[];
+}
+
+const { facts } = Astro.props;
+---
+
+<ul class="facts-kids">
+  {
+    facts.map((f) => (
+      <li>
+        <b>{f.place}</b>
+        {f.fact}
+      </li>
+    ))
+  }
+</ul>

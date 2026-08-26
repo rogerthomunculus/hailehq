@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+
+const guides = (await getCollection('travel', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<ContentLayout title="Travel — hailehq.com" description="Family trip guides.">
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Travel</h2>
+      </div>
+      <ul class="places">
+        {
+          guides.map((g) => (
+            <li>
+              <b>
+                <a href={`/travel/${g.id}/`}>{g.data.title}</a>
+              </b>
+              <span class="where">
+                {g.data.destination} · {g.data.year}
+              </span>
+              <span class="what">{g.data.summary}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</ContentLayout>

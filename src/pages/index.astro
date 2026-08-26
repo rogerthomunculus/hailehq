@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import ContentLayout from '../layouts/ContentLayout.astro';
+
+const travelGuides = (await getCollection('travel', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const schoolResources = (await getCollection('school', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<ContentLayout
+  title="hailehq.com"
+  description="Family site — travel guides, school resources, and apps."
+>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Family site</p>
+      <h1>hailehq<span>.com</span></h1>
+      <p class="lede">
+        Trip guides, school resources, and the odd interactive tool, all in one place.
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Travel</h2>
+      </div>
+      <ul class="places">
+        {
+          travelGuides.map((g) => (
+            <li>
+              <b>
+                <a href={`/travel/${g.id}/`}>{g.data.title}</a>
+              </b>
+              <span class="where">
+                {g.data.destination} · {g.data.year}
+              </span>
+              <span class="what">{g.data.summary}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>School</h2>
+      </div>
+      {
+        schoolResources.length === 0 ? (
+          <p class="measure">Nothing here yet.</p>
+        ) : (
+          <ul class="places">
+            {schoolResources.map((r) => (
+              <li>
+                <b>
+                  <a href={`/school/${r.id}/`}>{r.data.title}</a>
+                </b>
+                <span class="where">
+                  Grade {r.data.grade} · {r.data.subject}
+                </span>
+                <span class="what">{r.data.summary}</span>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Apps</h2>
+      </div>
+      <ul class="places">
+        <li>
+          <b><a href="/apps/iceland-planner/">Iceland trip planner</a></b>
+          <span class="what"
+            >The pre-trip booking tracker and day-by-day itinerary tool for the Iceland trip.</span
+          >
+        </li>
+      </ul>
+    </div>
+  </section>
+</ContentLayout>

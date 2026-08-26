@@ -1,0 +1,14 @@
+---
+interface Props {
+  type?: 'default' | 'warn' | 'win';
+  label: string;
+}
+
+const { type = 'default', label } = Astro.props;
+const cls = type === 'default' ? 'note' : `note ${type}`;
+---
+
+<div class={cls}>
+  <span class="note-label">{label}</span>
+  <slot />
+</div>

@@ -1,0 +1,28 @@
+---
+interface Download {
+  label: string;
+  file: string;
+  kind: 'pdf' | 'csv' | 'html' | 'zip';
+}
+
+interface Props {
+  downloads: Download[];
+}
+
+const { downloads } = Astro.props;
+---
+
+<ul class="places">
+  {
+    downloads.map((d) => (
+      <li>
+        <b>
+          <a href={d.file} download>
+            {d.label}
+          </a>
+        </b>
+        <span class="where">{d.kind.toUpperCase()}</span>
+      </li>
+    ))
+  }
+</ul>

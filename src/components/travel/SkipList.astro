@@ -1,0 +1,25 @@
+---
+interface Skip {
+  item: string;
+  why: string;
+  reason: string;
+}
+
+interface Props {
+  items: Skip[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="skips">
+  {
+    items.map((s) => (
+      <div class="skip">
+        <b>{s.item}</b>
+        <p>{s.why}</p>
+        <span class="why">{s.reason}</span>
+      </div>
+    ))
+  }
+</div>

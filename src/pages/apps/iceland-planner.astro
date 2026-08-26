@@ -1,0 +1,12 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import IcelandPlanner from '../../apps/iceland-planner/IcelandPlanner.jsx';
+---
+
+<AppLayout
+  title="Iceland 2026 — Family Trip Planner"
+  description="Pre-trip booking tracker and day-by-day itinerary for the Iceland family trip."
+  themeColor="#080f1c"
+>
+  <IcelandPlanner client:load />
+</AppLayout>

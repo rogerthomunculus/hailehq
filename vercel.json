@@ -1,0 +1,22 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "iceland.hailehq.com" }],
+      "destination": "https://hailehq.com/travel/iceland-2026",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "houston.hailehq.com" }],
+      "destination": "https://hailehq.com/travel/houston-2026",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.hailehq.com" }],
+      "destination": "https://hailehq.com",
+      "permanent": true
+    }
+  ]
+}

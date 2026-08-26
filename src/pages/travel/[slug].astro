@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import TravelHero from '../../components/travel/TravelHero.astro';
+import JumpNav from '../../components/travel/JumpNav.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('travel', ({ data }) => !data.draft);
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, summary, travellers, year, bases, sections } = entry.data;
+
+const dateRange = `${entry.data.startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}–${entry.data.endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}, ${year}`;
+---
+
+<ContentLayout title={`${title} — hailehq.com`} description={summary}>
+  <TravelHero
+    eyebrow={`${dateRange} · ${travellers}`}
+    title={entry.data.destination}
+    titleAccent="with kids"
+    lede={summary}
+    bases={bases}
+  />
+  {sections && <JumpNav links={sections.map((s) => ({ href: `#${s.id}`, label: s.label }))} />}
+  <Content />
+</ContentLayout>

@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import DownloadList from '../../components/ui/DownloadList.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('school', ({ data }) => !data.draft);
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, summary, downloads } = entry.data;
+---
+
+<ContentLayout title={`${title} — hailehq.com`} description={summary}>
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>{title}</h2>
+        <p class="sec-sub">{summary}</p>
+      </div>
+      <div class="measure">
+        <Content />
+      </div>
+      {downloads && downloads.length > 0 && <DownloadList downloads={downloads} />}
+    </div>
+  </section>
+</ContentLayout>

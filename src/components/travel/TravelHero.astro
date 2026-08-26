@@ -1,0 +1,46 @@
+---
+interface Base {
+  name: string;
+  nights: number;
+  color: string;
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  titleAccent?: string;
+  lede: string;
+  bases?: Base[];
+}
+
+const { eyebrow, title, titleAccent, lede, bases } = Astro.props;
+---
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>
+      {title}
+      {titleAccent && <span>{titleAccent}</span>}
+    </h1>
+    <p class="lede">{lede}</p>
+
+    {
+      bases && bases.length > 0 && (
+        <div class="route">
+          <p class="route-label">The bases</p>
+          <ul class="bases">
+            {bases.map((b) => (
+              <li class="base" style={`--bs:${b.color}`}>
+                <b>{b.name}</b>
+                <span>
+                  {b.nights} night{b.nights === 1 ? '' : 's'}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </div>
+</header>

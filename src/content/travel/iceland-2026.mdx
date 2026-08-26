@@ -1,0 +1,975 @@
+---
+title: Iceland with kids
+summary: A real account of a 12-day self-drive Iceland trip with a 6- and 9-year-old. What we booked, what we skipped, what broke.
+destination: Iceland
+year: 2026
+startDate: 2026-07-16
+endDate: 2026-07-27
+dayCount: 12
+travellers: Family of 4 · ages 6 & 9
+updated: 2026-07-28
+order: 1
+appUrl: /apps/iceland-planner
+bases:
+  - { name: Reykjavík, nights: 4, color: '#7FA8B8' }
+  - { name: Glacier Lagoon, nights: 3, color: '#9DB3C4' }
+  - { name: Akureyri, nights: 2, color: '#8AA37E' }
+  - { name: Snæfellsnes, nights: 2, color: '#C0A97E' }
+sections:
+  - { id: about, label: About Iceland }
+  - { id: plan, label: Planning }
+  - { id: logistics, label: Flights & car }
+  - { id: stay, label: Where we slept }
+  - { id: days, label: The 12 days }
+  - { id: skipped, label: What we skipped }
+  - { id: pack, label: Packing }
+  - { id: money, label: Money & apps }
+  - { id: eat, label: Eating }
+  - { id: kids, label: With kids }
+  - { id: wrong, label: What went wrong }
+---
+
+import Section from '../../components/travel/Section.astro';
+import Note from '../../components/ui/Note.astro';
+import FactGrid from '../../components/ui/FactGrid.astro';
+import PlaceList from '../../components/ui/PlaceList.astro';
+import DayList from '../../components/travel/DayList.astro';
+import Day from '../../components/travel/Day.astro';
+import SkipList from '../../components/travel/SkipList.astro';
+import KidFacts from '../../components/travel/KidFacts.astro';
+
+<Section id="about" num="01" title="What Iceland actually is" subtitle="If you're on the fence, this is the orientation we wish we'd had before booking — the shape of the place, why it looks the way it does, and who it genuinely suits.">
+
+<FactGrid
+  facts={[
+    { label: 'Population', value: '~400,000' },
+    { label: 'Land area', value: 'About Kentucky' },
+    { label: 'Ring Road', value: '~1,300 km' },
+    { label: 'July temps', value: '10–14°C' },
+  ]}
+/>
+
+<div class="measure">
+
+### It's smaller than you think
+
+About 400,000 people live here, two-thirds of them in and around Reykjavík. The whole country is roughly the size of Kentucky, and a single road — Route 1, the Ring Road — loops the entire island. You can genuinely drive around a country in a week, which is not a sentence that applies to many places.
+
+### It's still being built
+
+Iceland sits directly on the Mid-Atlantic Ridge, where the North American and Eurasian plates are pulling apart, and on top of a volcanic hotspot at the same time. That combination is the whole explanation for the scenery: it's why a waterfall, a glacier tongue, a geyser field and a black sand beach can all sit within an hour of each other.
+
+It's also intensely practical. Nearly all the country's electricity comes from geothermal and hydro, which is why greenhouses grow tomatoes in the Arctic, why every town of any size has a heated outdoor pool, and why the hot tap sometimes smells faintly of sulfur.
+
+### The name is a lie
+
+The Norse settlers reportedly called it Iceland to put others off following them, while naming the genuinely icy place Greenland to lure people there. The Gulf Stream keeps it far milder than the latitude suggests — Reykjavík winters are comparable to New York's. In July you're looking at 10–14°C and daylight that essentially never stops.
+
+### The landscape is the attraction
+
+This is not a museum country. You park, walk five minutes, and the thing is right there. Very little queuing, very little standing quietly indoors being told to behave. That's the entire appeal, and it's also why it works unusually well with children.
+
+### It's an easy place to travel
+
+Iceland ranks at or near the top of global peace indices year after year. Everyone speaks fluent English. Roads are good and well signed, the tap water is among the best anywhere, and there are no mosquitoes on the island — not a single species. If you've been putting off independent international travel because it feels daunting, this is close to the gentlest possible place to start.
+
+### A few things about the people
+
+Icelanders don't have inherited surnames. Children take a parent's first name plus _-son_ or _-dóttir_, which means the phone book is alphabetised by first name and everyone — up to and including the president — goes by theirs.
+
+The medieval sagas, written down in the 1200s, are still readable in modern Icelandic and remain central to how the country understands itself. A meaningful number of people will tell you they aren't prepared to rule out the existence of elves, and roads have occasionally been re-routed around particular rocks.
+
+The public pools are the real social institution. Every town has one, geothermally heated, open year-round, and it does the job a pub or a town square does elsewhere.
+
+### The honest downsides
+
+**It's expensive.** Not "European city" expensive — genuinely expensive. Meals, fuel and accommodation will all cost more than you're bracing for.
+
+**The weather is not negotiable.** It changes fast, and wind is a constant factor rather than an occasional one. Plans get rearranged. If a fixed itinerary matters to you, this will grate.
+
+**Summer is busy.** July and August funnel most of the year's visitors through the same handful of sights, and the airport in particular feels it.
+
+**There isn't much built history.** Some churches, some turf houses, no cathedrals or castles or Roman anything. Iceland went from subsistence farming to one of the world's wealthiest countries in about a century, and the buildings reflect that.
+
+<Note type="win" label="Go if">
+  You like being outside. You'd rather look at a glacier than a gallery. You're travelling with
+  children who need to move around. Or you want somewhere genuinely dramatic that's still easy to
+  navigate on your own.
+</Note>
+
+<Note type="warn" label="Think harder if">
+  You want reliable sun, a beach holiday, big-city nightlife, dense historic architecture, or a trip
+  where the schedule holds no matter what the sky is doing.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="plan" num="02" title="Planning timeline" subtitle="We used four base camps instead of moving hotels nightly. Longer drives between bases, but only three real packing days across twelve. With a six-year-old, that trade is worth a lot.">
+
+<FactGrid
+  facts={[
+    { label: 'On the ground', value: '12 days' },
+    { label: 'Driving', value: '~2,000 km' },
+    { label: 'Vehicle', value: 'RAV4 4×4' },
+    { label: 'Longest day', value: '9+ hours' },
+  ]}
+/>
+
+<div class="measure">
+
+#### Five to six months out
+
+- Flights
+- All four hotels — July fills up, and the glacier zone and Snæfellsnes go first
+
+#### Three to four months out
+
+- Rental car
+- **Travel insurance.** Must be bought within 14 days of your first trip deposit to get pre-existing condition coverage. That window is real and it closes permanently.
+- Blue Lagoon — timed entry, sells out
+
+#### Two to three months out
+
+- Whale watching — small boats, limited July capacity
+- Ice cave tour
+- Anything with an age minimum. Check these first; they will change your plans.
+
+#### One month out
+
+- Rain shells, kids' shoes, merino wool socks
+- Offline maps and downloaded entertainment
+
+#### Week before
+
+- Rental car online check-in — opens 7 days out, saved us 20–30 minutes at the counter
+- Airline check-in opens 24 hours before the first flight
+
+<Note label="Leave room">
+  Most small boat tours, cave tours, and lagoons other than Blue Lagoon can be booked on the ground.
+  We deliberately left three days flexible and it was the right call.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="logistics" num="03" title="Flights and the car" subtitle="Two things worth getting right before anything else, because both have traps that cost real money.">
+
+<div class="measure">
+
+### Flights
+
+We flew **Icelandair, Economy Standard**, on a single ticket covering all four legs — with the two US domestic legs operated by Southwest under Icelandair's interline partnership.
+
+**Why one ticket matters:** because everything was ticketed by Icelandair, our bags were tagged straight through to the final destination and transferred between airlines automatically. We never touched them at the connection. Economy Standard's free checked bag also applied to the Southwest legs, so Southwest's own bag fees never came into play.
+
+#### Icelandair size limits — stricter than US carriers
+
+</div>
+
+<div class="tbl">
+
+| Bag           | Size                                           | Weight                                  |
+| ------------- | ---------------------------------------------- | --------------------------------------- |
+| Checked       | <span class="mono">158 cm / 62 in total</span> | <span class="mono">23 kg / 50 lb</span> |
+| Carry-on      | <span class="mono">55 × 40 × 20 cm</span>      | <span class="mono">10 kg / 22 lb</span> |
+| Personal item | <span class="mono">40 × 30 × 15 cm</span>      | Under seat                              |
+
+</div>
+
+<div class="measure">
+
+<Note type="warn" label="The carry-on trap">
+  Icelandair's 20 cm depth limit is about 3 cm shallower than a standard American carry-on. Pack to
+  the Icelandair number or your bag may get gate-checked.
+</Note>
+
+#### Airport lessons
+
+- At the US departure counter, be explicit: _"This is an Icelandair booking, Economy Standard, checked bags included. Please tag them through to Keflavík."_ The operating carrier's agents sometimes default to their own fee structure.
+- **Photograph every bag tag receipt.** Five seconds, saves enormous grief.
+- Connecting at Baltimore means **re-clearing security** — Southwest arrives in A/B/C, Icelandair departs from Concourse E, and they're separate secure zones. Budget 45 minutes door to door.
+- Our booking wouldn't issue digital boarding passes for the Southwest-operated legs. Physical passes at the counter. Normal for interline, just plan the time.
+- Nashville does not support Mobile Passport Control. Standard immigration line on the way home.
+
+### The rental car
+
+A **Toyota RAV4, 4×4, automatic** from [Lotus Car Rental](https://www.lotuscarrental.is) (Flugvellir 6, Keflavík) for eleven days. We set pickup two hours after landing to absorb immigration and baggage.
+
+We'd originally quoted a larger SUV from [MyCar](https://www.mycar.is) and switched for meaningfully less money. The RAV4 was completely adequate for four people plus luggage. Other well-regarded local operators: [Lava](https://www.lavacarrental.is) and [Blue](https://www.bluecarrental.is). All the Icelandic companies rate better than the international chains, which are consistently more expensive here for the same class.
+
+#### Insurance — don't cheap out
+
+Icelandic rental insurance comes in tiers. Base gives you third-party liability, collision damage waiver, and theft, but with a substantial excess on any claim. Mid adds gravel protection and sand & ash protection. Top adds tire, river crossing, F-road, animal damage, and towing — at zero excess.
+
+**Gravel and sand & ash are the two that matter.** Windshield chips from gravel are the single most common claim in Iceland. Volcanic sand can strip paint off a car in one storm on the south coast. We bought the top tier and considered it worth it for the peace of mind alone with kids in the car.
+
+<Note type="warn" label="Never covered, at any tier">
+**Wind damage to doors.** Icelandic wind can rip a car door backward off its hinges in a single gust. Repairs are expensive and entirely on you. Park facing into the wind, and hold doors firmly when opening. This is the most common expensive mistake tourists make.
+
+**Water damage from river crossings.** Don't do them. Your route almost certainly doesn't require it.
+
+</Note>
+
+#### Car seats
+
+Children under 135 cm or 36 kg legally require an approved child restraint — look for the orange ECE R44/04 or R129 sticker. Both backless and high-back boosters are legal, but high-back is meaningfully safer on long drives where kids fall asleep and their heads flop forward. We booked a backless booster for the nine-year-old and a high-back for the six-year-old.
+
+<Note type="warn" label="Two things we nearly got wrong">
+**We nearly double-booked a booster.** The confirmation email bundled every extra into one line with a single combined price. Log into the booking portal and read the itemized breakdown instead.
+
+**We nearly voided our insurance.** Only one driver was registered until we caught it. If the other parent drives even once — on a nine-hour day, say — the coverage is void. Add the second driver at booking.
+
+</Note>
+
+#### At pickup
+
+- **Physical credit card in the main driver's name.** Mobile wallets and virtual cards get rejected.
+- **Walk-around video before driving off** — all four sides, roof, windshield, underside. Photograph every existing scratch.
+- Confirm the tank is actually full, not just marked full.
+- Ask where the spare tire is.
+
+### Travel insurance
+
+We used **Tin Leg Gold**, bought through [SquareMouth](https://www.squaremouth.com). What to look for in any policy for Iceland:
+
+- **$500,000 per person medical**, ideally **primary** — meaning they pay first, not your health insurance
+- **$500,000 per person emergency medical evacuation**
+- No medical deductible
+- 100% trip cancellation, 150% trip interruption
+- A pre-existing condition waiver
+
+The evacuation limit isn't theoretical. If someone breaks an ankle at Skaftafell or on Snæfellsnes, you're looking at helicopter transport or a multi-hour ambulance ride to Reykjavík.
+
+**Volcanic eruption** was explicitly covered under our policy's natural disaster definition. Also not theoretical — Reykjanes has erupted repeatedly in recent years, and Grindavík, ten minutes from the Blue Lagoon, has been evacuated more than once.
+
+<Note label="Read the exclusions">
+  Ours excluded mountaineering with ropes or guides, rock climbing, deep scuba, and horseback
+  racing. A guided glacier walk with crampons is _not_ mountaineering in the policy sense — that
+  means technical rope-and-harness climbing. Glacier walks, ice caves, whale boats and hiking were
+  all covered. When something feels borderline, read the actual definition rather than assuming.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="stay" num="04" title="Where we slept">
+
+<div class="tbl">
+
+| Base           | Property                                                                                                                              | Nights                              |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| Reykjavík      | [Reykjavik Residence Apartment Hotel](https://www.reykjavikresidence.is)<br /><span class="mono">Hverfisgata 45, 101 Reykjavík</span> | <span class="mono">Jul 16–20</span> |
+| Glacier Lagoon | [Hótel Jökulsárlón](https://www.hoteljokulsarlon.is)<br /><span class="mono">Hnappavellir, 785 Öræfi</span>                           | <span class="mono">Jul 20–23</span> |
+| Akureyri       | Akureyri Log Cabin                                                                                                                    | <span class="mono">Jul 23–25</span> |
+| Snæfellsnes    | Hotel Vest Mar<br /><span class="mono">Ólafsvík, Snæfellsnes</span>                                                                   | <span class="mono">Jul 25–27</span> |
+
+</div>
+
+<div class="measure">
+
+<Note type="win" label="Best decision we made">
+  The Reykjavík apartment. Full kitchen, two bedrooms, walkable to everything downtown. Grocery
+  breakfasts and a couple of dinners in saved real money, and having space for the kids to
+  decompress mattered more than we expected.
+</Note>
+
+**Hótel Jökulsárlón is genuinely isolated.** The hotel restaurant is effectively the only dining option — the nearest alternatives are 45 minutes away in Höfn. We emailed ahead about our late arrival and that was the right move.
+
+<Note type="warn" label="Learned the hard way">
+  We rolled into Ólafsvík around 9pm and every restaurant in town was closed. Dinner was gas station
+  sandwiches. In small Icelandic towns, kitchens often close at eight or nine. If a driving day ends
+  late, eat en route or bring groceries.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="days" num="05" title="The twelve days" subtitle="Dot colour is the base camp we slept at. The bars under each number are how demanding the day actually was — one bar is a rest day, four is the kind of day you only schedule once.">
+
+<DayList>
+
+<Day n={1} date="Wed 16 July" base="rvk" intensity={1} title="Arrival" drive="Keflavík → Reykjavík · 50 min">
+
+Landed at 6:25am off the overnight. Rental shuttle, car at 8:30am, then into the city. Breakfast at **Deig / Wesen** — Icelandic doughnuts and bagels, and a good counterpoint to the pastry-heavy bakeries. Grocery run. Deliberately nothing ambitious.
+
+<Note label="Lesson">
+  Do not schedule anything real on arrival day. You've been travelling twenty hours and everyone is
+  wrecked.
+</Note>
+
+</Day>
+
+<Day n={2} date="Thu 17 July" base="rvk" intensity={2} title="Reykjavík and a lava tunnel" drive="City morning · 30 min to the tunnel">
+
+Started at **Braud & Co** (Frakkastígur 16) — the rainbow-painted bakery, five minutes from the apartment, and the best cinnamon rolls in Iceland. This was the six-year-old's specific request.
+
+Then **Grótta Lighthouse** (Norðurströnd, Seltjarnarnes), fifteen minutes west and the surprise hit of the Reykjavík days. A tidal peninsula with rocky shoreline and tide pools the kids worked for an hour, plus **Kvika**, a free geothermal foot bath by the car park. Views across the bay to Mount Esja. No tickets, no crowds.
+
+<Note label="Timing">
+  The causeway to the lighthouse island is only passable at low tide, and there's a tide board at
+  the car park — check it there rather than trusting an app. The island itself is **closed 1 May –
+  15 July** for nesting terns and eider ducks. Even at high tide the mainland shoreline has plenty
+  of tide pools, so it's worth going regardless.
+</Note>
+
+At 4pm, the [Raufarhólshellir Lava Tunnel](https://www.thelavatunnel.is) — a 5,200-year-old lava tube on a raised walkway, about an hour underground, helmets and headlamps provided. **Bring fleece.** It sits at 4–7°C year-round regardless of the weather outside.
+
+Dinner at **Bæjarins Beztu Pylsur** (Tryggvagata 1), the hot dog stand near the Old Harbour. Order _eina með öllu_ — one with everything: raw onion, crispy fried onion, ketchup, sweet brown mustard, remoulade.
+
+</Day>
+
+<Day n={3} date="Fri 18 July" base="rvk" intensity={3} title="Golden Circle" drive="Loop from Reykjavík · ~260 km">
+
+Out by 9am. **Þingvellir** first — put "Hakið Visitor Center" into the GPS and park at P1. There's a parking fee; pay at the machine or via the Parka app. Walk down through the **Almannagjá gorge**, the rift between the North American and Eurasian plates. That's the best of it, and it takes 45 to 60 minutes at a normal pace.
+
+**Geysir** is fifty minutes east. The original Geysir is mostly dormant now; **Strokkur** is the active one, going 20 to 30 metres every five to eight minutes. Watch three or four — there's a blue dome that forms a split second before it blows, and once kids spot that they're hooked. Stay on the paths, the pools are at boiling point.
+
+**Gullfoss** is ten minutes further and marks your turnaround. Upper viewpoint first, then down to the lower platform. Paths get wet and slippery.
+
+<Note type="win" label="The best meal of the trip, entirely by accident">
+  We had a reservation at [Friðheimar](https://fridheimar.is), the famous tomato greenhouse
+  restaurant, and arrived to find it closed. We pivoted to [**Efstidalur
+  Farm**](https://www.efstidalur.is) near Laugarvatn — a working dairy farm where **you eat looking
+  through a window into the barn**. The cows you're watching produce the milk in the ice cream and
+  the beef on the menu. The kids talked about it for the rest of the trip.
+</Note>
+
+Last stop, **Kerið Crater** on Route 35 — a 6,500-year-old volcanic crater with a blue-green lake at the bottom and vivid red rock around it. Small entry fee. Walk the rim, then take the path down to the water; the colour shifts noticeably between the two.
+
+_Skipped:_ Faxi waterfall and Secret Lagoon. No regrets on either.
+
+</Day>
+
+<Day n={4} date="Sat 19 July" base="rvk" intensity={1} title="Blue Lagoon" drive="50 min each way · Grindavík">
+
+Deliberately slow morning, no alarm. We checked [road.is](https://www.road.is) and [safetravel.is](https://safetravel.is) before driving out — the [Blue Lagoon](https://www.bluelagoon.com) sits on the Reykjanes Peninsula, which has had repeated volcanic activity. All green.
+
+Left the apartment at **2pm sharp** for a 3pm entry. **Timed entry is strictly enforced** — you cannot arrive early or late, so build real buffer. The Comfort package covers towels, a silica mud mask, and a drink; kids get soft drinks at the swim-up bar. We stayed about two and a half hours and skipped the on-site restaurant.
+
+<Note label="If you're wearing jewellery you can't remove">
+  The silica and sulfur leave surface residue but won't permanently damage gold. Rinse thoroughly at
+  the fresh-water showers on the way out and clean it properly at home. Not worth stripping a screw
+  with an improvised tool.
+</Note>
+
+</Day>
+
+<Day n={5} date="Sun 20 July" base="gla" intensity={4} title="South coast and the Katla ice cave" drive="Reykjavík → Jökulsárlón · ~380 km · 13 hours">
+
+Our biggest day. Checked out at 8:45am.
+
+**Seljalandsfoss** is the waterfall you walk _behind_. You will get soaked; a full rain shell is not optional and the path back there is slippery. **Gljúfrabúi** is a five-minute walk north from the same car park — a hidden waterfall inside a narrow gorge that most people skip. Worth it. Both done by noon.
+
+**Skógafoss**, twenty minutes on. Sixty-metre drop, 370 steps to a platform at the top if you want them. We stayed at the base. Rainbow in the spray on a sunny day.
+
+<Note type="win" label="Best wildlife moment of the trip">
+  **Dyrhólaey**, just west of Vík. Wild Atlantic puffins nesting on the sea cliffs at close range,
+  from a walk-up viewpoint. No boat, no ticket, free. They nest roughly April to mid-August, so
+  mid-July is prime. They're also terrible at landing — they come in fast and frequently faceplant,
+  which kids find hilarious. Watch the edges; there are real drop-offs with no barriers.
+</Note>
+
+Lunch at **Lava Café** in Vík around 2pm, then wool shopping at **Katla Wool** in the Icewear building.
+
+At 4:30pm, the [Katla Ice Cave and Super Jeep](https://adventures.is) tour, about three hours. The meeting point is the bus car park on the **south side of the Icewear/Krónan building**, Austurvegur 20 — the side facing the sea. Arrive fifteen minutes early; they leave promptly.
+
+This is the one ice cave genuinely accessible in summer. Most Icelandic ice caves, including the famous blue crystal caves under Vatnajökull, are winter-only because they melt and become unstable. The super jeep ride out there, crossing glacial rivers in a modified monster truck, was arguably as big a hit as the cave itself. **Minimum age six**, which mattered for us. Crampons and helmets provided; bring your own gloves and hat, it's around freezing inside.
+
+<Note label="Calibrate expectations">
+  The summer version is less "frozen blue tunnel" than the winter photos suggest. It's a
+  hollowed-out section of glacier with black volcanic ash striping the ice. Genuinely impressive,
+  just different.
+</Note>
+
+Dinner at **Black Crust Pizzeria** in Vík — kids were done, and their charcoal dough is the house signature. We skipped Reynisfjara to protect the tour buffer. Then two hours east, arriving at the hotel around 9:45pm in full daylight.
+
+</Day>
+
+<Day n={6} date="Mon 21 July" base="gla" intensity={1} title="Glacier lagoon" drive="10 min each way · rest day">
+
+Deliberately easy after Day 5. A [40-minute amphibian boat tour](https://icelagoon.is) at Jökulsárlón at 10:20am — the boat drives off land directly into the lagoon, which kids love. Warm layers under the provided life vests; the water is 2°C even in July.
+
+<Note label="Boat choice">
+  There's also a Zodiac tour that goes deeper and closer to the glacier face. Faster, more dramatic,
+  and **minimum age is usually 10** — which ruled it out for us. The amphibian boat has no such
+  restriction.
+</Note>
+
+**Diamond Beach** is directly across the road, where icebergs that floated out to sea wash back onto jet-black sand. Constantly changing, free. Lunch from the **Fancy Sheep food truck** in the car park — closed when we first arrived and open later, so check rather than assume.
+
+Afternoon in the hotel hot tub. That was the whole plan.
+
+</Day>
+
+<Day n={7} date="Tue 22 July" base="gla" intensity={2} title="Vatnajökull National Park" drive="Loop from the hotel · all free">
+
+A drive-around-and-see-things day, and it cost nothing. In order:
+
+- **Fjaðrárgljúfur Canyon** — a 100-metre mossy green canyon with a river winding through. Flat rim walk, about 45 minutes.
+- **Foss á Síðu** — roadside waterfall against a cliff face, five-minute stop.
+- **Skaftafell Visitor Centre** — free geology exhibits, restrooms, café. The main bathroom stop for the whole area.
+- **Skaftafellsjökull viewpoint** — a 10–15 minute flat walk to the glacier tongue. Dramatic, almost no effort.
+- **Svínafellsjökull** — drive-up glacier viewpoint, and a filming location for _Interstellar_ and _Game of Thrones_.
+- **Kvíárjökull** — quieter, off the tourist path.
+- **Fjallsárlón** — a smaller, quieter glacier lagoon with a café. Icebergs without the crowds.
+
+We built this day because the guided glacier walk we'd wanted turned out to have an age minimum we couldn't meet. It ended up being one of the better days.
+
+</Day>
+
+<Day n={8} date="Wed 23 July" base="aku" intensity={4} title="The marathon drive" drive="Glacier zone → Mývatn → Akureyri · ~580 km · 9+ hours">
+
+Out at 7:50am. **Höfn** at the 45-minute mark for fuel and bathrooms — it's Iceland's langoustine capital, and **Kaffi Hornið** does an excellent, reasonably priced langoustine soup if you want a second breakfast. Last real town for a while.
+
+We **skipped Djúpivogur and Petra's Stone Collection** in the East Fjords. Petra's is genuinely interesting — a woman spent eighty years collecting minerals from the surrounding mountains — but our kids weren't going to be into it, and cutting both bought us three extra hours at Mývatn. Correct call.
+
+**Egilsstaðir** is the natural midpoint for lunch and fuel. Nearby **Hallormsstaðarskógur** is Iceland's largest forest, which sounds unimpressive until you remember the country is famously treeless. There's a local joke: _what do you do if you get lost in an Icelandic forest? Stand up._
+
+**Mývatn** is the payoff for the whole drive, and we gave it two to three hours:
+
+- **Dimmuborgir** — a labyrinth of lava formations, twisted pillars and arches, with trails from twenty minutes to over an hour. **The kids' favourite stop of the day** — endless little rooms and passages to explore. Folklore has it as a gateway to the underworld.
+- **Hverir** — boiling mud pools and sulfur vents in an orange-grey Martian landscape, on boardwalks. **The smell is intense.** Our nine-year-old found it genuinely revolting. Memorable either way.
+- **Skútustaðagígar** — pseudo-craters formed by steam explosions when lava flowed over wet ground, not by actual vents. Easy loop with lake views.
+
+Dinner at **Kaffi Borgir**, right at Dimmuborgir, so no extra driving. We'd planned [Vogafjós](https://vogafjos.is) — a restaurant inside a working cowshed — but after Efstidalur we'd had that experience.
+
+<Note label="Don't skip this one">
+  **Goðafoss** is literally on Route 1 between Mývatn and Akureyri. Park at the top, two-minute
+  walk, a twelve-metre drop in a perfect semicircle. Ten minutes, and worth it no matter how tired
+  everyone is.
+</Note>
+
+_On reindeer:_ East Iceland has the country's only wild herd, around 3,000 animals. We saw zero. They're more common in autumn and winter — treat a July sighting as a bonus, not a plan.
+
+</Day>
+
+<Day n={9} date="Thu 24 July" base="aku" intensity={2} title="Whales, and then Akureyri" drive="25 min south to Árskógssandur">
+
+**Our tour was rerouted the morning of, for wind.** We'd booked [North Sailing](https://www.northsailing.is) out of Húsavík, billed as the whale watching capital of Europe. Conditions in Skjálfandi Bay forced a swap to **Árskógssandur**, a smaller port south of Akureyri in Eyjafjörður — Iceland's longest fjord, and considerably more sheltered. The operator handled it well and refunded the difference.
+
+Three hours out. **We saw one whale.**
+
+That's whale watching. Good operators will offer a reschedule voucher if you see nothing at all, but sightings are never guaranteed. The kids still had a great time — the boat, the warm overalls, the hot chocolate on the way back.
+
+Afternoon in **Akureyri**: the botanical garden (free, and the world's northernmost), the modernist **Akureyrarkirkja** on the hill, a harbour walk. Then **Brynja** (Aðalstræti 3) — running since 1939, and Icelanders genuinely drive hours for it. Get the dipped cone.
+
+</Day>
+
+<Day n={10} date="Fri 25 July" base="sna" intensity={3} title="Across to Snæfellsnes" drive="Akureyri → Ólafsvík · ~430 km · 5.5 hours">
+
+Fuel at **Varmahlíð**, then lunch at **Vínberið** in Blönduós — famous homemade ice cream plus a proper café menu, and an Iceland road-trip institution.
+
+The stop worth the detour is a cluster of three near Reykholt, about thirty minutes off the direct route:
+
+- **Deildartunguhver** — Europe's highest-flow hot spring, 180 litres per second of boiling water. Ten minutes.
+- **Hraunfossar** — genuinely unique. Water streams _out of a lava field_ across 700 metres into the river below. No cliff, no drop; the water just appears from between the rocks. Flat, kid-friendly path.
+- **Barnafoss** — violent rapids five minutes upstream.
+
+All three are walking distance from each other.
+
+**Kirkjufell** is fifteen minutes east of Ólafsvík — the most photographed mountain in Iceland, with Kirkjufellsfoss in the foreground. Golden hour in July runs roughly 10pm to midnight, so an evening visit is entirely viable.
+
+</Day>
+
+<Day n={11} date="Sat 26 July" base="sna" intensity={3} title="The Snæfellsnes loop" drive="Peninsula circuit from Ólafsvík">
+
+Snæfellsnes is called _Iceland in miniature_ — glacier, fjords, lava fields, black sand, and volcanic cones on one peninsula.
+
+**Ytri-Tunga** is a private farm beach with a small parking fee and harbour seals hauled out on the rocks, often within metres and completely habituated to people. One of the most reliable wildlife stops in the country, and it delivered.
+
+**Arnarstapi** has coastal cliffs, the **Gatklettur** lava arch, and dramatic basalt formations. We ate lunch here rather than at **Fjöruhúsið** in Hellnar as planned — a tiny wooden building right on the beach, famous for its fish soup.
+
+<Note type="warn" label="No puffins">
+  By late July the colony had largely dispersed — chicks fledge and the adults head back out to sea.
+  If puffins matter, aim for June through mid-July. We'd already had ours at Dyrhólaey.
+</Note>
+
+**Rauðfeldsgjá Gorge**, five minutes from Arnarstapi, is a narrow mossy crack in the mountainside you scramble into with a waterfall at the back. Feet _will_ get wet. Kids love it.
+
+**Lóndrangar** — two volcanic sea stacks, 75 and 61 metres, rising straight out of the ocean. Short walk from a roadside pullout.
+
+**Djúpalónssandur** — a black lava pebble beach with rusted shipwreck remains scattered across the sand from a 1948 wreck, plus four **lifting stones** historically used to test whether a man was strong enough to join a fishing crew. Kids can try them. Ours spent most of the time in the tide pools instead, which bookended nicely with Grótta on Day 2.
+
+Dinner at **Matarlyst** (Ólafsbraut 19). Exceptional, and genuinely unexpected in a town this small. Ólafsvík has essentially two restaurants; this is the one.
+
+</Day>
+
+<Day n={12} date="Sun 27 July" base="out" intensity={2} title="Home" drive="Ólafsvík → Keflavík · ~3 hours">
+
+Car back at 2pm for a 5:10pm flight. We considered **Gerðuberg** — a wall of hexagonal basalt columns on the south coast of the peninsula, roughly on the route — and skipped it for time.
+
+<Note type="warn" label="The worst part of the trip">
+  Keflavík in peak July. We waited for the **third rental shuttle** to have space for four people
+  and luggage. Check-in and boarding were crowded and confusing, with no real gate area to wait in.
+  We abandoned the VAT refund line entirely. **Budget far more airport time than feels necessary for
+  a July departure.**
+</Note>
+
+</Day>
+
+</DayList>
+
+</Section>
+
+<Section id="skipped" num="06" title="What we skipped" subtitle="Arguably more useful than the highlight reel. Each of these was researched, considered, and cut for a specific reason.">
+
+<SkipList
+  items={[
+    {
+      item: 'Guided glacier walk at Skaftafell',
+      why: "We wanted this badly. Every operator's minimum age was 8 or 10 and our youngest was 6 — and we only found out while trying to book. Replaced with a self-guided glacier viewpoint day that cost nothing and was excellent.",
+      reason: 'Age minimum',
+    },
+    {
+      item: 'Zodiac and RIB boat tours',
+      why: 'Faster, closer to the glacier face, more thrilling than the amphibian boat at both Jökulsárlón and Fjallsárlón.',
+      reason: 'Minimum age 10',
+    },
+    {
+      item: 'A second whale watching tour in Reykjavík',
+      why: 'We already had North Sailing booked in the north, where the waters are better. A second tour would have eaten most of a Reykjavík day.',
+      reason: 'Redundant',
+    },
+    {
+      item: 'Lava Show, Reykjavík',
+      why: 'The only place in the world where you watch real molten lava poured in front of you. Well-reviewed, age 5+. We already had the lava tunnel that same day.',
+      reason: 'Would do on a return trip',
+    },
+    {
+      item: 'Sky Lagoon',
+      why: "The Blue Lagoon's main competitor, closer to the city, with an ocean infinity edge. Its seven-step ritual includes a cold plunge.",
+      reason: 'Wrong for a six-year-old',
+    },
+    {
+      item: 'Secret Lagoon and Vatnshellir Cave',
+      why: 'A rural geothermal pool on the Golden Circle, and a lava tube descent on Snæfellsnes.',
+      reason: "Both redundant with what we'd booked",
+    },
+    {
+      item: "Petra's Stone Collection and Djúpivogur",
+      why: 'Eighty years of collected minerals, and a colourful fishing village. Genuinely interesting for the right traveller.',
+      reason: 'Cut to buy hours at Mývatn',
+    },
+    {
+      item: "Reykjavík's museums",
+      why: 'Whales of Iceland, Perlan, FlyOver Iceland, the Puffin Express. All fine. We chose free outdoor stops every time and never regretted it.',
+      reason: 'Kids want to move and touch things',
+    },
+    {
+      item: 'A multi-currency travel card',
+      why: 'We researched it, then just used a credit card with no foreign transaction fees. Worked perfectly.',
+      reason: 'One less thing to manage',
+    },
+  ]}
+/>
+
+</Section>
+
+<Section id="pack" num="07" title="What to pack" subtitle="July averages 10–14°C. It rains roughly seventeen days out of thirty-one. Wind is constant. Daylight is essentially twenty-four hours.">
+
+<div class="measure">
+
+It's not _cold_ cold — you don't need a parka. But you will get wet repeatedly, and being wet in 12°C wind is genuinely miserable.
+
+### The layering system
+
+Every person, every day: a long-sleeve base, a fleece mid-layer, and a fully waterproof shell with a hood. You will add and remove layers several times a day. Sunny morning, strip the fleece. Drive past a waterfall, put it back on. Walk into the spray, zip the shell. Back in the car, strip both.
+
+### What we actually bought
+
+<PlaceList
+  places={[
+    {
+      name: 'REI Co-op Rainier rain jackets',
+      where: 'Adults',
+      what: 'Fully waterproof, hooded, packable. Order a size up so a fleece fits underneath.',
+    },
+    {
+      name: 'Columbia Glennaker rain jackets',
+      where: 'Kids',
+      what: 'Don’t overspend here — they outgrow them. Just confirm "fully waterproof" with sealed seams, not "water resistant."',
+    },
+    {
+      name: 'KEEN Newport H2',
+      where: 'Kids',
+      what: 'See below. The single most useful gear decision we made.',
+    },
+    {
+      name: 'Smartwool or Darn Tough merino socks',
+      where: 'Everyone · 4–5 pairs each',
+      what: 'The highest-value purchase on this entire list.',
+    },
+  ]}
+/>
+
+<Note type="win" label="The kids' shoe decision, explained">
+Standard advice is waterproof hiking shoes. **We deliberately went the other way.**
+
+Once water gets in over the top — which it will, at every waterfall — the same membrane that keeps water out now traps it in. Your kid's foot sits in a warm swamp for hours and the shoe takes a day or two to dry. Kids also splash, fall, and step in things adults wouldn't, so the rating gets exceeded constantly.
+
+Instead: **KEEN Newport H2**, a closed-toe sandal-shoe that drains freely and dries in under an hour, for waterfalls and boats and beaches and rainy days — plus **their existing sneakers** for dry days and anything needing a solid sole. Paired with merino socks, which insulate even when wet, this worked perfectly for twelve days.
+
+</Note>
+
+For adults we used what we already owned — a trail runner as the daily shoe and a waterproof low hiker as backup for heavy rain. **You do not need hiking boots for this trip.** Everything is on marked paths, three to five miles a day at most, no heavy packs. Trail runners are more comfortable, dry faster, and work fine with crampons on a glacier tour.
+
+#### Everything else
+
+- Swimsuits — lagoons and hotel hot tubs
+- Warm hat, light gloves, and a buff each — specifically for the ice cave and boat tours
+- Sunglasses and SPF 30+. High-latitude sun is intense even overcast, and the wind hides the burn.
+- European Type F adapters, 230V
+- Two power banks — photo days plus GPS navigation drain phones fast
+- Motion sickness remedies for kids if you're doing boats
+- Gallon Ziplocks for wet clothes
+- A basic medical kit and a luggage scale
+
+#### What we didn't need
+
+Heavy winter coats, snow pants, waterproof over-trousers, or dedicated waterproof daypacks. Quick-dry trousers under a long shell was enough, and regular school backpacks plus Ziplocks did the job.
+
+</div>
+
+</Section>
+
+<Section id="money" num="08" title="Money and apps">
+
+<div class="measure">
+
+<Note type="warn" label="The one that costs you real money">
+  **Always pay in ISK, never in dollars.** Terminals and Icelandic websites will offer to charge you
+  in your home currency. That's dynamic currency conversion, where the merchant sets the rate —
+  typically with a 3–5% markup baked in. Choosing ISK means your card network converts at the real
+  interbank rate. Some terminals default to USD and you have to actively switch, so look at the
+  screen before confirming.
+</Note>
+
+- **Most major US banks no longer need travel notifications.** Chase dropped the feature in 2018; their fraud detection recognises travel patterns. Check yours, but don't assume you need to call.
+- **Get a PIN for your credit card before you go.** Some unmanned Icelandic petrol stations require one even for credit, and US cards typically don't have one set. Ours took 7–10 days to arrive by mail.
+- Iceland is nearly cashless. We pulled a small amount of ISK at the airport and barely touched it.
+- **There's a Costco in Iceland** — Kauptún 3, Garðabær, about fifteen minutes from downtown Reykjavík. Same prices as the US, while Icelandic supermarkets run considerably higher. Bring your membership card.
+
+#### VAT refund
+
+You can reclaim around 24% on purchases above a threshold per receipt. It needs tax-free forms from the store at the time of purchase — ask, because you generally can't claim retroactively — and you process it at the airport **before checking bags**, since customs may want to see the goods. We skipped it: Keflavík was chaotic and we ran out of buffer. Either commit and budget twenty extra minutes, or decide up front you're not bothering.
+
+### Apps worth having
+
+#### Essential
+
+<PlaceList
+  places={[
+    {
+      name: 'Google Maps',
+      where: 'Download all of Iceland offline before you leave',
+      what: 'About 500 MB. Coverage is genuinely spotty in the East Fjords and remote areas. The single most important prep step.',
+    },
+    {
+      name: 'Vedur',
+      where: 'vedur.is',
+      what: 'The Icelandic Met Office. Far more accurate here than any international weather app. Check every morning — wind determines what’s actually doable.',
+    },
+    {
+      name: 'road.is',
+      where: 'Website, not an app — bookmark it',
+      what: 'Real-time road conditions, colour-coded by segment. Check before every driving day.',
+    },
+    {
+      name: 'safetravel.is',
+      where: 'safetravel.is',
+      what: 'Official alerts: road closures, weather warnings, volcanic activity. Especially relevant near Reykjanes.',
+    },
+  ]}
+/>
+
+#### Useful
+
+<PlaceList
+  places={[
+    {
+      name: '112 Iceland',
+      where: 'Emergency',
+      what: 'One button sends your GPS coordinates to Icelandic emergency services. Install it and hope you never open it.',
+    },
+    {
+      name: 'Parka',
+      where: 'Parking',
+      what: 'Plate-based, so paid time follows your car rather than a specific space — you can move within a zone without paying again. One app is enough; EasyPark overlaps almost entirely. You’ll need your rental’s plate, which you won’t have until pickup.',
+    },
+    {
+      name: 'Google Translate',
+      where: 'Download the Icelandic offline pack',
+      what: 'Everyone speaks English, but menus and signs are handy.',
+    },
+  ]}
+/>
+
+#### Organisational
+
+Every confirmation, ticket, insurance document and passport scan went into one shared **Google Drive** folder with **offline access enabled on both parents' phones**, plus screenshots of every QR code in a single **Google Photos** album. For the kids, download eight-plus hours of content each before leaving wifi — we had one nine-hour drive day and two others over five.
+
+</div>
+
+</Section>
+
+<Section id="eat" num="09" title="Eating" subtitle="Iceland is expensive and restaurant meals for four add up fast. Two things blunt it: book at least one place with a kitchen, and keep the car stocked so you're never forced into an overpriced petrol station lunch.">
+
+<div class="measure">
+
+**Bónus** and **Krónan** are the budget grocery chains.
+
+#### Reykjavík
+
+<PlaceList
+  places={[
+    {
+      name: 'Deig / Wesen',
+      where: 'Suðurlandsbraut 4a · Skólavörðustígur 21',
+      what: 'Icelandic doughnuts and bagels. A great first-morning breakfast.',
+    },
+    {
+      name: 'Braud & Co',
+      where: 'Frakkastígur 16',
+      what: 'The rainbow-painted bakery. Best cinnamon rolls in Iceland.',
+    },
+    {
+      name: 'Sandholt',
+      where: 'Laugavegur 36',
+      what: 'Multi-generational artisan bakery — sourdough and open-faced sandwiches.',
+    },
+    {
+      name: 'Bæjarins Beztu Pylsur',
+      where: 'Tryggvagata 1',
+      what: 'The hot dog stand. Order "eina með öllu."',
+    },
+    {
+      name: 'Icelandic Street Food',
+      where: 'Lækjargata 8',
+      what: 'Unlimited lamb soup refills and free waffles.',
+    },
+    {
+      name: 'Messinn',
+      where: 'Lækjargata 6',
+      what: 'Fish skillets, generous and meant for sharing.',
+    },
+  ]}
+/>
+
+#### Golden Circle
+
+<PlaceList
+  places={[
+    {
+      name: 'Efstidalur Farm',
+      where: 'Near Laugarvatn',
+      what: 'Working dairy farm, eat looking into the barn, farm-made ice cream. Best meal of our trip.',
+    },
+    {
+      name: 'Friðheimar',
+      where: 'Reykholt',
+      what: 'The famous tomato greenhouse restaurant. Reserve ahead and confirm hours.',
+    },
+  ]}
+/>
+
+#### South coast
+
+<PlaceList
+  places={[
+    { name: 'Lava Café', where: 'Víkurbraut 2, Vík', what: 'Casual and quick.' },
+    {
+      name: 'Black Crust Pizzeria',
+      where: 'Austurvegur 2, Vík',
+      what: 'Charcoal dough. Kid-approved.',
+    },
+    { name: 'Suður-Vík', where: 'Suðurvíkurvegur 1, Vík', what: 'Sit-down, lamb and arctic char.' },
+  ]}
+/>
+
+#### Glacier zone
+
+<PlaceList
+  places={[
+    {
+      name: 'Fancy Sheep',
+      where: 'Jökulsárlón car park',
+      what: 'Lamb burgers and fish and chips from a truck.',
+    },
+    {
+      name: 'Kaffi Hornið',
+      where: 'Hafnarbraut 42, Höfn',
+      what: 'Langoustine soup, cheaper than Pakkhús and nearly as good.',
+    },
+    {
+      name: 'Systrakaffi',
+      where: 'Kirkjubæjarklaustur',
+      what: 'Best option between Vík and the glacier zone.',
+    },
+  ]}
+/>
+
+#### North
+
+<PlaceList
+  places={[
+    {
+      name: 'Kaffi Borgir',
+      where: 'Dimmuborgir, Mývatn',
+      what: 'Homemade food, right at the lava formations, zero extra driving.',
+    },
+    {
+      name: 'Vogafjós',
+      where: 'Vogar, Mývatn',
+      what: 'Cowshed restaurant with windows into the barn.',
+    },
+    {
+      name: 'Vínberið',
+      where: 'Húnabraut 2, Blönduós',
+      what: 'Famous homemade ice cream plus a real café menu.',
+    },
+    {
+      name: 'Brynja',
+      where: 'Aðalstræti 3, Akureyri',
+      what: 'The ice cream pilgrimage. Since 1939.',
+    },
+  ]}
+/>
+
+#### Snæfellsnes
+
+<PlaceList
+  places={[
+    {
+      name: 'Matarlyst',
+      where: 'Ólafsbraut 19, Ólafsvík',
+      what: 'Exceptional, and genuinely unexpected in a town this small.',
+    },
+    {
+      name: 'Fjöruhúsið',
+      where: 'Hellnar',
+      what: 'Tiny wooden building on the beach, legendary fish soup. Limited hours.',
+    },
+  ]}
+/>
+
+### Bringing things home
+
+Alcohol is sold **exclusively at Vínbúðin**, the state liquor stores. Supermarkets carry only low-alcohol beer. **Limited hours, often closing at six, and closed Sundays** — we got caught out twice. Buy when you see one. Worth carrying back: **Brennivín**, the caraway schnapps nicknamed Black Death; **Opal** or **Tópas**, licorice-menthol liqueurs based on beloved Icelandic sweets; **Flóki**, the country's first single malt. US customs allows a litre per adult duty-free.
+
+**Icelandic wool** is real — the breed has been genetically isolated for 1,100 years and produces a distinctive dual-fibre fleece. Check the label for "100% Icelandic wool" and "Made in Iceland"; a lot of tourist-shop knitwear is imported and styled to look the part. Handknit sweaters cost roughly double the machine-made version, and the price difference tells you which you're holding. The [Handknitting Association of Iceland](https://handknit.is) on Skólavörðustígur is the safe bet; **Álafoss**, **Varma** and **Rammagerðin** are reliable, and **Katla Wool** in Vík is a good stop on the south coast.
+
+Also worth it: [Omnom](https://omnomchocolate.com) bean-to-bar chocolate, [Saltverk](https://saltverk.com) geothermal sea salt, and [66°North](https://www.66north.com), which has been making gear for Icelandic fishermen and rescue teams since 1926.
+
+</div>
+
+</Section>
+
+<Section id="kids" num="10" title="Doing this with kids">
+
+<div class="measure">
+
+**Base camps beat one-night stops.** Four bases over eleven nights meant only three real packing days. Enormous difference in stress.
+
+**Schedule a genuine rest day after every big one.** Day 5 was thirteen hours. Day 6 was a forty-minute boat tour and a hot tub. That rhythm is what made the trip sustainable.
+
+**Free outdoor stops consistently beat paid attractions.** Tide pools at Grótta, seals at Ytri-Tunga, puffins at Dyrhólaey, the crater rim at Kerið — all free, all better received than any museum would have been.
+
+<Note type="warn" label="Check these before you plan around anything">
+  Age minimums will constrain you. Glacier walks are typically **8 to 10**. Zodiac boats, **10**.
+  Ice caves, **6**. Lava caves, **5**. Find this out before building an itinerary around an
+  activity, not while trying to book it.
+</Note>
+
+### Give every stop a story
+
+We wrote two or three facts for each major site and read them out in the car before arriving. It turned passive sightseeing into something the kids engaged with.
+
+<KidFacts
+  facts={[
+    {
+      place: 'Þingvellir',
+      fact: "You're standing between two continents, and they're pulling apart two centimetres a year — about as fast as your fingernails grow.",
+    },
+    {
+      place: 'Geysir',
+      fact: 'The English word "geyser" comes from this exact spot. Every geyser on Earth is named after this one.',
+    },
+    {
+      place: 'Gullfoss',
+      fact: "A farmer's daughter named Sigríður walked 120 km barefoot to Reykjavík to stop a dam here, and threatened to throw herself into the falls. She won.",
+    },
+    {
+      place: 'Kerið',
+      fact: 'This was a cone-shaped volcano that collapsed inward when the magma chamber emptied. The red rock is literally rust — the same reason Mars is red.',
+    },
+    {
+      place: 'Reynisfjara',
+      fact: 'Those sea stacks are two trolls who got caught by sunrise dragging a ship to shore. Trolls turn to stone in daylight.',
+    },
+    { place: 'Dimmuborgir', fact: 'Icelandic folklore has this as a gateway to the underworld.' },
+  ]}
+/>
+
+Car games worked too: counting sheep and Icelandic horses, spotting and naming each glacier tongue, predicting Strokkur's next eruption.
+
+**Icelandic public pools** are a genuine institution — geothermally heated, every town has one, cheap, with slides and hot tubs. Excellent for a rainy day or tired kids. Akureyri's is among the best in the country.
+
+**The twenty-four-hour daylight is a real sleep problem.** Bring blackout solutions or accept later bedtimes. The upside is that golden hour runs from 10pm to midnight, so evening sightseeing is entirely viable — Kirkjufell and Jökulsárlón are both spectacular at that hour with no crowds.
+
+</div>
+
+</Section>
+
+<Section id="wrong" num="11" title="What went wrong" subtitle="Every trip has these. Most guides leave them out.">
+
+<div class="measure">
+
+**Our Golden Circle lunch reservation was closed.** We pivoted to a dairy farm down the road and it became the best meal of the trip. Don't over-plan meals in rural Iceland, and confirm hours.
+
+**We booked a tour on the wrong day.** The Katla ice cave went on the calendar for July 18 — the same day as the Golden Circle, in the opposite direction. Vík is two and a half hours south of Reykjavík; the Golden Circle runs northeast. Doing both meant a thirteen-hour day with six hours of driving. Rather than cram it, we called the operator and moved the tour to July 20, when we'd already be driving through Vík. They accommodated it easily. **Icelandic tour operators are generally flexible about rescheduling — call them.**
+
+**A tour got rerouted for weather.** Whale watching moved ports the morning of, from Húsavík to Árskógssandur, because of wind. The operator handled it well and refunded the difference. This is normal here. Build tolerance for it.
+
+**An age minimum disqualified us** from the glacier walk, days before. **We nearly double-booked a car seat** because the rental confirmation bundled extras into one line. **We nearly voided our insurance** by having only one registered driver. **We arrived somewhere at 9pm with nothing open.**
+
+**We saw one whale.** That's the game.
+
+**No reindeer, and no puffins on Snæfellsnes.** Wildlife is not a guarantee — we got extraordinarily lucky at Dyrhólaey and Ytri-Tunga, and unlucky elsewhere.
+
+### What we'd do differently
+
+- Far more buffer on departure day. Keflavík in July was the single most stressful part of the trip.
+- Commit to the VAT refund or decide up front not to. We defaulted into skipping it by running out of time.
+- Check age minimums _before_ building the itinerary.
+- Buy alcohol the first time we saw a Vínbúðin. The limited hours and Sunday closures caught us repeatedly.
+- Shorten the marathon drive day. Nine-plus hours with stops is the outer edge of what works with a six-year-old.
+- Possibly one fewer base. Four moves in twelve days worked, but three would have been calmer.
+
+</div>
+
+</Section>
+
+<div class="close">
+<div class="wrap">
+
+## Would we recommend it?
+
+Without hesitation, for this kind of family trip.
+
+Iceland works remarkably well with kids because the attractions are overwhelmingly **outdoor, free, and immediate**. You park, walk five minutes, and there's a waterfall or a glacier or a seal colony. Very little standing in line. Very little "be quiet and look at the exhibit." Enormous natural drama for minimal effort.
+
+The country is extraordinarily safe, everyone speaks fluent English, the roads are good, and the infrastructure works. It's an easy place to travel independently.
+
+It is genuinely expensive. Budget accordingly, and use the kitchen-and-groceries strategy to blunt it.
+
+The best moments were almost all unplanned or free: a dairy farm we found because a reservation fell through, tide pools on a windy peninsula outside Reykjavík, puffins crash-landing on a sea cliff, icebergs washing up on black sand, and a six-year-old refusing to leave a tide pool on our last full day.
+
+Twelve days in Iceland · July 2026 · Happy to answer questions about any of it.
+
+</div>
+</div>
