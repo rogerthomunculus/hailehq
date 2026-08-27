@@ -13,6 +13,15 @@
   z-index: 1;
 }
 
+/* japan-theme.css makes .rail-section sticky assuming it sits in a short,
+   bounded container. Here it's a flat sibling followed by all eight cities'
+   worth of content, so with no bottom boundary to unstick against it pins to
+   the viewport top for the rest of the page, overlapping every city section
+   underneath. Drop the sticky behavior so it scrolls normally instead. */
+.rail-section {
+  position: static;
+}
+
 /* H2 — top-level guide sections (About, Entry Requirements, Money, ... Cities, Skipped, Pack, Heat, Kids) */
 .section-head {
   font-family: var(--disp);
