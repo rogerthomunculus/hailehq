@@ -17,6 +17,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="stamps">
         <a class="stamp" href="/travel/iceland-2026/">Iceland<br />Jul 2026</a>
         <a class="stamp" href="/travel/houston-2026/">Houston<br />Sep 2026</a>
+        <a class="stamp" href="/travel/hawaii-2025/">Hawaii<br />Jul 2025</a>
+        <a class="stamp" href="/travel/nyc-2025/">NYC<br />Jun 2025</a>
+        <a class="stamp" href="/travel/dallas-2025/">Dallas<br />Apr 2025</a>
+        <a class="stamp" href="/travel/japan-2024/">Japan<br />Jul 2024</a>
       </div>
     </header>
 
@@ -102,6 +106,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3>Iceland</h3>
           <p>The full 12-day trip guide — bookings, gear, what went wrong.</p>
         </a>
+        <a class="landing-card" href="/travel/hawaii-2025/">
+          <span class="card-eyebrow">Jul 2025</span>
+          <h3>Hawaii</h3>
+          <p>Placeholder — write-up coming soon.</p>
+        </a>
+        <a class="landing-card" href="/travel/nyc-2025/">
+          <span class="card-eyebrow">Jun 2025</span>
+          <h3>NYC</h3>
+          <p>Placeholder — write-up coming soon.</p>
+        </a>
+        <a class="landing-card" href="/travel/dallas-2025/">
+          <span class="card-eyebrow">Apr 2025</span>
+          <h3>Dallas</h3>
+          <p>Placeholder — write-up coming soon.</p>
+        </a>
+        <a class="landing-card" href="/travel/japan-2024/">
+          <span class="card-eyebrow">Jul 2024</span>
+          <h3>Japan</h3>
+          <p>Placeholder — write-up coming soon.</p>
+        </a>
       </div>
     </section>
 
@@ -162,7 +186,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     flex: 0 0 auto;
     text-decoration: none;
   }
-  .stamp:nth-child(2) {
+  .stamp:nth-child(even) {
     transform: rotate(4deg);
   }
   .stamp:hover {
