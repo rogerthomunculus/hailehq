@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Sidebar from '../components/ui/Sidebar.astro';
 
 interface Props {
   title: string;
@@ -7,13 +8,7 @@ interface Props {
   themeColor?: string;
 }
 
-const { title, description = 'Family site.', themeColor = '#16191d' } = Astro.props;
-const { pathname } = Astro.url;
-
-const navLinks = [
-  { href: '/travel/', label: 'Travel' },
-  { href: '/school/', label: 'School' },
-];
+const { title, description = 'Family site.', themeColor = '#1b1216' } = Astro.props;
 ---
 
 <!doctype html>
@@ -28,28 +23,16 @@ const navLinks = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Libre+Franklin:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <nav class="site-nav">
-      <div class="wrap">
-        <a class="brand" href="/">hailehq</a>
-        <div class="links">
-          {
-            navLinks.map((link) => (
-              <a
-                href={link.href}
-                aria-current={pathname.startsWith(link.href) ? 'page' : undefined}
-              >
-                {link.label}
-              </a>
-            ))
-          }
-        </div>
-      </div>
-    </nav>
-    <slot />
+    <div class="shell">
+      <Sidebar />
+      <main class="content">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

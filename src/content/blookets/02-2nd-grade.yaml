@@ -1,0 +1,15 @@
+grade: 2nd Grade
+order: 2
+subjects:
+  - name: ELA
+    sets:
+      - url: https://www.blooket.com/set/6a0bdc5f93e4e9542dfd22a8
+        title: Lucas-ELA-2nd-Prep Flashcards
+      - url: https://www.blooket.com/set/6a0bdc76753b45cd29346835
+        title: Lucas-ELA-2nd-Prep TestSim
+  - name: Math
+    sets:
+      - url: https://www.blooket.com/set/6a0bdcb593e4e9542dfd22bc
+        title: Lucas-Math-2nd-Prep Flashcards
+      - url: https://www.blooket.com/set/6a0bdcc754234f801d626dbe
+        title: Lucas-Math-2nd-Prep TestSim

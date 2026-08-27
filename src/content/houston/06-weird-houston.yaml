@@ -1,0 +1,36 @@
+order: 6
+title: Weird Houston
+note: The folk-art corridor on the East End. All three within a mile of each other, all outdoors — go late.
+items:
+  - name: Orange Show Monument
+    where: Munger St, East End
+    why: A postman spent 20 years hand-building a maze of tile, wagon wheels and mannequins in his backyard. Check hours; it runs seasonally.
+    tags:
+      - - Seasonal hours
+        - warn
+    filters: []
+    map: Orange Show Monument Houston
+  - name: Smither Park
+    where: 2441 Munger St
+    why: Wall-to-wall mosaic of broken tile and glass. Art cars are often parked in the field behind it.
+    tags:
+      - - Free
+        - good
+      - - 7am–7pm
+      - - Open Monday
+        - good
+    filters:
+      - free
+      - mon
+    map: Smither Park Houston
+  - name: Beer Can House
+    where: 222 Malone St
+    why: Fifty thousand flattened cans siding an entire bungalow, with garlands that chime in the wind.
+    tags:
+      - - Free
+        - good
+      - - Wed–Sun 10–4
+        - warn
+    filters:
+      - free
+    map: Beer Can House Houston

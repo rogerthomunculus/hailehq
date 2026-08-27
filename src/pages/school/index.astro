@@ -5,33 +5,41 @@ import ContentLayout from '../../layouts/ContentLayout.astro';
 const resources = (await getCollection('school', ({ data }) => !data.draft)).sort(
   (a, b) => a.data.order - b.data.order,
 );
+const blooketGrades = await getCollection('blookets');
+const blooketCount = blooketGrades.reduce(
+  (total, g) => total + g.data.subjects.reduce((n, s) => n + s.sets.length, 0),
+  0,
+);
 ---
 
 <ContentLayout title="School — hailehq.com" description="Study packs and resources.">
-  <section>
+  <section class="guide-section">
     <div class="wrap">
       <div class="sec-head">
         <h2>School</h2>
       </div>
-      {
-        resources.length === 0 ? (
-          <p class="measure">Nothing here yet.</p>
-        ) : (
-          <ul class="places">
-            {resources.map((r) => (
-              <li>
-                <b>
-                  <a href={`/school/${r.id}/`}>{r.data.title}</a>
-                </b>
-                <span class="where">
-                  Grade {r.data.grade} · {r.data.subject}
-                </span>
-                <span class="what">{r.data.summary}</span>
-              </li>
-            ))}
-          </ul>
-        )
-      }
+      <ul class="places">
+        <li>
+          <b>
+            <a href="/school/blookets/">Blookets</a>
+          </b>
+          <span class="where">Study Sets</span>
+          <span class="what">{blooketCount} Blooket sets, grouped by grade and subject.</span>
+        </li>
+        {
+          resources.map((r) => (
+            <li>
+              <b>
+                <a href={`/school/${r.id}/`}>{r.data.title}</a>
+              </b>
+              <span class="where">
+                Grade {r.data.grade} · {r.data.subject}
+              </span>
+              <span class="what">{r.data.summary}</span>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </section>
 </ContentLayout>

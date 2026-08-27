@@ -1,0 +1,69 @@
+order: 3
+title: Make something you take home
+note: Highest effort, highest payoff. All of these need booking ahead.
+items:
+  - name: Glassblowing Houston
+    where: Tomball · ~45 min NW
+    why: Each person on the pipe with an instructor — pick the shape, pick the colors, gather and blow it yourself. Reviewers specifically bring kids.
+    tags:
+      - - 4.9 stars
+        - good
+      - - Small studio — book early
+        - warn
+    filters:
+      - active
+      - book
+    map: Glassblowing Houston Tomball
+  - name: The Mad Potter
+    where: W Gray, River Oaks
+    why: Paint-your-own pottery at your own pace, and you can bring your own food and drinks in. Low floor, no ceiling, nobody condescended to.
+    tags:
+      - - Till 10pm Fri–Sat
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - indoor
+      - active
+      - mon
+      - late
+    map: The Mad Potter Houston W Gray
+  - name: Cooking With A Twist
+    where: Stafford · ~30 min SW
+    why: Hands-on themed classes. Everything's pre-prepped, each person does part of the process, then you eat what you made.
+    tags:
+      - - Saturdays till 9pm
+      - - Closed Sun & Mon
+        - warn
+      - - Book ahead
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    map: Cooking With A Twist Stafford Texas
+  - name: Painting with a Twist
+    where: Westheimer
+    why: Instructor-led, whole group paints the same piece, built-in comparison at the end. Confirm which sessions are all-ages — some are 21+.
+    tags:
+      - - 4.9 / 729 reviews
+        - good
+      - - Till 9pm Fri–Sat
+      - - Book ahead
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    map: Painting with a Twist Houston Westheimer
+  - name: The Printing Museum
+    where: San Jacinto St
+    why: Print your own page on a working Gutenberg replica, plus cheap screen-printing workshops. Take the guided tour — reviewers say it's what makes it.
+    tags:
+      - - Small museum
+      - - Check hours
+        - warn
+    filters:
+      - indoor
+      - active
+    map: The Printing Museum Houston

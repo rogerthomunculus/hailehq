@@ -1,0 +1,163 @@
+order: 10
+title: Family dinner for 9
+note: Ranked on rating strength first, then whether a nine-top actually works there — review count matters as much as the score itself.
+items:
+  - name: Taste of Texas
+    where: Katy Fwy, West Houston
+    why: 4.7 across 11,000 reviews. Walk into the butcher case and pick your own steak, then a huge salad bar. Enormous room built for family parties, and kids get a real production made of it. The strongest single answer on this list.
+    tags:
+      - - 4.7 / 11,000
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - group9
+    site: https://www.tasteoftexas.com/
+    map: Taste of Texas Houston Katy Freeway
+  - name: Lost & Found
+    where: W Gray St
+    why: 4.8 across 18,700 — the highest-volume high rating in Houston. Bar-and-grill format, wide menu, open till midnight, reviewers repeatedly mention family groups being handled well.
+    tags:
+      - - 4.8 / 18,700
+        - good
+      - - Till 12am daily
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - late
+      - group9
+    map: Lost and Found Houston W Gray
+  - name: Winsome Prime
+    where: Westheimer Rd
+    why: 4.8 across 7,100. Modern American, steaks and shareables, dinner from 4pm. Big polished room, reservations recommended.
+    tags:
+      - - 4.8 / 7,100
+        - good
+      - - Book ahead
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - book
+      - group9
+    map: Winsome Prime Houston Westheimer
+  - name: Casa do Brasil
+    where: Sage Rd
+    why: 4.8 across 2,850, the best-rated churrascaria in town by a clear margin, and a step more refined than the others. Open Monday, unlike a lot of this category's competition.
+    tags:
+      - - 4.8 / 2,850
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - group9
+    map: Casa do Brasil Houston Sage Road
+  - name: Athena's Greek & European Kitchen
+    where: FM 529, far NW
+    why: 4.9 across 2,700, remarkable at that volume. Family-run, mezze and lamb platters made for sharing, fair prices. Downside is the location — well out of the loop.
+    tags:
+      - - 4.9 / 2,700
+        - good
+      - - Far NW
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - group9
+    map: Athenas Greek European Kitchen Houston FM 529
+  - name: The Butcher's Grille
+    where: San Felipe St
+    why: 4.8 across 1,950. Middle Eastern, built around big shareable boards, indoor and patio seating. Reservations advised for groups.
+    tags:
+      - - 4.8 / 1,950
+        - good
+      - - Book ahead
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - book
+      - group9
+    map: The Butchers Grille Houston San Felipe
+  - name: Niko Niko's
+    where: Montrose Blvd
+    why: "4.6 across 6,650. The low-stakes pick: cheap, gigantic menu, nobody can fail to find something, loud enough that kids don't matter. Counter ordering, so no waiting on one check for nine."
+    tags:
+      - - 4.6 / 6,650
+        - good
+      - - Counter order
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - group9
+    map: Niko Nikos Montrose Houston
+  - name: Goode Company Seafood
+    where: Westpark Dr
+    why: 4.5 across 3,600. A reviewer describes walking in with twelve people and no reservation and being accommodated — exactly the signal you want. Campechana and the mesquite-grilled fish are the orders.
+    tags:
+      - - 4.5 / 3,600
+        - good
+      - - Walk-ins fine
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - group9
+    map: Goode Company Seafood Houston Westpark
+  - name: Prima Pasta
+    where: Kirby Dr, Med Center
+    why: 4.6 across 1,120. Italian with a live solo musician most nights, generous portions, open till 10 daily. Easy crowd-pleaser.
+    tags:
+      - - 4.6 / 1,120
+        - good
+      - - Live music
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - group9
+    map: Prima Pasta Houston Kirby
+  - name: Ouisie's Table
+    where: San Felipe St
+    why: "4.4 across 1,790 — the lowest rating here, so being straight: it's on the list because multiple reviewers specifically describe large family dinners going smoothly, including split checks for a big party. Southern food, live piano, very large room."
+    tags:
+      - - 4.4 / 1,790
+      - - Book ahead
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - book
+      - group9
+    map: Ouisies Table Houston San Felipe

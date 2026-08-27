@@ -1,0 +1,49 @@
+order: 13
+title: Full-day trips
+note: Only if a whole day opens up. Both head southeast, so they can be combined or traded.
+items:
+  - name: Space Center Houston
+    where: NASA Pkwy · ~35 min SE
+    why: The tram to historic Mission Control and the Saturn V building is the real payoff, not the main hall. Bring your own food — concessions are rough.
+    tags:
+      - - 10–5 daily
+      - - Open Monday
+        - good
+      - - Pairs with Kemah
+        - good
+    filters:
+      - indoor
+      - mon
+    map: Space Center Houston
+  - name: Moody Gardens
+    where: Galveston · ~1 hr
+    why: Three pyramids — rainforest, aquarium, discovery. The all-access pass is worth the extra over pyramids-only.
+    tags:
+      - - 10–5
+      - - Open Monday
+        - good
+    filters:
+      - indoor
+      - mon
+    map: Moody Gardens Galveston
+  - name: Baywatch Dolphin Tours
+    where: Harborside Dr, Galveston
+    why: 4.9 across 5,500 reviews, which is a remarkable number. Captains let kids take the wheel and honk the horn. Short commitment, not a whole day.
+    tags:
+      - - Boats till 9pm
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - active
+      - mon
+    map: Baywatch Dolphin Tours Galveston
+  - name: Galveston Pleasure Pier
+    where: Seawall Blvd, Galveston
+    why: An amusement pier built out over the Gulf. Wristband is all-day and you can leave and come back.
+    tags:
+      - - Fri 2–10 · Sat 11–10 · Sun 12–10
+      - - Closed Mon–Thu
+        - warn
+    filters: []
+    map: Galveston Island Historic Pleasure Pier

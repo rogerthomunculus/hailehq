@@ -1,0 +1,95 @@
+order: 4
+title: Compete
+note: Games where the skill floor is low enough that a 10-year-old can genuinely win.
+items:
+  - name: Curling Club of Houston
+    where: Bellerive Dr
+    why: Learn to Curl gets you throwing stones, sweeping and calling shots inside an hour, then a short game. Nobody's done it, and it's a cold room in September.
+    tags:
+      - - Scheduled sessions — email ahead
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    map: Curling Club of Houston
+  - name: Cidercade
+    where: Canal St, EaDo
+    why: $12 flat for 275+ games, all day. No token anxiety, so it turns into a tournament instead of parallel play.
+    tags:
+      - - $12 all day
+        - good
+      - - Till midnight daily
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - indoor
+      - active
+      - mon
+      - late
+    site: https://www.cidercade.com/houston/
+    map: Cidercade Houston
+  - name: K1 Speed
+    where: NW Freeway
+    why: Indoor electric karting with separate youth and adult heats, so the 10-year-old races for real.
+    tags:
+      - - ~$40/race/person
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - indoor
+      - active
+      - mon
+    map: K1 Speed Houston
+  - name: Pinstripes
+    where: Kirby Dr
+    why: Book the bocce, not the bowling. Dead simple, age-neutral, nobody's played it. The lanes are tight for big groups.
+    tags:
+      - - Book courts ahead
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    map: Pinstripes Houston Kirby
+  - name: BATL Grounds
+    where: W 20th St, Heights
+    why: Axe and knife throwing plus archery, near-perfect reviews. Usually 12+, so this one costs you the 10-year-old.
+    tags:
+      - - 12+ likely
+        - warn
+      - - Till midnight Sat
+    filters:
+      - indoor
+      - active
+      - late
+      - book
+    site: http://batlgrounds.com/axe-throwing-houston/
+    map: BATL Grounds Houston
+  - name: Home Run Dugout
+    where: Katy
+    why: Batting bays with a screen-game layer. Call first — one recent review claims the pitching bays were removed, another describes booking one.
+    tags:
+      - - Verify by phone
+        - warn
+      - - Till midnight Fri–Sat
+    filters:
+      - active
+      - late
+    map: Home Run Dugout Katy Texas
+  - name: Main Event
+    where: Stafford
+    why: Bowling, laser, arcade, ropes. Unglamorous, but it absorbs a whole group till 2am when nothing else is open.
+    tags:
+      - - Till 2am Fri–Sat
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - indoor
+      - active
+      - mon
+      - late
+    map: Main Event Stafford Texas

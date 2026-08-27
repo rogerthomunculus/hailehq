@@ -1,0 +1,138 @@
+order: 11
+title: Interesting dining experiences for 9
+note: Ranked on how interesting the meal itself is — not just the food quality — filtered for the age spread and a table of nine.
+items:
+  - name: Saigon Pagolac
+    where: Chinatown · 9600 Bellaire Blvd
+    why: 'Bò 7 món: seven courses of beef, including cuts you grill yourself at the table and roll into rice paper. The most participatory meal in Houston and one of the cheapest. Room is dated and the 3.9 rating reflects that, not the food.'
+    tags:
+      - - Grill it yourself
+        - good
+      - - Closed Mondays
+        - warn
+    filters:
+      - food
+      - indoor
+      - group9
+    site: http://www.saigonpagolac.com/
+    map: Saigon Pagolac Houston Bellaire
+  - name: Liuyishou Hot Pot
+    where: Dun Huang Plaza · 9889 Bellaire Blvd
+    why: 4.9 across 5,300 reviews — unheard of. Everyone builds their own broth and cooks their own food; reviewers specifically mention parties of 10 being handled fine.
+    tags:
+      - - 4.9 / 5,300
+        - good
+      - - Till 2am Fri–Sat
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - late
+      - group9
+    map: Liuyishou Hot Pot Houston Bellaire
+  - name: Tourão
+    where: Montrose
+    why: Churrascaria with gauchos carving at your table and a red/green card you flip to control the flow. Kids find the card genuinely thrilling. Halal, and notably cheaper than Fogo. Has space set aside for large groups.
+    tags:
+      - - Halal
+        - good
+      - - Large-group seating
+        - good
+    filters:
+      - food
+      - indoor
+      - group9
+    map: Tourao Brazilian Steakhouse Houston Montrose
+  - name: Blue Nile
+    where: Upper Kirby
+    why: One enormous shared platter, injera instead of utensils, everyone eating off the same surface with their hands. For a group that's never done it, this is the biggest single leap on the list.
+    tags:
+      - - Eat with your hands
+        - good
+    filters:
+      - food
+      - indoor
+      - group9
+    map: Blue Nile Ethiopian Houston Upper Kirby
+  - name: Crawfish & Noodles
+    where: Bellaire · 11360 Bellaire Blvd
+    why: The restaurant that put Viet-Cajun on the national map. Gloves, butcher paper, garlic butter everywhere. September is past peak crawfish — call and check; shrimp, crab and grilled oysters carry it either way.
+    tags:
+      - - 'Call ahead re: crawfish season'
+        - warn
+    filters:
+      - food
+      - indoor
+      - group9
+    site: https://www.crawfishandnoodles.com/
+    map: Crawfish and Noodles Houston Bellaire
+  - name: Fung's Kitchen
+    where: Sharpstown · 7320 SW Fwy
+    why: Real rolling dim sum carts, which almost nowhere still does. Picking things off a passing cart is the whole point, and the room is built like a banquet hall, so nine is nothing.
+    tags:
+      - - Rolling carts
+        - good
+      - - Closed Mondays
+        - warn
+    filters:
+      - food
+      - indoor
+      - group9
+    site: https://fungskitchen.com/
+    map: Fungs Kitchen Houston Sharpstown
+  - name: POST Market
+    where: downtown · 401 Franklin St
+    why: Nine people, nine different cuisines, one table, then the Skylawn rooftop for the skyline. The correct answer when the group can't agree. Paid parking, so budget for it.
+    tags:
+      - - Nine cuisines, one table
+        - good
+      - - Paid parking
+        - warn
+    filters:
+      - food
+      - indoor
+      - group9
+    map: POST Houston Market Franklin Street
+  - name: Traveler's Table
+    where: Montrose
+    why: Small plates from a dozen countries designed to be passed around; a reviewer describes doing exactly this with a party of 14. Opens at 5, dinner only on weekdays.
+    tags:
+      - - Dinner only weekdays
+        - warn
+    filters:
+      - food
+      - indoor
+      - group9
+    site: https://www.travelerstable.com/
+    map: Travelers Table Houston Montrose
+  - name: The Original Ninfa's on Navigation
+    where: East End · 2704 Navigation Blvd
+    why: Where fajitas were invented in 1973, tortillas pressed by hand at a window you can watch. Historical rather than gimmicky, and it absorbs big tables easily.
+    tags:
+      - - Where fajitas were invented
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - group9
+    site: https://ninfas.com/ninfas-on-navigation/
+    map: Original Ninfas on Navigation Houston
+  - name: Hobbit Cafe
+    where: Upper Kirby
+    why: "A Tolkien-themed bungalow with a shaded patio, 4.5 across 4,500 reviews. Being straight: the food is decent burger-and-sandwich territory, not a destination. It's on the list for the room and patio, which work well for a sprawling group."
+    tags:
+      - - 4.5 / 4,500
+        - good
+      - - Food is decent, not the draw
+        - warn
+    filters:
+      - food
+      - indoor
+      - group9
+    map: Hobbit Cafe Houston Upper Kirby

@@ -1,0 +1,45 @@
+grade: 3rd Grade
+order: 3
+subjects:
+  - name: ELA
+    sets:
+      - url: https://www.blooket.com/set/6a83e3338b34cf18435c4f7f
+        title: APAAS 3rd ELA Week 2 Vocab (Lucas)
+      - url: https://www.blooket.com/set/678478b7f07df0229ad05666
+        title: APAAS 3rd Grade ELA Week 10 Vocab
+      - url: https://www.blooket.com/set/6786f12420b45fa4c5d5b702
+        title: APAAS 3rd Grade ELA Week 11 Vocab
+      - url: https://www.blooket.com/set/673e920153c2225e88f3d530
+        title: APAAS 3rd Grade ELA Week 8 Vocabulary
+      - url: https://www.blooket.com/set/674e1a4a0286ab3bac7985d8
+        title: APAAS 3rd Grade ELA Week 9 Vocabulary
+      - url: https://www.blooket.com/set/67a3b76b41680eea7c58ddad
+        title: APAAS ELA Week 12 Vocab
+  - name: Science
+    sets:
+      - url: https://www.blooket.com/set/674e3a2c3d2ef2c5a229c792
+        title: APAAS 3rd Grade Sci Chapter 2
+  - name: Social Studies
+    sets:
+      - url: https://www.blooket.com/set/67830c7127ca9d1d219b9e2d
+        title: APAAS 3rd Grade SS Ch 7 Vocab
+      - url: https://www.blooket.com/set/67ef184f2296b0f80610fb4f
+        title: APAAS 3rd Grade SS Chapter 10 Vocabulary
+      - url: https://www.blooket.com/set/67fbe841780bbd5f11048cf5
+        title: APAAS 3rd Grade SS Chapter 11 Vocabulary
+      - url: https://www.blooket.com/set/681d4c879e7fd4c3b754bbb7
+        title: APAAS 3rd Grade SS Chapter 12 Vocabulary
+      - url: https://www.blooket.com/set/674d12fbc877abff704979a4
+        title: APAAS 3rd Grade SS Chapter 6 Vocabulary
+      - url: https://www.blooket.com/set/67a8117e1622a8eca9f0054b
+        title: APAAS 3rd Grade SS Chapter 8 Vocab
+      - url: https://www.blooket.com/set/67e03599ec5c7d81cea384d4
+        title: APAAS 3rd Grade SS Chapter 9 Test Focus Questions
+      - url: https://www.blooket.com/set/67deb2cd1831fdb7f831809c
+        title: APAAS 3rd Grade SS Chapter 9 Vocabulary
+      - url: https://www.blooket.com/set/6a83e3ff8b34cf18435c4f9a
+        title: APAAS 3rd SS Unit 1 Ch 1 (Lucas)
+      - url: https://www.blooket.com/set/6a83e4840a47ac47201caf03
+        title: APAAS 3rd SS Unit 1 Ch 2 (Lucas)
+      - url: https://www.blooket.com/set/6a8cca4b54e8973a3c0b16
+        title: APAAS SS 3rd Unit 1 Ch 3 Canada (Lucas)

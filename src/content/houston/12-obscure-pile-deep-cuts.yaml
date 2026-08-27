@@ -1,0 +1,162 @@
+order: 12
+title: Obscure pile — deep cuts
+note: Deliberately unusual, mostly things this group hasn't done before. All ten are open Labor Day Monday.
+items:
+  - name: Patis & Toyo
+    where: Katy
+    why: 'The boodle fight: food spread straight onto banana leaves down the table, no plates, no utensils, everyone eats with their hands. Order it ahead. Best fit on either list for what this group responds to. 4.7 across 1,150.'
+    tags:
+      - - 4.7 / 1,150
+        - good
+      - - Order boodle fight ahead
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - obscure
+    map: Patis and Toyo Katy Texas
+  - name: Mikiya Wagyu Shabu House
+    where: Bellaire
+    why: Everyone gets their own pot; tiers go up to A5 wagyu and Norway lobster. 4.9 across 1,578 — a tier above the usual AYCE hot pot rooms.
+    tags:
+      - - 4.9 / 1,578
+        - good
+      - - Till 12am Fri–Sat
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - late
+      - obscure
+    map: Mikiya Wagyu Shabu House Houston Bellaire
+  - name: Vishala
+    where: Hwy 6 South
+    why: 'Gujarati thali: a tray of a dozen-plus compartments, refilled endlessly by staff circling the room. Entirely vegetarian, dirt cheap, 4.9 across 846.'
+    tags:
+      - - 4.9 / 846
+        - good
+      - - Vegetarian
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - obscure
+    map: Vishala Restaurant Houston Hwy 6
+  - name: ChòpnBlọk
+    where: Montrose
+    why: Michelin-recognized West African, 4.8 across 1,800. Build-your-own bowls with suya spice, jollof, plantain. Make a reservation; parking is rough.
+    tags:
+      - - 4.8 / 1,800
+        - good
+      - - Book ahead
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - book
+      - obscure
+    map: ChopnBlok Houston Montrose
+  - name: Kasra Persian Grill
+    where: Westheimer Rd
+    why: The Family Platter is six kabob varieties over three rices, warm naan, raw herbs and feta to start. Big spacious room that seats nine without drama. 4.6 across 5,400.
+    tags:
+      - - 4.6 / 5,400
+        - good
+      - - Seats the whole group
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - obscure
+    map: Kasra Persian Grill Houston Westheimer
+  - name: Sarabell Calabar
+    where: Bissonnet St
+    why: Nigerian buffet — five or six different soups with fufu, plus a hand-washing station by the door. One reviewer warns off small kids because the food is very rich and heavily spiced; your youngest is 10, probably fine, but know it going in.
+    tags:
+      - - Rich, heavily spiced
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - obscure
+    map: Sarabell Calabar Houston Bissonnet
+  - name: Foreign Grill
+    where: inside POST Market, downtown
+    why: Georgian khachapuri, the cheese-and-egg boat you stir into itself at the table, plus Uzbek plov. A stall rather than a restaurant, so it pairs with the rooftop rather than replacing a dinner.
+    tags:
+      - - Stall, not a sit-down
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - obscure
+    map: Foreign Grill POST Houston
+  - name: Triple Pepper
+    where: Chinatown
+    why: Chongqing-style, hotter and more aggressive than the Sichuan most people have had. Reviewers mention a dragon dance. 4.6, and the room handles families.
+    tags:
+      - - '4.6'
+        - good
+      - - Very spicy
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - obscure
+    map: Triple Pepper Houston Chinatown
+  - name: Chopan Kabob House
+    where: west Westheimer Rd
+    why: Afghan charsi kabab and kabuli palaw, in a space that doubles as a wedding venue, so nine is nothing. 4.3 — the low-ish score is service inconsistency, not the food.
+    tags:
+      - - 4.3 — service inconsistent
+        - warn
+      - - Seats the whole group
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - obscure
+    map: Chopan Kabob House Houston Westheimer
+  - name: Govinda's
+    where: Garden Oaks
+    why: All-you-can-eat vegetarian buffet attached to the Hare Krishna temple, which you can walk through. Around $15 a head, 4.6 across 1,700. Odd and calm and completely unlike anything else here.
+    tags:
+      - - 4.6 / 1,700
+        - good
+      - - ~$15/head
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - obscure
+    map: Govindas Buffet Houston Garden Oaks

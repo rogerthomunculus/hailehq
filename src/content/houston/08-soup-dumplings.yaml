@@ -1,0 +1,144 @@
+order: 8
+title: Soup dumplings
+note: Ranked on the dumplings themselves — wrapper, soup volume, whether they hold together. Notes on which ones can seat all nine of you.
+items:
+  - name: Wanna Bao
+    where: Midtown · 2708 Bagby St
+    why: The city's benchmark. Made to order, ~12-min wait, wrapper thin enough to be scary but doesn't tear. Pork or crab-and-pork.
+    tags:
+      - - Made to order
+        - good
+      - - 12-min wait
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    site: https://wannabao.com/
+    map: Wanna Bao Houston Bagby
+  - name: One Dragon
+    where: Asiatown · 9310 Bellaire Blvd
+    why: Shanghainese mom-and-pop, thinnest skins in Houston. ~10 tables, closed Mondays. Get the crispy-bottom bao too.
+    tags:
+      - - ~10 tables
+        - warn
+      - - Closed Mondays
+        - warn
+    filters:
+      - food
+      - indoor
+    map: One Dragon Restaurant Houston Bellaire
+  - name: Loves Dumpling House
+    where: Spring Branch · also Katy
+    why: 4.7 with a big review count and a kitchen window where you watch them fold. Regulars argue it's passed One Dragon.
+    tags:
+      - - Open Monday
+        - good
+      - - Two locations
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    site: https://www.lovesdumplinghouse.com/
+    map: Loves Dumpling House Houston Katy Fwy
+  - name: Xiaolong Dumpling
+    where: Montrose · 1901 Taft St
+    why: 4.8. XLB are strong, but the Sichuan side of the menu is the real draw.
+    tags:
+      - - Till 10pm Fri–Sat
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    site: https://www.xiaolongdumplingtx.com/
+    map: Xiaolong Dumpling Houston Taft
+  - name: Trendy Dumpling
+    where: Greenway · 3285 Southwest Fwy
+    why: Best big-group option. Handmade noodles behind glass, roomy, wide menu for picky eaters.
+    tags:
+      - - Seats the whole group
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    map: Trendy Dumpling Houston Southwest Freeway
+  - name: Shanghai Dumpling
+    where: Cypress · FM 1960 W
+    why: The Lucky Six basket is six different fillings in one steamer. Fun for kids. Far north, so only if you're up that way.
+    tags:
+      - - Six-flavor basket
+        - good
+      - - ~30 min north
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    map: Shanghai Dumpling FM 1960 Houston
+  - name: Bee Bite Dumpling
+    where: Bellaire · 5712 Bellaire Blvd
+    why: Small, excellent, open to 12:30am most nights.
+    tags:
+      - - Till 12:30am Thu–Sun
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - late
+    site: https://beebitedumplingusa.com/
+    map: Bee Bite Dumpling Houston Bellaire
+  - name: Golden Dumpling House
+    where: Asiatown · 9896 Bellaire Blvd
+    why: Enormous dumplings, near-nothing prices, cramped seating. Great value, not the most refined.
+    tags:
+      - - Cheapest on the list
+        - good
+      - - Tight seating
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    map: Golden Dumpling House Houston Bellaire
+  - name: 88 Dumpling House
+    where: Med Center · 8017 Main St
+    why: Solid XLB with a lot of soup, open till 1am. The late-night pick.
+    tags:
+      - - Till 1am
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - late
+    map: 88 Dumpling House Houston Main Street
+  - name: Dough Zone Dumpling House
+    where: Midtown · 2450 Louisiana St
+    why: A chain and it shows, but consistent and the easiest sell for a mixed group.
+    tags:
+      - - Easiest sell for the group
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    map: Dough Zone Dumpling House Houston Midtown

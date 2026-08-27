@@ -1,0 +1,98 @@
+order: 5
+title: Free & short
+note: Fifteen to forty minutes each. Use these to bridge between dinner and the main event.
+items:
+  - name: Waugh Drive bat colony
+    where: Waugh Dr bridge
+    why: Roughly 250,000 bats pour out from under the bridge at sunset, with hawks picking them off mid-air. Over in ten minutes.
+    tags:
+      - - Free
+        - good
+      - - Sunset ≈ 7:40pm
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - free
+      - mon
+    map: Waugh Drive Bat Colony Houston
+  - name: Dan Flavin at Richmond Hall
+    where: 1500 Richmond Ave
+    why: A former grocery store turned permanent Flavin installation — two rooms of colored fluorescent light washing across bare floors.
+    tags:
+      - - Free
+        - good
+      - - Wed–Sun 11–7
+        - warn
+    filters:
+      - indoor
+      - free
+    map: Dan Flavin Installation Richmond Hall Houston
+  - name: “The Light Inside” — James Turrell
+    where: MFAH, Bissonnet St
+    why: The neon tunnel between two museum buildings. It shifts color as you walk and quietly scrambles your sense of where the floor is.
+    tags:
+      - - Free Thursdays
+        - good
+      - - Till 9pm Thu–Fri
+      - - Closed Mon–Tue
+        - warn
+    filters:
+      - indoor
+      - free
+    map: Museum of Fine Arts Houston
+  - name: Lee & Joe Jamail Skatepark
+    where: 103 Sabine St
+    why: Free, city-run, 30,000 square feet. Helmets required. Same block as the Cistern.
+    tags:
+      - - Free
+        - good
+      - - 5–10pm
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - free
+      - active
+      - mon
+    map: Lee and Joe Jamail Skatepark Houston
+  - name: Waterwall Park
+    where: Post Oak Blvd
+    why: 64 feet tall, 11,000 gallons a minute, and the mist drops the temperature noticeably. Twenty minutes at night.
+    tags:
+      - - Free
+        - good
+      - - Till 8pm
+      - - Open Monday
+        - good
+    filters:
+      - free
+      - mon
+    map: Gerald D Hines Waterwall Park Houston
+  - name: Twilight Epiphany Skyspace
+    where: Rice University
+    why: Turrell's LED sequence washing across an open roof aperture at dusk, seated. Same slot as the bats, so pick one.
+    tags:
+      - - Free
+        - good
+      - - Reservations + call first
+        - warn
+    filters:
+      - free
+      - book
+    map: Twilight Epiphany Skyspace Rice University
+  - name: Discovery Green
+    where: 1500 McKinney St
+    why: Pedal boats, playground, rotating events calendar. A landing spot between two other things, not a destination.
+    tags:
+      - - Free
+        - good
+      - - Till 11pm
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - free
+      - mon
+      - late
+    map: Discovery Green Houston

@@ -1,0 +1,15 @@
+grade: 1st Grade
+order: 1
+subjects:
+  - name: ELA
+    sets:
+      - url: https://www.blooket.com/set/6a0bdc0b753b45cd29346820
+        title: Lucas-ELA-1st-Review Flashcards
+      - url: https://www.blooket.com/set/6a0bdc4893e4e9542dfd22a6
+        title: Lucas-ELA-1st-Review TestSim
+  - name: Math
+    sets:
+      - url: https://www.blooket.com/set/6a0bdc8d93e4e9542dfd22b1
+        title: Lucas-Math-1st-Review Flashcards
+      - url: https://www.blooket.com/set/6a0bdca393e4e9542dfd22b6
+        title: Lucas-Math-1st-Review TestSim

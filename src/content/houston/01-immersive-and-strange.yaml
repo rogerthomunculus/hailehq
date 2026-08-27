@@ -1,0 +1,72 @@
+order: 1
+title: Immersive & strange
+note: The core category. All indoor, all air-conditioned.
+items:
+  - name: Meow Wolf — Radio Tave
+    where: Fifth Ward
+    why: 85+ rooms, hidden passages, an app scavenger hunt and a real storyline underneath. Deep enough for the 17-year-old, loud enough for the 10-year-old.
+    tags:
+      - - $33–47 / $19–27 kid
+      - - Till 11pm Fri–Sat
+        - good
+      - - Closes 6pm Mon
+        - warn
+      - - Timed entry
+        - warn
+    filters:
+      - indoor
+      - late
+      - book
+    site: https://meowwolf.com/visit/houston
+    map: Meow Wolf Houston Radio Tave
+  - name: Buffalo Bayou Park Cistern
+    where: 105-B Sabine St
+    why: A 1926 underground reservoir. 221 columns, a mile of LED cable strung over mirrored water, a 17-second echo. Speak into an intercom and your voice travels the room as light.
+    tags:
+      - - $15 · 30 min
+      - - Wed–Sun only
+        - warn
+      - - Book ahead
+        - warn
+    filters:
+      - indoor
+      - book
+    site: https://buffalobayou.org/2026-undercurrents/
+    map: Buffalo Bayou Park Cistern Houston
+  - name: Seismique
+    where: Hwy 6 South, West Houston
+    why: Your three past hits stacked in one building — immersive rooms, blacklight mini golf, arcade.
+    tags:
+      - - Till midnight Fri–Sat
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - indoor
+      - mon
+      - late
+    site: https://www.seismique.com/
+    map: Seismique Houston
+  - name: Museum of Illusions
+    where: W Alabama, near the Galleria
+    why: Tilted room, vortex tunnel, forced perspective. About an hour, and it's inside the mall — but 4.6 across 2,300 reviews.
+    tags:
+      - - Till 9pm Fri–Sat
+      - - Open Monday
+        - good
+    filters:
+      - indoor
+      - mon
+    map: Museum of Illusions Houston
+  - name: Kemah Boardwalk
+    where: Kemah · ~35 min SE
+    why: Rides, ferris wheel, Friday fireworks. Same owner as the Downtown Aquarium, which is a point in its favor given how that went.
+    tags:
+      - - Evening only
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - mon
+    site: http://www.kemahboardwalk.com/
+    map: Kemah Boardwalk

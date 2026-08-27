@@ -1,0 +1,163 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const grades = (await getCollection('blookets')).sort((a, b) => a.data.order - b.data.order);
+const totalSets = grades.reduce(
+  (total, g) => total + g.data.subjects.reduce((n, s) => n + s.sets.length, 0),
+  0,
+);
+---
+
+<BaseLayout
+  title="Blookets · Hai Le HQ"
+  description={`${totalSets} Blooket sets, grouped by grade and subject.`}
+>
+  <div class="wrap">
+    <a class="back" href="/">← Hai Le HQ</a>
+    <p class="eyebrow">School · Study Sets</p>
+    <h1 class="page-h1">Blookets</h1>
+    <p class="standfirst">
+      {totalSets} Blooket sets, grouped by grade and subject. Tap a set to open it and grab the join code
+      to play.
+    </p>
+
+    {
+      grades.map((g) => (
+        <section class="grade-block">
+          <h2>{g.data.grade}</h2>
+          {g.data.subjects.map((s) => (
+            <div class="subject-block">
+              <h3>{s.name}</h3>
+              <div class="bgrid">
+                {s.sets.map((set) => (
+                  <a class="bcard" href={set.url} target="_blank" rel="noopener">
+                    <h4>{set.title}</h4>
+                    <span class="go">Open set →</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      ))
+    }
+
+    <div class="foot">hailehq.com/school/blookets</div>
+  </div>
+</BaseLayout>
+
+<style>
+  .wrap {
+    max-width: 900px;
+    padding-top: calc(var(--sp) * 1.6);
+    padding-bottom: calc(var(--sp) * 3);
+  }
+  .back {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 7px 12px;
+    text-decoration: none;
+  }
+  .back:hover {
+    color: var(--text);
+    border-color: var(--gold);
+  }
+  .page-h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(38px, 7vw, 58px);
+    line-height: 0.96;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+  .standfirst {
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0 0 40px;
+    font-size: 15.5px;
+  }
+  .grade-block {
+    margin-bottom: 44px;
+    padding-top: 28px;
+    border-top: 1px solid var(--rule);
+  }
+  .grade-block:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+  .grade-block > h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    margin: 0 0 20px;
+    color: var(--gold);
+  }
+  .subject-block {
+    margin-bottom: 22px;
+  }
+  .subject-block h3 {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .bgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 640px) {
+    .bgrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .bcard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: var(--surface);
+    transition: 0.15s;
+    text-decoration: none;
+  }
+  .bcard:hover {
+    border-color: var(--gold);
+    background: var(--surface2);
+  }
+  .bcard h4 {
+    margin: 0;
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+  .bcard .go {
+    flex: 0 0 auto;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .foot {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+  }
+</style>

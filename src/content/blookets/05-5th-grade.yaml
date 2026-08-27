@@ -1,0 +1,33 @@
+grade: 5th Grade
+order: 5
+subjects:
+  - name: ELA
+    sets:
+      - url: https://www.blooket.com/set/6a0bd0cb753b45cd293465d2
+        title: ELA 5th Prep Flashcards (Hailey Summer)
+      - url: https://www.blooket.com/set/6a0bd0f693e4e9542dfd2053
+        title: ELA 5th Prep TestSim (Hailey Summer)
+  - name: ELA (Novel Study)
+    sets:
+      - url: https://www.blooket.com/set/6a85241baa52753c4b9335b4
+        title: Esperanza Rising Ch 1
+      - url: https://www.blooket.com/set/6a85242c4251940f2584d73d
+        title: Esperanza Rising Ch 2
+      - url: https://www.blooket.com/set/6a879ca694d452f20df7f1e8
+        title: Esperanza Rising Ch 3 Los Higos
+      - url: https://www.blooket.com/set/6a8e1ef6dc65a93e5c974586
+        title: Esperanza Rising Ch 4 Las Guayabas
+      - url: https://www.blooket.com/set/6a85244b4251940f2584d745
+        title: Esperanza Rising Prologue
+      - url: https://www.blooket.com/set/6a852407aa52753c4b9335af
+        title: Esperanza Rising Prologue - Ch 2
+  - name: Math
+    sets:
+      - url: https://www.blooket.com/set/6a0bd18654234f801d626b63
+        title: Math 5th Prep Flashcards (Hailey Summer)
+      - url: https://www.blooket.com/set/6a0bd1a793e4e9542dfd2081
+        title: Math 5th Prep TestSim (Hailey Summer)
+  - name: Social Studies
+    sets:
+      - url: https://www.blooket.com/set/6a811e4e8b34cf18435c0b16
+        title: APAAS 5th SS Unit 1 Ch 2

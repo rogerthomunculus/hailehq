@@ -1,0 +1,227 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HoustonGuide from '../../apps/houston-guide/HoustonGuide.jsx';
+
+const sectionEntries = (await getCollection('houston')).sort((a, b) => a.data.order - b.data.order);
+const sections = sectionEntries.map((e) => e.data);
+---
+
+<BaseLayout
+  title="Houston — Sept 4–7"
+  description="Ranked group experiences and food for Houston, Labor Day weekend."
+  themeColor="#1b1216"
+>
+  <div class="wrap">
+    <header class="houston-header">
+      <p class="eyebrow">Sept 4–7 · Labor Day weekend</p>
+      <h1 class="houston-h1">Houston<br /><em>with the cousins</em></h1>
+      <p class="standfirst">
+        Ranked by how well each one works for <b>everyone at once</b> — ages 7 to 17, one group, nobody
+        chaperoning. Mid-90s and humid all weekend, so outdoor items are evening-only.
+      </p>
+    </header>
+  </div>
+
+  <HoustonGuide client:load sections={sections} />
+
+  <div class="wrap">
+    <section class="closing-section">
+      <div class="sec-head"><span class="sec-num">↺</span><h2>Combos that stack</h2></div>
+      <div class="callout combo">
+        <h3>Cistern → Jamail Skatepark</h3>
+        <p>Same block on Sabine St. Light installation and a free skatepark in one stop.</p>
+      </div>
+      <div class="callout combo">
+        <h3>Korean BBQ → karaoke</h3>
+        <p>
+          Hongdae 33 and Happy Zone KTV are in the same building at 9889 Bellaire. One parking lot,
+          four hours, everyone doing something.
+        </p>
+      </div>
+      <div class="callout combo">
+        <h3>Dinner → bats at 7:40 → Meow Wolf</h3>
+        <p>
+          A full evening without repeating a register. Meow Wolf runs till 11 on Friday and
+          Saturday.
+        </p>
+      </div>
+      <div class="callout combo">
+        <h3>Cistern → Flavin → Turrell tunnel</h3>
+        <p>
+          The whole Houston light trail in one afternoon. Mostly free, each stop short enough that
+          nobody burns out.
+        </p>
+      </div>
+      <div class="callout combo">
+        <h3>Museum of Illusions → Waterwall</h3>
+        <p>Five minutes apart, both by the Galleria. The waterwall mist genuinely cools you off.</p>
+      </div>
+      <div class="callout combo">
+        <h3>Mensho → Tiger Den → karaoke</h3>
+        <p>
+          Mensho and Tiger Den are both inside Dun Huang Plaza at 9889 Bellaire, same building as
+          Hongdae 33 and Happy Zone KTV. One parking lot holds most of a night.
+        </p>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <div class="sec-head"><span class="sec-num">!</span><h2>The Monday problem</h2></div>
+      <div class="callout">
+        <p>
+          <b>Closed Labor Day Monday:</b> the Cistern, Richmond Hall, MFAH, the Beer Can House. Meow Wolf
+          shuts at 6.
+        </p>
+        <p>
+          <b>Open normal hours:</b> Seismique, Cidercade, Kemah, Main Event, Momentum, Museum of Illusions,
+          Topgolf.
+        </p>
+        <p>
+          <b>Restaurants closed Mondays:</b> One Dragon, Tiger Den, Ramen Moto, Moonlight Miso — closed
+          every Monday regardless of the holiday.
+        </p>
+        <p>
+          Put the nights with your brother's family on <b>Friday and Saturday</b>. Treat Monday as
+          the light day.
+        </p>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <div class="sec-head"><span class="sec-num">×</span><h2>Considered and skipped</h2></div>
+      <ul class="plain skip">
+        <li>
+          <b>Astros</b> — most passive option available, three hours of sitting. Home vs. Arizona Sept
+          4–6 if you change your mind.
+        </li>
+        <li><b>Houston Zoo</b> — it's the aquarium again, and it closes at 4pm in the heat.</li>
+        <li>
+          <b>Urban Air Heights</b> — 4.0, recurring complaints about cleanliness and staffing.
+        </li>
+        <li>
+          <b>Ice Skate Memorial City</b> — erratic hours, closed Fridays, reviews suggest the rink is
+          being phased out.
+        </li>
+        <li><b>Survival Game of Texas</b> paintball — outdoors, closes 5:30, September heat.</li>
+        <li>
+          <b>Blessington Farms</b> — early September falls between berry and fall seasons. Call first.
+        </li>
+        <li>
+          <b>Neway</b> karaoke — repeated reports of an automatic 20% charge on room time with no service.
+        </li>
+        <li>
+          <b>Bass Pro Shops Katy</b> — gets recommended as a free attraction. It's a store in a mall.
+        </li>
+        <li>
+          <b>Splitting the group</b> so the older kids peel off — this group does better whole.
+        </li>
+        <li>
+          <b>Ninja Ramen</b> — the Washington Ave institution that still shows up on every Houston ramen
+          list. It closed permanently on Dec 30, 2025.
+        </li>
+      </ul>
+    </section>
+
+    <footer class="houston-footer">
+      Compiled Aug 2026 · Hours and prices drift — tap through before you drive.
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .houston-header {
+    padding: calc(var(--sp) * 1.6) 0 var(--sp);
+  }
+  .houston-h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(38px, 11vw, 68px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin: 0 0 14px;
+    text-transform: none;
+  }
+  .houston-h1 em {
+    font-style: normal;
+    color: var(--muted);
+  }
+  .standfirst {
+    color: var(--muted);
+    max-width: 46ch;
+    margin: 0;
+  }
+  .standfirst b {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .closing-section {
+    padding: calc(var(--sp) * 1.4) 0 var(--sp);
+    border-top: 1px solid var(--rule);
+  }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .sec-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+  }
+  .closing-section h2 {
+    font-size: clamp(24px, 6vw, 34px);
+    letter-spacing: -0.01em;
+    margin: 0;
+    line-height: 1.05;
+  }
+  .callout {
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--stamp);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+    margin: 16px 0 10px;
+    background: var(--surface);
+  }
+  .callout h3 {
+    font-family: var(--display);
+    font-size: 16px;
+    margin: 0 0 8px;
+  }
+  .callout p {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .callout p:last-child {
+    margin: 0;
+  }
+  .combo {
+    border-left-color: var(--gold);
+  }
+  ul.plain {
+    margin: 16px 0 0;
+    padding-left: 18px;
+    color: var(--text);
+    font-size: 15px;
+  }
+  ul.plain li {
+    margin-bottom: 6px;
+  }
+  .skip li {
+    color: var(--muted);
+    font-size: 14.5px;
+  }
+  .skip b {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .houston-footer {
+    padding: var(--sp) 0 calc(var(--sp) * 2);
+    color: var(--muted);
+    font-size: 13px;
+    font-family: var(--mono);
+    border-top: 1px solid var(--rule);
+  }
+</style>

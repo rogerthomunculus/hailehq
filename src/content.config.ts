@@ -72,19 +72,42 @@ const notes = defineCollection({
 const blookets = defineCollection({
   loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/blookets' }),
   schema: z.object({
-    grade: z.string(),
-    subject: z.string(),
-    child: z.enum(['hailey', 'lucas', 'both']),
-    order: z.number().default(0),
-    sets: z.array(
+    grade: z.string(), // display label, e.g. "1st Grade"
+    order: z.number(), // controls grade ordering on the page
+    subjects: z.array(
       z.object({
-        title: z.string(),
-        url: z.string().url(),
-        added: z.coerce.date(),
-        notes: z.string().optional(),
+        name: z.string(), // e.g. "ELA", "ELA (Novel Study)"
+        sets: z.array(
+          z.object({
+            title: z.string(),
+            url: z.string().url(),
+          }),
+        ),
       }),
     ),
   }),
 });
 
-export const collections = { travel, school, notes, blookets };
+// A filterable reference list (venues/activities), not day-by-day prose —
+// rendered by a client island rather than MDX. See src/content/houston/.
+const houston = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/houston' }),
+  schema: z.object({
+    order: z.number(),
+    title: z.string(),
+    note: z.string(),
+    items: z.array(
+      z.object({
+        name: z.string(),
+        where: z.string(),
+        why: z.string(),
+        tags: z.array(z.array(z.string()).min(1).max(2)), // [label] or [label, 'good'|'warn']
+        filters: z.array(z.string()),
+        site: z.string().url().optional(),
+        map: z.string(),
+      }),
+    ),
+  }),
+});
+
+export const collections = { travel, school, notes, blookets, houston };

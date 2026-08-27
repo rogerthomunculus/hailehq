@@ -8,7 +8,7 @@ const guides = (await getCollection('travel', ({ data }) => !data.draft)).sort(
 ---
 
 <ContentLayout title="Travel — hailehq.com" description="Family trip guides.">
-  <section>
+  <section class="guide-section">
     <div class="wrap">
       <div class="sec-head">
         <h2>Travel</h2>
@@ -27,6 +27,16 @@ const guides = (await getCollection('travel', ({ data }) => !data.draft)).sort(
             </li>
           ))
         }
+        <li>
+          <b>
+            <a href="/travel/houston-2026/">Houston with the cousins</a>
+          </b>
+          <span class="where">Houston · Sept 2026</span>
+          <span class="what">
+            Ranked group experiences and food for Labor Day weekend — a filterable venue list, not a
+            day-by-day narrative.
+          </span>
+        </li>
       </ul>
     </div>
   </section>

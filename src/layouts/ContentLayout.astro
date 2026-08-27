@@ -11,9 +11,7 @@ const { title, description, themeColor } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} themeColor={themeColor}>
-  <main>
-    <slot />
-  </main>
+  <slot />
   <footer>
     <div class="wrap">
       <slot name="footer">hailehq.com</slot>

@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+
+const { pathname } = Astro.url;
+
+const travelGuides = (await getCollection('travel', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+// Houston isn't MDX prose (see src/content/houston/), so it isn't in the `travel`
+// collection — it gets its own static route but belongs in the same nav group.
+const travelLinks = [
+  ...travelGuides.map((g) => ({ href: `/travel/${g.id}/`, label: g.data.destination })),
+  { href: '/travel/houston-2026/', label: 'Houston' },
+].sort((a, b) => a.label.localeCompare(b.label));
+
+const schoolLinks = [{ href: '/school/blookets/', label: 'Blookets' }];
+---
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="/">Hai Le <span>HQ</span></a>
+  <nav>
+    <a class="nav-link" href="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</a>
+
+    <button class="nav-group-toggle" id="travelToggle" aria-expanded="true">
+      Travel
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+        ><path d="M9 6l6 6-6 6"></path></svg
+      >
+    </button>
+    <div class="nav-group open" id="travelGroup">
+      {
+        travelLinks.map((l) => (
+          <a href={l.href} aria-current={pathname.startsWith(l.href) ? 'page' : undefined}>
+            {l.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <button class="nav-group-toggle" id="schoolToggle" aria-expanded="true">
+      School
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+        ><path d="M9 6l6 6-6 6"></path></svg
+      >
+    </button>
+    <div class="nav-group open" id="schoolGroup">
+      {
+        schoolLinks.map((l) => (
+          <a href={l.href} aria-current={pathname.startsWith(l.href) ? 'page' : undefined}>
+            {l.label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+  <div class="sidebar-foot">hailehq.com</div>
+</aside>
+
+<script>
+  function wireToggle(toggleId: string, groupId: string) {
+    const toggle = document.getElementById(toggleId);
+    const group = document.getElementById(groupId);
+    if (!toggle || !group) return;
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      group.classList.toggle('open', !open);
+    });
+  }
+  wireToggle('travelToggle', 'travelGroup');
+  wireToggle('schoolToggle', 'schoolGroup');
+
+  document.getElementById('menuToggle')?.addEventListener('click', () => {
+    document.getElementById('sidebar')?.classList.toggle('open');
+  });
+</script>

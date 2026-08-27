@@ -1,0 +1,57 @@
+order: 7
+title: Catharsis & oddities
+note: Harder to categorize. Each is worth the drive for the right mood.
+items:
+  - name: iSmash Cypress
+    where: Hwy 6 N, Cypress
+    why: A rage room. Full gear, a crate of dishes and electronics, a bat. Parents mention bringing kids — confirm the age minimum for the 10-year-old.
+    tags:
+      - - 5.0 / 248 reviews
+        - good
+      - - Closed Wed
+        - warn
+      - - Confirm age minimum
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    map: iSmash Cypress Houston
+  - name: Cypress Trails Ranch
+    where: Humble · ~40 min N
+    why: Trail rides on a shaded route with beginner handling instruction first. 4.8 across 1,372 reviews.
+    tags:
+      - - Up to 90 min
+      - - Open Monday
+        - good
+      - - Book ahead
+        - warn
+    filters:
+      - active
+      - mon
+      - book
+    map: Cypress Trails Ranch Humble Texas
+  - name: Texas TreeVentures
+    where: The Woodlands · ~50 min N
+    why: Aerial course with three ascending difficulty levels and staff on each. Outdoors, and the hours are narrow.
+    tags:
+      - - Fri 3–6 · Sat–Sun 9–2
+        - warn
+      - - Closed Mon–Thu
+        - warn
+    filters:
+      - active
+      - book
+    map: Texas TreeVentures The Woodlands
+  - name: Crabbing off a pier
+    where: Seabrook or Kemah
+    why: Chicken necks, string, a net, a bucket. Costs almost nothing and it's completely absorbing. Sunrise or late evening only.
+    tags:
+      - - Free
+        - good
+      - - Full sun otherwise
+        - warn
+    filters:
+      - free
+      - active
+    map: Bayside Park Seabrook Texas

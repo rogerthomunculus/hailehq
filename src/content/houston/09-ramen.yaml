@@ -1,0 +1,164 @@
+order: 9
+title: Ramen
+note: Ranked on the bowl. Where the best bowl and the best room for nine people are different places, that's flagged.
+items:
+  - name: Mensho
+    where: Asiatown · 9889 Bellaire Blvd
+    why: Not close. Tokyo's Tomoharu Shono, house-made noodles, Texas-smoked wagyu bowl. No reservations, real waits, small room — bad for nine people, great for two.
+    tags:
+      - - No reservations
+        - warn
+      - - Expect a wait
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    site: https://mensho.com/
+    map: Mensho Ramen Houston Bellaire
+  - name: Tiger Den
+    where: Asiatown · 9889 Bellaire Blvd
+    why: In-house noodles plus a full yakitori menu. Dinner only, closed Mondays.
+    tags:
+      - - Dinner only, from 5pm
+        - warn
+      - - Closed Mondays
+        - warn
+    filters:
+      - food
+      - indoor
+      - late
+    map: Tiger Den Ramen Houston
+  - name: AFURI
+    where: Heights · 1215 N Durham Dr
+    why: "Yuzu shio: light, clean, citrusy. The one to pick if heavy tonkotsu isn't your thing."
+    tags:
+      - - Till 11:30pm Fri–Sat
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - late
+    map: AFURI Houston Heights Durham
+  - name: Ramen Tatsu-ya
+    where: Montrose · 1722 California St
+    why: The Austin standard-bearer. Customizable heat via spice bombs, easy with kids.
+    tags:
+      - - Easy with kids
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    site: https://www.ramen-tatsuya.com/
+    map: Ramen Tatsu-ya Houston Montrose
+  - name: Kazzan Ramen & Bar
+    where: Heights · 191 Heights Blvd
+    why: Tableside volcano ramen with the lid-off reveal. Food is good, not top-three; the theater is the point, which is exactly right for your group.
+    tags:
+      - - Tableside show
+        - good
+      - - Seats the whole group
+        - good
+    filters:
+      - food
+      - indoor
+    map: Kazzan Ramen and Bar Houston Heights
+  - name: Ramen Bar Ichi
+    where: West Houston · S Dairy Ashford
+    why: A decade of consistency. Spicy tonkotsu, crisp-edged chashu.
+    tags:
+      - - Closes 8pm
+        - warn
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    map: Ramen Bar Ichi Houston Dairy Ashford
+  - name: JINYA Ramen Bar
+    where: Heights Waterworks · 449 W 19th St
+    why: A chain, but the most reliable landing spot for a nine-person party.
+    tags:
+      - - Till midnight Fri–Sat
+        - good
+      - - Seats the whole group
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - late
+    site: https://www.jinyaramenbar.com/
+    map: JINYA Ramen Bar Heights Waterworks Houston
+  - name: Ramen Moto
+    where: Upper Kirby · 2320 W Alabama St
+    why: Izakaya energy, burnt garlic bowl, open till 1am. Closed Mondays.
+    tags:
+      - - Till 1am
+        - good
+      - - Opens 3pm
+        - warn
+      - - Closed Mondays
+        - warn
+    filters:
+      - food
+      - indoor
+      - late
+    map: Ramen Moto Houston W Alabama
+  - name: RAKKAN Ramen
+    where: Galleria · also Heights
+    why: Plant-based broth done seriously; the vegan bowls hold up against the pork ones.
+    tags:
+      - - Vegan bowls
+        - good
+      - - Till 11pm Fri–Sat
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - late
+    site: https://rakkanramen.com/
+    map: RAKKAN Ramen Galleria Houston Post Oak
+  - name: Toyori
+    where: Asiatown · 9889 Bellaire Blvd
+    why: Cheapest good bowl on this list, sizzling plates alongside.
+    tags:
+      - - Cheapest good bowl
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+    map: Toyori Houston Bellaire
+  - name: Moonlight Miso — the outlier
+    where: EaDo · 1701 Webster St
+    why: Pick your noodles off a shelf, load your own toppings, and boil it yourself at a machine, with karaoke and anime going. The ramen is mediocre. The experience is squarely the kind of participatory thing your combined group has liked.
+    tags:
+      - - You build it yourself
+        - good
+      - - Ramen is mediocre
+        - warn
+      - - Closed Mondays
+        - warn
+    filters:
+      - food
+      - indoor
+      - active
+      - late
+    map: Moonlight Miso Houston Webster

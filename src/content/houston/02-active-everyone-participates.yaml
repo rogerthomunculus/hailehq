@@ -1,0 +1,125 @@
+order: 2
+title: Active — everyone participates
+note: Where this group is strongest. Ranked by how well the whole 7-to-17 spread is served at once.
+items:
+  - name: Buffalo Bayou kayak — bat tour
+    where: Launches downtown
+    why: Paddle 2.5 miles upstream at sunset, arrive under the bridge as 350,000 bats launch overhead, then float back under the skyline. Tandem kayaks available.
+    tags:
+      - - ~3 hrs
+      - - Book ahead
+        - warn
+    filters:
+      - active
+      - book
+    map: Buffalo Bayou Kayak Tours Houston
+  - name: Korean BBQ + karaoke
+    where: 9889 Bellaire Blvd
+    why: Hongdae 33 for all-you-can-eat, then a private karaoke room upstairs — two mics, YouTube, BYOB. Grill your own dinner, then nobody performs for strangers.
+    tags:
+      - - Karaoke till 2am Fri–Sat
+        - good
+      - - Reserve the room
+        - warn
+    filters:
+      - indoor
+      - active
+      - late
+      - book
+    map: Hongdae 33 Korean BBQ Houston
+  - name: Momentum Silver Street
+    where: Sawyer Yards
+    why: Climbing with a day pass and shoe rental. Routes at every level, so nobody stands around watching. 4.8 across 2,600 reviews.
+    tags:
+      - - Till 11pm most nights
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - indoor
+      - active
+      - mon
+      - late
+    map: Momentum Indoor Climbing Silver Street Houston
+  - name: Immersive Gamebox
+    where: 1200 McKinney, downtown
+    why: Projection-mapped rooms, cooperative group games. Rooms cap around six, so seven-plus splits into two — works fine as head-to-head.
+    tags:
+      - - 4.9 / 2,650 reviews
+        - good
+      - - Short sessions
+      - - Book ahead
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    map: Immersive Gamebox Houston
+  - name: Chicken N Pickle
+    where: Webster · ~30 min SE
+    why: Pickleball plus a full restaurant. Closest thing to a genuinely age-neutral sport — a 10-year-old really does beat adults.
+    tags:
+      - - Till midnight Fri–Sat
+    filters:
+      - active
+      - late
+    map: Chicken N Pickle Webster Texas
+  - name: The Escape Game
+    where: CityCentre or Galleria
+    why: Same cooperative logic as Gamebox, with more talking and less flailing.
+    tags:
+      - - Book ahead
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    map: The Escape Game Houston CityCentre
+  - name: Sandbox VR
+    where: CityCentre or downtown
+    why: Full-body team VR — the whole group plays as one squad. Check the age minimum for the 10-year-old.
+    tags:
+      - - ~30 min
+      - - Book ahead
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    site: https://sandboxvr.com/houston
+    map: Sandbox VR Houston
+  - name: Battlefield Houston
+    where: W Little York, NW
+    why: Laser tag with actual game modes — domination, capture the flag. Adults and kids in the same matches. Not mall laser tag.
+    tags:
+      - - $16 / 30 min · $24 / hr
+    filters:
+      - indoor
+      - active
+    map: Battlefield Houston laser tag
+  - name: Topgolf
+    where: Katy
+    why: Every ball tracked and games layered on top, so someone who's never held a club still scores.
+    tags:
+      - - Till 1am Fri–Sat
+        - good
+      - - Open Monday
+        - good
+    filters:
+      - active
+      - mon
+      - late
+    map: Topgolf Houston Katy
+  - name: iFLY indoor skydiving
+    where: Katy Fwy, Memorial
+    why: Age 3 and up, so nobody sits out, and watching each other is half of it. Expensive for roughly two minutes of flight each — buy it as a memory, not an evening.
+    tags:
+      - - Pricey
+        - warn
+      - - Book ahead
+        - warn
+    filters:
+      - indoor
+      - active
+      - book
+    map: iFLY Indoor Skydiving Houston Memorial
