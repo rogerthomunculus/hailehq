@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HoustonGuide from '../../apps/houston-guide/HoustonGuide.jsx';
+import PrintButton from '../../components/ui/PrintButton.astro';
 
 const sectionEntries = (await getCollection('houston')).sort((a, b) => a.data.order - b.data.order);
 const sections = sectionEntries.map((e) => e.data);
@@ -20,6 +21,12 @@ const sections = sectionEntries.map((e) => e.data);
         Ranked by how well each one works for <b>everyone at once</b> — ages 7 to 17, one group, nobody
         chaperoning. Mid-90s and humid all weekend, so outdoor items are evening-only.
       </p>
+      <div class="print-row">
+        <PrintButton />
+        <span class="print-hint"
+          >Tap “Everything” first if you want the full list, not just what's filtered</span
+        >
+      </div>
     </header>
   </div>
 
@@ -154,6 +161,22 @@ const sections = sectionEntries.map((e) => e.data);
   .standfirst b {
     color: var(--text);
     font-weight: 600;
+  }
+  .print-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .print-hint {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  @media print {
+    .print-hint {
+      display: none;
+    }
   }
   .closing-section {
     padding: calc(var(--sp) * 1.4) 0 var(--sp);

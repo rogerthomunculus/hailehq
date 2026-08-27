@@ -6,6 +6,7 @@ import JapanH2 from '../../components/japan/JapanH2.astro';
 import JapanH3 from '../../components/japan/JapanH3.astro';
 import JapanH4 from '../../components/japan/JapanH4.astro';
 import { CITIES } from '../../components/japan/cities';
+import PrintButton from '../../components/ui/PrintButton.astro';
 
 const entry = await getEntry('travel', 'japan-2024');
 if (!entry) throw new Error('japan-2024 entry not found in travel collection');
@@ -26,7 +27,10 @@ const { title, summary, dayCount, travellers, bases, year } = entry.data;
       { n: travellers.split('·')[1]?.trim() ?? travellers, l: 'Travellers' },
     ]}
   />
-  <div class="jp-content" id="top">
+  <div class="container" id="top" style="margin-bottom: 24px;">
+    <PrintButton />
+  </div>
+  <div class="jp-content">
     <Content components={{ h2: JapanH2, h3: JapanH3, h4: JapanH4 }} />
   </div>
 </JapanLayout>
