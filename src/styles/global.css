@@ -798,3 +798,47 @@ footer .wrap {
 .app-frame {
   min-height: 100dvh;
 }
+
+/* ---------- print ---------- */
+@media print {
+  :root {
+    --bg: #fff;
+    --surface: #f4f4f4;
+    --surface2: #ececec;
+    --rule: #ccc;
+    --text: #111;
+    --muted: #444;
+    --gold: #806020;
+    --stamp: #a03050;
+  }
+  .sidebar,
+  .menu-toggle,
+  .print-btn,
+  .houston .filters,
+  .houston .count {
+    display: none !important;
+  }
+  .shell {
+    display: block;
+  }
+  nav.jump {
+    position: static;
+    backdrop-filter: none;
+  }
+  a {
+    color: var(--text);
+    text-decoration: underline;
+  }
+  .note,
+  .day,
+  .fact,
+  .card,
+  .skip,
+  .bcard,
+  .places li {
+    break-inside: avoid;
+  }
+  .houston .filters {
+    position: static;
+  }
+}

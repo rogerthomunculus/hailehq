@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PrintButton from '../../components/ui/PrintButton.astro';
 
 const grades = (await getCollection('blookets')).sort((a, b) => a.data.order - b.data.order);
 const totalSets = grades.reduce(
@@ -21,6 +22,9 @@ const totalSets = grades.reduce(
       {totalSets} Blooket sets, grouped by grade and subject. Tap a set to open it and grab the join code
       to play.
     </p>
+    <div class="print-row">
+      <PrintButton />
+    </div>
 
     {
       grades.map((g) => (
@@ -80,8 +84,16 @@ const totalSets = grades.reduce(
   .standfirst {
     color: var(--muted);
     max-width: 56ch;
-    margin: 0 0 40px;
+    margin: 0 0 26px;
     font-size: 15.5px;
+  }
+  .print-row {
+    margin: 0 0 40px;
+  }
+  @media print {
+    .back {
+      display: none;
+    }
   }
   .grade-block {
     margin-bottom: 44px;
