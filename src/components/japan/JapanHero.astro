@@ -1,0 +1,34 @@
+---
+interface Stat {
+  n: string;
+  l: string;
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  titleAccent: string;
+  lede: string;
+  stats: Stat[];
+  kanji?: string;
+}
+
+const { eyebrow, title, titleAccent, lede, stats, kanji = '旅' } = Astro.props;
+---
+
+<header class="hero">
+  <span class="hero-kanji" aria-hidden="true">{kanji}</span>
+  <p class="hero-eyebrow"><span class="dot"></span>{eyebrow}</p>
+  <h1>{title} <em>{titleAccent}</em></h1>
+  <p class="hero-sub">{lede}</p>
+  <div class="hero-stats">
+    {
+      stats.map((s) => (
+        <div class="stat">
+          <span class="n">{s.n}</span>
+          <span class="l">{s.l}</span>
+        </div>
+      ))
+    }
+  </div>
+</header>

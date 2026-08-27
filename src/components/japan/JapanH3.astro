@@ -1,0 +1,23 @@
+---
+import { CITIES } from './cities';
+
+const rawHtml = (await Astro.slots.render('default')).trim();
+// City headings follow "Name (jp)" or "Name (jp · day trip)" — match on the
+// leading name against the known city list rather than a generated id.
+const m = rawHtml.match(/^([A-Za-z][A-Za-z\s]*)\s*\(/);
+const city = m ? CITIES.find((c) => c.name.toLowerCase() === m[1].trim().toLowerCase()) : null;
+---
+
+{
+  city ? (
+    <div class="city-head" id={city.id}>
+      <div class="city-stamp">{city.jp.slice(0, 1)}</div>
+      <div>
+        <h3 class="city-name">{city.name}</h3>
+        <div class="city-jp">{city.jp}</div>
+      </div>
+    </div>
+  ) : (
+    <h3 class="subhead" set:html={rawHtml} />
+  )
+}

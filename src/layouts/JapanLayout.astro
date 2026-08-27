@@ -1,0 +1,71 @@
+---
+// Standalone layout for the Japan guide. Deliberately does NOT extend
+// BaseLayout/ContentLayout or import global.css — the hanko-stamp theme is
+// its own design system (see src/components/japan/), and keeping this page
+// fully self-contained is what guarantees it can never leak into or clash
+// with the shared passport-stamp system used by every other page.
+import '../components/japan/japan-theme.css';
+import '../components/japan/japan-overrides.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'A family trip guide.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#131F38" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <a href="/" class="back-link">← Hai Le HQ</a>
+      <slot />
+      <footer>
+        <div class="mark">日本</div>
+        <p>hailehq.com/travel/japan-2024</p>
+      </footer>
+    </div>
+    <a href="#top" class="totop" id="totop" aria-label="Back to top">↑</a>
+    <script>
+      const totop = document.getElementById('totop');
+      addEventListener('scroll', () => {
+        totop?.classList.toggle('show', scrollY > 800);
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .back-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--washi-dim);
+    background: var(--indigo-mid);
+    border: 1px solid var(--indigo-line);
+    border-radius: 8px;
+    padding: 8px 14px;
+    text-decoration: none;
+  }
+  .back-link:hover {
+    color: var(--washi);
+    border-color: var(--shu-bright);
+  }
+</style>

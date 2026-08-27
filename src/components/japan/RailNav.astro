@@ -1,0 +1,20 @@
+---
+import { CITIES } from './cities';
+---
+
+<nav class="rail-section" aria-label="Cities">
+  <p class="rail-intro">Five base camps · eight cities</p>
+  <div class="rail">
+    {
+      CITIES.map((c, i) => (
+        <a class="stop" href={`#${c.id}`}>
+          <span class="stop-marker">{String(i + 1).padStart(2, '0')}</span>
+          <span class="stop-text">
+            <span class="stop-en">{c.name}</span>
+            <span class="stop-jp">{c.jp}</span>
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</nav>
