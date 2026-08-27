@@ -1,0 +1,32 @@
+---
+import { getEntry, render } from 'astro:content';
+import JapanLayout from '../../layouts/JapanLayout.astro';
+import JapanHero from '../../components/japan/JapanHero.astro';
+import JapanH2 from '../../components/japan/JapanH2.astro';
+import JapanH3 from '../../components/japan/JapanH3.astro';
+import JapanH4 from '../../components/japan/JapanH4.astro';
+import { CITIES } from '../../components/japan/cities';
+
+const entry = await getEntry('travel', 'japan-2024');
+if (!entry) throw new Error('japan-2024 entry not found in travel collection');
+const { Content } = await render(entry);
+const { title, summary, dayCount, travellers, bases, year } = entry.data;
+---
+
+<JapanLayout title={`${title} — hailehq.com`} description={summary}>
+  <JapanHero
+    eyebrow={`${year} · Family of 4`}
+    title="Japan"
+    titleAccent="with kids"
+    lede={summary}
+    stats={[
+      { n: String(dayCount), l: 'Days' },
+      { n: String(bases?.length ?? 0), l: 'Base camps' },
+      { n: String(CITIES.length), l: 'Cities' },
+      { n: travellers.split('·')[1]?.trim() ?? travellers, l: 'Travellers' },
+    ]}
+  />
+  <div class="jp-content" id="top">
+    <Content components={{ h2: JapanH2, h3: JapanH3, h4: JapanH4 }} />
+  </div>
+</JapanLayout>

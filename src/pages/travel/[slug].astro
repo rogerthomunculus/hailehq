@@ -5,7 +5,14 @@ import TravelHero from '../../components/travel/TravelHero.astro';
 import JumpNav from '../../components/travel/JumpNav.astro';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('travel', ({ data }) => !data.draft);
+  // Guides with their own dedicated page + layout (a distinct design system,
+  // not the shared Section/Note/Day components) are excluded here so this
+  // dynamic route doesn't also try to generate — and conflict with — them.
+  const selfHostedSlugs = new Set(['japan-2024']);
+  const entries = await getCollection(
+    'travel',
+    ({ data, id }) => !data.draft && !selfHostedSlugs.has(id),
+  );
   return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 

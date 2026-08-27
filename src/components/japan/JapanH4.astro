@@ -1,0 +1,30 @@
+---
+import { ICONS, ICON_EMOJI_FALLBACK, IconBadge } from './japan-icons';
+
+const { id } = Astro.props;
+const rawHtml = (await Astro.slots.render('default')).trim();
+
+let iconKey: string | null = null;
+let text = rawHtml;
+for (const [key, emoji] of Object.entries(ICON_EMOJI_FALLBACK)) {
+  if (rawHtml.startsWith(emoji)) {
+    iconKey = key;
+    text = rawHtml.slice(emoji.length).trim();
+    break;
+  }
+}
+const Icon = iconKey ? ICONS[iconKey] : null;
+---
+
+{
+  Icon ? (
+    <div class="card-title" id={id}>
+      <IconBadge>
+        <Icon />
+      </IconBadge>
+      <h4 set:html={text} />
+    </div>
+  ) : (
+    <h4 id={id} set:html={text} />
+  )
+}

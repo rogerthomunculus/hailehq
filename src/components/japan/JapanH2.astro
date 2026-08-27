@@ -1,0 +1,10 @@
+---
+import RailNav from './RailNav.astro';
+
+const rawHtml = (await Astro.slots.render('default')).trim();
+const isCitiesSection = rawHtml.trim().toLowerCase() === 'the cities';
+const id = isCitiesSection ? 'cities' : undefined;
+---
+
+<h2 class="section-head" id={id} set:html={rawHtml} />
+{isCitiesSection && <RailNav />}

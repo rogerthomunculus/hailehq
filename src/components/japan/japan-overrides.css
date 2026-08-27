@@ -1,0 +1,111 @@
+/*
+  Additions on top of japan-theme.css for content this reference guide needs
+  that the original standalone build (city-cards-only) didn't have to handle:
+  generic prose (the Entry/Money/Etiquette/etc. reference sections) and a
+  section-level heading style distinct from the city-stamp treatment.
+*/
+
+.jp-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 120px;
+  position: relative;
+  z-index: 1;
+}
+
+/* H2 — top-level guide sections (About, Entry Requirements, Money, ... Cities, Skipped, Pack, Heat, Kids) */
+.section-head {
+  font-family: var(--disp);
+  font-weight: 800;
+  font-size: clamp(28px, 4.5vw, 44px);
+  color: var(--washi);
+  line-height: 1.05;
+  padding-top: 56px;
+  margin-top: 56px;
+  border-top: 1px solid var(--indigo-line);
+}
+.jp-content > .section-head:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* generic prose inside sections */
+.jp-content p {
+  color: var(--washi-dim);
+  font-size: 16px;
+  margin: 14px 0;
+  max-width: 62ch;
+}
+.jp-content p strong {
+  color: var(--washi);
+}
+.jp-content p em {
+  color: var(--gold);
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 0.9em;
+}
+.jp-content ul {
+  padding-left: 20px;
+  color: var(--washi-dim);
+  font-size: 15.5px;
+  max-width: 62ch;
+  margin: 14px 0;
+}
+.jp-content ul li {
+  margin-bottom: 8px;
+}
+.jp-content ul li::marker {
+  color: var(--shu-bright);
+}
+.jp-content ul li strong {
+  color: var(--washi);
+}
+
+/* h4 "card" heading — used everywhere a titled item appears (city venues,
+   Before You Go items, Don't-Skip entries, Skipped entries) */
+.jp-content h4 {
+  font-family: var(--disp);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--washi);
+  margin: 30px 0 6px;
+  padding-left: 14px;
+  border-left: 3px solid var(--shu-bright);
+}
+.jp-content h4 + p,
+.jp-content h4 + p + ul,
+.jp-content h4 ~ ul:not(.jp-content > ul) {
+  padding-left: 14px;
+  border-left: 3px solid rgba(226, 99, 43, 0.35);
+}
+
+/* card-title (icon-badge + h4) as rendered by JapanH4.astro */
+.jp-content .card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0 6px;
+  padding-left: 0;
+  border-left: none;
+}
+.jp-content .card-title h4 {
+  margin: 0;
+  padding-left: 0;
+  border-left: none;
+}
+.jp-content .card-title + p,
+.jp-content .card-title + p + ul {
+  padding-left: 14px;
+  border-left: 3px solid rgba(226, 99, 43, 0.35);
+}
+
+/* city name inside the city-stamp header (kept distinct from .section-head) */
+.city-name {
+  font-family: var(--disp);
+  font-weight: 800;
+  font-size: clamp(34px, 5vw, 54px);
+  color: var(--washi);
+  line-height: 1;
+}
