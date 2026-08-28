@@ -1,31 +1,628 @@
 ---
-title: Hawaii
-summary: Placeholder guide for our Hawaii trip — write-up coming once we're back and the photos are sorted.
+title: Hawaii — Oʻahu & the Big Island
+summary: A real account of our 10-day family trip, five nights in Waikiki and five on the Kohala Coast. What we booked, what we ate, what we'd tell a first-timer before they go.
 destination: Hawaii
 year: 2025
-startDate: 2025-07-05
-endDate: 2025-07-12
-dayCount: 7
+startDate: 2025-06-01
+endDate: 2025-06-10
+dayCount: 10
 travellers: Family of 4
-updated: 2025-07-12
+updated: 2026-08-28
 order: 2
+bases:
+  - { name: Waikiki (Oʻahu), nights: 5, color: '#E2632B' }
+  - { name: Kohala Coast (Hawaiʻi Island), nights: 5, color: '#4A6FA5' }
+sections:
+  - { id: about, label: About Hawaii }
+  - { id: planning, label: Planning & money }
+  - { id: logistics, label: Flights & cars }
+  - { id: stay, label: Where we slept }
+  - { id: oahu, label: Oʻahu }
+  - { id: oahu-eat, label: Eating on Oʻahu }
+  - { id: bigisland, label: The Big Island }
+  - { id: bigisland-eat, label: Eating on the Big Island }
+  - { id: safety, label: Ocean, sun & etiquette }
+  - { id: pack, label: Packing }
+  - { id: kids, label: With kids }
+  - { id: wrong, label: What we'd do differently }
 ---
 
 import Section from '../../components/travel/Section.astro';
 import Note from '../../components/ui/Note.astro';
+import FactGrid from '../../components/ui/FactGrid.astro';
+import PlaceList from '../../components/ui/PlaceList.astro';
+import KidFacts from '../../components/travel/KidFacts.astro';
 import TripArt from '../../components/travel/TripArt.astro';
 
-<Section id="about" num="01" title="Hawaii, July 2025" subtitle="Placeholder page — the real guide goes here once the trip's done and we've written it up.">
+<Section id="about" num="01" title="Hawaii, if you haven't been" subtitle="Two islands on this trip, and they don't feel like the same state. Here's the orientation we wish someone had given us before booking.">
 
-<TripArt variant="hawaii" alt="Placeholder illustration of a family on a Hawaiian beach" />
+<TripArt variant="hawaii" alt="Illustration of a family on a Hawaiian beach" />
+
+<FactGrid
+  facts={[
+    { label: 'Islands on this trip', value: '2 — Oʻahu, Hawaiʻi Island' },
+    { label: 'Entry requirement', value: "None — it's a US state" },
+    { label: 'Interisland flight', value: '~45 min, HNL → KOA' },
+    { label: 'Time zone', value: 'Hawaii–Aleutian, no DST' },
+  ]}
+/>
 
 <div class="measure">
 
-<Note label="Coming soon">
-  This is a placeholder for the Hawaii trip guide — flights, where we stayed, what we did, what we'd
-  skip next time. Same treatment as the Iceland guide once it's written.
+### It's a US state, not a foreign trip
+
+If you're flying from the mainland, this is domestic travel — no passport, no customs form, no currency exchange. You do need a **REAL ID-compliant driver's license or passport** to clear TSA, same as any other US flight. The one procedural quirk: **agricultural inspection**. Hawaii is protecting itself from invasive species, not the other way around, so there are restrictions on bringing certain fresh fruit, plants, and soil _out_ of the state when you fly home to the mainland. Pineapples and a handful of pre-cleared items are fine; ask at the airport agriculture inspection station if you're unsure. There's no inspection when flying between islands.
+
+### Oʻahu and the Big Island are genuinely different trips
+
+Oʻahu is the urban, developed island — Waikiki is a dense strip of high-rises, and Honolulu is a real city. Twenty minutes outside town you're in rainforest or on a nearly empty North Shore beach, but the contrast between "city" and "nature" is sharp and close together.
+
+Hawaiʻi Island (the Big Island) is the opposite: enormous, rural, and still geologically alive. It's larger than all the other Hawaiian islands combined, has its own microclimates ranging from lava desert to rainforest to near-alpine, and is home to an active volcano system inside Hawaiʻi Volcanoes National Park. Distances are bigger and traffic is lighter. Splitting the trip the way we did — a few days of city-and-surf energy, then a few days of a slower, wilder island — worked well as a pair.
+
+### The honest downsides — there really weren't many
+
+We came home without much to complain about. It's a genuinely easy, low-friction trip to do with kids — you can set your own pace, and it's easy to find things that suit any kid's interests, whether that's food, tide pools, hikes, creatures, or just resort time. The food especially is an easy palette for kids, and the whole vibe is different from a mainland US beach town in a way that made the trip feel like a real "getaway" rather than just a warmer version of home.
+
+If there's one genuine gripe, it's the **airports**: expensive, with pretty mediocre food options. Grab something before you head in rather than counting on a real meal once you're there. TSA itself, on the other hand, was easy and fast both times — no complaints on that front.
+
+<Note type="win" label="Go if">
+  You want a trip that's genuinely easy logistically (no passport, no currency, English everywhere)
+  but still feels far from home. Great for families — beaches, easy hikes, and animal encounters are
+  everywhere, and it's easy to build a day around whatever your kids are actually into.
+</Note>
+
+<Note type="warn" label="Think harder if">
+  You're hoping for one uniform island experience — Oʻahu and the Big Island in particular could not
+  be more different from each other, so pick your bases with that contrast in mind rather than
+  expecting "more of the same."
 </Note>
 
 </div>
 
 </Section>
+
+<Section id="planning" num="02" title="Planning, weather & money" subtitle="What to lock in early, and what Hawaii actually costs.">
+
+<div class="measure">
+
+#### Book early
+
+- **Flights and both hotels.** Waikiki beachfront properties and Kohala Coast resorts both fill up, especially around summer break and winter holidays.
+- **Anything with a hard capacity limit:** the luau, the submarine tour, the Kualoa Ranch ATV tour, dolphin lagoon time if your resort limits it.
+
+#### Weather
+
+Hawaii doesn't really have a cold season — expect daytime temps roughly **75–88°F (24–31°C)** year-round on the coast, with humidity that makes it feel warmer. The real seasonal split is wet vs. dry: **November–March** is the wetter, higher-surf season (especially on north- and west-facing shores), while **April–October** is drier and calmer. Higher elevations (Volcano area on the Big Island, the interior of Oʻahu) run noticeably cooler and wetter than the coast — pack a layer even in summer if you're heading up to Hawaiʻi Volcanoes National Park.
+
+<Note label="Vog">
+  "Vog" — volcanic smog from ongoing activity at Kīlauea — can drift across the Big Island depending
+  on wind direction, and occasionally reaches other islands. It's a real respiratory irritant for
+  people with asthma or other conditions. Check the Hawaii DOH vog dashboard before a trip that
+  involves the Volcano area.
+</Note>
+
+#### Money
+
+Hawaii runs on the US dollar and cards are accepted everywhere in resort areas; carry some cash for food trucks and small local spots, several of which are cash-only or card-with-a-fee. Expect meals, groceries, and gas to run noticeably higher than mainland prices — everything gets shipped in.
+
+</div>
+
+</Section>
+
+<Section id="logistics" num="03" title="Flights and rental cars" subtitle="How we actually got between islands, and what we drove on each one.">
+
+<div class="measure">
+
+### Getting to Hawaii, and between islands
+
+Flying in from the mainland is a normal domestic flight — no passport needed. **Getting between islands is its own short hop**, not an extension of your inbound flight unless you book it that way. We flew Oʻahu → Hawaiʻi Island partway through the trip.
+
+**Hawaiian Airlines** and **Southwest Airlines** both fly nonstop between Honolulu (HNL) and Kona (KOA) multiple times a day; the flight itself is only **about 45 minutes**, though you should budget real time on both ends for airport security and bag claim — interisland terminals in Hawaii can be slower than the short flight time suggests. There's no agricultural inspection for this leg (that only applies when leaving the state). Book the interisland leg directly with the airline; Southwest in particular runs frequent short-notice interisland sales.
+
+<Note label="Pack light for the hop">
+  If you're checking bags on both the inbound mainland flight and the interisland flight, confirm
+  whether your fare includes interisland bag fees separately — Southwest's two-free-checked-bags
+  policy carries over, but not every fare class or airline does.
+</Note>
+
+### Island hopping, in more detail
+
+A few things that make the HNL → KOA leg feel different from a normal domestic connection:
+
+- **Despite being a 45-minute domestic hop, it's still a full TSA screening.** There's no shortcut because it's "just interisland" — plan on going through security exactly like any other flight.
+- **Arrive at least 90 minutes early.** Interisland gates at Honolulu's Daniel K. Inouye International Airport can be in a different terminal area than the one you land in on your inbound mainland flight, so don't build a tight connection around a best-case walk between gates. TSA PreCheck helps if you have it.
+- **Hawaiian Airlines is the dominant interisland carrier** — it's flown these routes since 1929, runs about 170 daily interisland flights, and mostly uses Boeing 717s (roughly 120 seats) with flight times of 20–50 minutes depending on the route. Reliability tends to run higher than Southwest's interisland service, which is worth factoring in if a missed connection would blow up a same-day tour booking.
+- **Bags are simple on this leg.** Hawaiian doesn't charge for a normal checked bag on interisland flights (extra or oversized bags do incur a fee); Southwest's standard two-free-checked-bags policy applies here too.
+- **Factor in the "shoulders" of the flight, not just the flight itself.** Hotel checkout, the drive to the airport, security, boarding, landing, and bag claim on the other end typically add up to more total time than the 45 minutes in the air — treat it like a half-day transition, not a quick hop.
+
+<Note type="warn" label="Consider the alternative">
+  If you're checking a lot of luggage or traveling with very young kids, it's worth pricing an
+  **open-jaw itinerary** (fly into Honolulu, fly home from Kona) against the interisland-hop
+  approach we used — it skips one full airport cycle, though it means picking a different rental car
+  return/pickup pattern on each island.
+</Note>
+
+<Note label="Eat before you get to the airport">
+  Food options inside Hawaii's airports are limited and expensive relative to what you'll find just
+  about anywhere else on the islands. Grab a real meal or snacks before you head in rather than
+  planning to eat once you're there. TSA itself was easy and fast both times we went through it —
+  the airport experience overall was smoother than the food situation suggests.
+</Note>
+
+### Oʻahu: the rental car
+
+We rented a **Chevrolet Camaro convertible** from **Voyage Rental Cars**, a small independent agency near our hotel in Waikiki. Pickup was easy and parking was free, though the garage has **limited hours** — worth checking before you plan a very early or very late pickup/drop-off. A convertible was genuinely a fun call for Oʻahu's mix of coastal highway and North Shore driving, though it's not the most practical if you're hauling beach gear or car seats for more than two kids.
+
+<Note label="Now Sky Road Rent A Car">
+  Voyage Rental Cars has since rebranded to **Sky Road Rent A Car**, same desk:
+  [skyroadrentacar.com](https://www.skyroadrentacar.com/home), Waikiki Shopping Plaza, Level 1, 2250
+  Kalākaua Ave, Honolulu, HI 96815 · (808) 997-3522. If you're rebooking with the same setup, this
+  is the one to search for.
+</Note>
+
+### Hawaiʻi Island: the rental car
+
+We picked up a car from **Budget Car Rental at Kona International Airport (KOA)**, the standard airport-counter option. On the Big Island a car is close to essential — distances between sights are large (it's roughly two hours from the Kohala Coast to Hawaiʻi Volcanoes National Park), and public transit doesn't cover most visitor destinations.
+
+<Note label="Driving distances on the Big Island">
+  The island is genuinely huge — over 4,000 square miles, bigger than all the other Hawaiian islands
+  combined. Budget more driving time than you'd expect from the map; roads are often single-lane
+  each way and wind through small towns.
+</Note>
+
+### Grocery runs
+
+Having a car on both islands meant we ended up doing regular grocery store runs — stocking up for hikes, beach days, and just snacking back at the hotel rather than paying resort prices for everything. Worth building into the itinerary rather than treating it as a chore:
+
+- **Don Quijote ("Donki")** — a Japanese discount superstore with locations on Oʻahu, and genuinely worth a dedicated visit, not just a quick stop. Huge selection of Japanese and local snacks, drinks, and prepared food at better prices than resort-area shops.
+- **7-Eleven** — Hawaii's version leans hard into local and Japanese-style food, well beyond mainland 7-Eleven fare. A **salmon onigiri/rice ball** was a repeat favorite (we never caught the exact product name — if you spot it, it's worth grabbing).
+- **Shrimp chips** and other local snack brands turned into a running favorite in the car and at the hotel.
+- Stocking up on **drinks** at a grocery store rather than buying them at the beach or the resort added up to real savings over 10 days.
+
+</div>
+
+</Section>
+
+<Section id="stay" num="04" title="Where we slept">
+
+<div class="tbl">
+
+| Base                         | Property                                                                                                                                              | Nights                             |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Waikiki, Oʻahu               | [The Royal Hawaiian, A Luxury Collection Resort](https://www.royal-hawaiian.com)<br /><span class="mono">2259 Kalākaua Ave, Honolulu, HI 96815</span> | <span class="mono">5 nights</span> |
+| Kohala Coast, Hawaiʻi Island | Hilton Waikoloa Village<br /><span class="mono">69-425 Waikoloa Beach Dr, Waikoloa Village, HI 96738</span>                                           | <span class="mono">5 nights</span> |
+
+</div>
+
+<div class="measure">
+
+### The Royal Hawaiian — Waikiki
+
+The famous "Pink Palace of the Pacific," beachfront on the Waikiki strip and open since 1927 — there's real history here, not just a pink paint job. What stood out:
+
+- **The Mai Tais** were genuinely excellent — this is one of the hotels that claims to have originated the drink, and the bar leans into it.
+- **Breakfast with an ocean view** was a highlight of the mornings — the **pink pancakes** in particular were a hit with the kids.
+- **Free daily classes** — lei making, koi feeding — gave the kids something low-key to do most mornings without leaving the property.
+- **Location is the whole value proposition.** Central on the Waikiki strip, walking distance to an enormous amount of food and shopping.
+
+<Note type="warn" label="Parking">
+  Self- and valet parking are both expensive, as is typical for Waikiki beachfront hotels — factor
+  it into the budget, or plan around your rental car pickup/drop-off timing so you're not paying for
+  days you don't need the car.
+</Note>
+
+### Hilton Waikoloa Village — Kohala Coast
+
+This is less a hotel and more a resort-as-destination — budget real time here, not just a place to sleep between excursions. The property sprawls across 62 oceanfront acres and includes:
+
+- A **large ocean-fed saltwater lagoon** — protected from the open ocean's rougher surf, and genuinely full of marine life: sea turtles, eels, rays, and reef fish all in swimming distance of the beach chairs.
+- **Canals running through the property** with large ocean fish visible from the walkways (and connected by a monorail/canal-boat system between the towers — worth riding at least once just for the novelty).
+- A **separate dolphin lagoon**, where we swam with dolphins.
+- **Multiple pools and waterslides.**
+- **Rentable water activities**: paddleboards, sea hammocks, kayaks, and water trikes.
+
+The kids didn't want to leave the property most days, which tells you most of what you need to know.
+
+</div>
+
+</Section>
+
+<Section id="oahu" num="05" title="Oʻahu" subtitle="Five days split between Waikiki, the windward side, and the North Shore.">
+
+<div class="measure">
+
+### Manoa Falls Trail
+
+A gentle rainforest hike — about 1.5–2 miles round trip, roughly an hour or two depending on stops, and forgiving enough for kids. The trail climbs through banyan and bamboo groves to a 150-foot waterfall, and the jungle setting will look familiar: parts of _Jurassic Park_ and _Lost_ were filmed here. Parking at the trailhead runs a small fee; the trail is often muddy, so shoes you don't mind getting dirty are the move.
+
+### Mauka Warriors Luau
+
+Held at Coral Crater Adventure Park in Kapolei, this luau leans into Polynesian **warrior history** rather than the more generic luau format — demonstrations, theatrical tributes, and cultural dances built around the history of Polynesian conflict and King Kamehameha's campaign to unite the islands. Food was fine, not the highlight, but the experience and the number of hands-on activities for kids made it worthwhile.
+
+### Shark's Cove
+
+One of the best easy snorkeling spots on the island, tucked into Pupukea on the North Shore, directly across from a Foodland grocery store. Calm, reef-protected water inside the cove made for great fish- and creature-spotting with the kids.
+
+<Note type="warn" label="Sharp lava rock">
+  Entry is over lava rock and reef, which can be sharp — water shoes are close to essential here,
+  not optional. Conditions flip in winter: high surf makes the cove genuinely dangerous outside the
+  calmer April–October stretch, so check conditions before you go.
+</Note>
+
+### Laniakea Beach
+
+A well-known spot to see **Hawaiian green sea turtles (honu)** hauled out on the sand — we stopped to watch rather than swim. Volunteers sometimes rope off areas around resting turtles; keep your distance regardless (see the safety section — it's a federal protection, not a suggestion).
+
+### Kualoa Ranch — ATV tour
+
+A 4,000-acre working cattle ranch on the windward side that's also one of Hollywood's most-used Hawaii filming locations (_Jurassic Park_, _Jumanji_, _Godzilla_, _Lost_, and dozens more). We booked a guided ATV tour through the Kaʻaʻawa Valley — genuinely informative guide, great views, and the kids enjoyed it more than expected. Guides are happy to stop for photos along the way.
+
+<Note label="Age minimums">
+  ATV tours at Kualoa Ranch require riders to be **16+**; horseback tours allow **10+**. If you're
+  planning around a specific activity here with younger kids, check the age minimum before you build
+  the day around it.
+</Note>
+
+### Byodo-In Temple
+
+A serene, non-denominational Buddhist temple inside the Valley of the Temples in Kāneʻohe — a scaled replica of a 950-year-old temple in Uji, Japan, built in 1968 to mark the centennial of Japanese immigration to Hawaii. The koi pond is a highlight for kids (feeding is often possible), and the grounds are quiet and genuinely beautiful.
+
+<Note type="warn" label="Dress and conduct">
+  It's a working place of worship — beachwear is discouraged, shoes come off before entering the
+  main hall, and a respectful, quiet volume is expected throughout the grounds.
+</Note>
+
+We also picked up sand art from a local artist working near the temple, credited to **Wang Ge**. Turns out she's a known Beijing-trained "cloisonné sand painting" artist — gold-wire outlines filled with brilliant colored sand, mostly Asian and Hawaiian nature scenes — who moved to Hawaii in 2017 and keeps a stand at Byodo-In as well as a **permanent gallery in Waikiki**: [Wangge Gallery](https://www.facebook.com/wanggegallery), 2424 Kalākaua Ave, Suite 135, Honolulu, HI 96815, (808) 639-1378. Worth a stop if you liked what you picked up at the temple.
+
+### Matsumoto Shave Ice
+
+The North Shore institution, in business since 1951 and credited with introducing shave ice's most iconic Hawaii form. Located in the Haleiwa Store Lots at 66-111 Kamehameha Hwy. Expect a line, but it moves fast.
+
+<PlaceList
+  places={[
+    {
+      name: 'Manoa Falls Trail',
+      where: 'Mānoa, Honolulu · trailhead parking on Mānoa Rd',
+      what: 'Easy 1.5–2 mile rainforest hike to a 150-ft waterfall. Small parking fee, gets muddy.',
+    },
+    {
+      name: 'Mauka Warriors Luau',
+      where: 'Coral Crater Adventure Park, 91-1780 Midway Rd, Kapolei',
+      what: 'Warrior-history-focused luau. Good activities for kids, food just okay.',
+    },
+    {
+      name: "Shark's Cove",
+      where: 'Pupukea, North Shore — across from Foodland',
+      what: 'Easy, reef-protected snorkeling. Water shoes essential; summer only for safety.',
+    },
+    {
+      name: 'Laniakea Beach',
+      where: 'North Shore, Kamehameha Hwy',
+      what: 'Reliable spot to see resting green sea turtles from shore.',
+    },
+    {
+      name: 'Kualoa Ranch',
+      where: '49-560 Kamehameha Hwy, Kāneʻohe',
+      what: '4,000-acre ranch and film location. ATV tours 16+, horseback 10+.',
+    },
+    {
+      name: 'Byodo-In Temple',
+      where: '47-200 Kahekili Hwy, Kāneʻohe',
+      what: 'Peaceful Buddhist temple replica with a koi pond kids can feed. Modest dress expected.',
+    },
+    {
+      name: 'Matsumoto Shave Ice',
+      where: '66-111 Kamehameha Hwy, Haleʻiwa',
+      what: 'The North Shore shave ice institution since 1951. Long line, moves quickly.',
+    },
+  ]}
+/>
+
+</div>
+
+</Section>
+
+<Section id="oahu-eat" num="06" title="Eating on Oʻahu" subtitle="Almost everything below is within easy reach of Waikiki, plus a North Shore cluster near Shark's Cove.">
+
+<div class="measure">
+
+Waikiki turned out to be an unexpectedly great food base — dense enough that most nights we just walked. A few standouts: **Musubi & Bento IYASUME** was legitimately locally recommended and good enough that we picked up extras for day trips; **Ramen Bario Waikiki** was the trip's favorite ramen for one of the kids, while **Nana Musubi**'s onigiri was another high point. On the North Shore, the **food truck park in Pupukea**, right across from Shark's Cove, was the perfect post-snorkel stop — garlic shrimp and rice never tasted better than after a morning in the water.
+
+<PlaceList
+  places={[
+    {
+      name: 'Musubi & Bento IYASUME (Waikiki Seaside)',
+      what: 'Locally recommended musubi — legitimately excellent, worth grabbing extra for day trips.',
+    },
+    { name: 'Nana Musubi', what: 'Top-notch onigiri.' },
+    { name: 'Ramen Bario Waikiki', what: "One kid's favorite ramen of the whole trip." },
+    { name: 'Tsurutontan Waikiki', what: 'Popular, well-loved udon spot.' },
+    { name: 'Udon Yama', what: 'Simple, easy udon — a good option for a picky eater.' },
+    { name: 'Ramen Akatsuki', what: 'Another solid Waikiki ramen stop.' },
+    { name: 'Maguro Brothers Hawaii (Waikiki)', what: 'Excellent, fresh poke.' },
+    { name: 'Paia Fish Market (Waikiki)', what: 'Fresh, well-prepared fish plates.' },
+    {
+      name: 'Rainbow Drive-In',
+      what: 'The classic Hawaii plate-lunch experience — worth doing at least once.',
+    },
+    {
+      name: 'Waikiki Food Hall',
+      what: 'Big, varied food hall near the hotel — popular with the kids for the range of options.',
+    },
+    { name: 'Waffle and Berry', what: 'Waffles, a good breakfast/brunch option.' },
+    { name: "Nana's Green Tea", what: 'Japanese tea and matcha desserts.' },
+    {
+      name: 'Mitsuwa Marketplace',
+      what: 'Japanese grocery and snack stop — good for stocking up on car/beach-bag snacks.',
+    },
+    { name: 'Island Vintage Shave Ice', what: 'Another solid Waikiki-based shave ice option.' },
+    {
+      name: 'Food truck park, Pupukea',
+      where: "Across from Shark's Cove",
+      what: 'Garlic shrimp and rice after a morning of snorkeling — great timing, great food.',
+    },
+    {
+      name: 'Haleʻiwa Beach House',
+      where: 'North Shore',
+      what: 'Relaxed dinner spot with a great sunset view over the water — a nice way to end a North Shore day.',
+    },
+  ]}
+/>
+
+</div>
+
+</Section>
+
+<Section id="bigisland" num="07" title="The Big Island" subtitle="Five days on the Kohala Coast, with day trips down to Kona and across to Volcanoes National Park.">
+
+<div class="measure">
+
+### Akaka Falls
+
+An easy, paved loop trail near Honomu to a dramatic 442-foot waterfall — one of the more accessible "big" waterfalls on the island, and genuinely manageable for kids.
+
+### Rainbow Falls
+
+Right in Hilo, an easy roadside-adjacent waterfall — worth a stop if you're already in town, minimal effort required.
+
+### Tide pools at Wawaloli Beach Park
+
+A cove near the Natural Energy Laboratory of Hawaii Authority (NELHA) area outside Kailua-Kona, with tide pools that kept the kids entertained exploring for a good while.
+
+### Ocean Rider Seahorse Farm
+
+A genuinely unique, biologist-led educational tour near the Kona airport (in the NELHA research park area) — the farm sustainably breeds seahorses and seadragons for aquariums and research rather than pulling them from the wild. The highlight: guests get to hold a seahorse, which wraps its tail gently around a finger. Reservations recommended in advance.
+
+### Submarine tour, Kona
+
+We took an **Atlantis Submarines** tour departing from the Kailua-Kona pier (meeting point near 75-5660 Palani Rd) — a genuine, Coast Guard-approved passenger submarine descending about 100 feet to a 25-acre coral reef with two shipwrecks. A completely unique way to see the underwater world without anyone getting wet, and a hit with the kids.
+
+### Hawaiʻi Volcanoes National Park
+
+The big day trip — roughly two hours from the Kohala Coast. We had lunch in the park (fine, not memorable) and spent the day exploring the crater rim areas and steam vents. Give this more than a rushed afternoon if you can; it's a genuinely different landscape from the resort coast.
+
+### Nāhuku (Thurston Lava Tube)
+
+Inside Hawaiʻi Volcanoes National Park — a walkable lava tube formed by flowing lava that hollowed out as its surface cooled and the interior kept draining. An easy, interesting stop most families can do without much planning.
+
+### Punaluʻu Black Sand Beach
+
+A striking black sand beach — the sand is volcanic in origin, formed as lava meets the ocean and shatters into basalt fragments. Green sea turtles frequently rest here as well.
+
+<Note type="warn" label="Parking situation">
+  The parking area had some rough edges when we visited — a few abandoned buildings nearby, plus
+  signage from local residents expressing frustration with development pressure in the area. Nothing
+  that stopped us from visiting, but worth knowing before you arrive so it doesn't feel alarming.
+</Note>
+
+<PlaceList
+  places={[
+    {
+      name: 'Akaka Falls State Park',
+      where: 'Honomu',
+      what: 'Easy paved loop to a 442-ft waterfall. Good for kids.',
+    },
+    { name: 'Rainbow Falls', where: 'Hilo', what: 'Easy roadside waterfall stop.' },
+    {
+      name: 'Wawaloli Beach Park tide pools',
+      where: 'Near NELHA, Kailua-Kona',
+      what: 'Tide pools great for kids to explore.',
+    },
+    {
+      name: 'Ocean Rider Seahorse Farm',
+      where: 'Near Kona International Airport (NELHA area)',
+      what: 'Biologist-led tour; guests hold seahorses. Book ahead.',
+    },
+    {
+      name: 'Atlantis Submarines',
+      where: 'Departs Kailua-Kona pier, near 75-5660 Palani Rd',
+      what: 'Real passenger submarine to a 100-ft coral reef and two shipwrecks.',
+    },
+    {
+      name: 'Hawaiʻi Volcanoes National Park',
+      where: '~2 hrs from Kohala Coast',
+      what: 'Volcanic landscape, crater rim trails, steam vents. Give it a full day.',
+    },
+    {
+      name: 'Nāhuku (Thurston Lava Tube)',
+      where: 'Inside Hawaiʻi Volcanoes National Park',
+      what: 'Walkable lava tube, easy stop.',
+    },
+    {
+      name: 'Punaluʻu Black Sand Beach',
+      where: 'Kaʻū district',
+      what: 'Volcanic black sand beach, frequented by green sea turtles.',
+    },
+  ]}
+/>
+
+</div>
+
+</Section>
+
+<Section id="bigisland-eat" num="08" title="Eating on the Big Island">
+
+<div class="measure">
+
+<PlaceList
+  places={[
+    {
+      name: 'Ikkyu Ramen',
+      where: 'Waikoloa',
+      what: 'Solid, convenient ramen option near the resort.',
+    },
+    { name: 'Lehua Restaurant', what: 'A good sit-down option during the Big Island stretch.' },
+    { name: 'Pau Hana Poke', what: 'Delicious poke.' },
+  ]}
+/>
+
+<Note label="Souvenir stop">
+  **Costco on the Big Island** (Kailua-Kona) was a genuinely convenient stop for souvenirs and bulk
+  snacks before flying home — worth a visit if you have a Costco membership already.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="safety" num="09" title="Ocean, sun & cultural etiquette" subtitle="The Hawaii-specific things a first-timer should actually know before getting in the water or off the trail.">
+
+<div class="measure">
+
+### Ocean safety
+
+Hawaii's beaches are beautiful and genuinely dangerous in specific, predictable ways — most drownings and rescues involve visitors underestimating conditions they'd never encounter at home.
+
+<Note type="warn" label="Core rules">
+  **Check conditions before you get in.** Look for posted flags/signs and, where available,
+  lifeguards — surf, currents, and safety can vary dramatically by beach and by season. **"When in
+  doubt, don't go out."** Winter (roughly November–March) brings much higher surf to north- and
+  west-facing shores specifically — a beach that's calm and easy in July can be genuinely hazardous
+  in January. **Never turn your back on the ocean**, and never swim alone in unfamiliar water.
+</Note>
+
+**Rip currents** are the leading cause of ocean rescues in Hawaii. If caught in one, don't swim against it — swim parallel to shore until free of the current, then angle back in.
+
+### Tsunamis — a real, if rare, possibility
+
+Hawaii sits in the middle of the Pacific, so tsunami warnings do happen, and coastal resorts (including ones you're likely staying at) sit inside mapped evacuation zones. It's genuinely worth five minutes of prep rather than something to wave off as unlikely.
+
+<Note type="warn" label="What to actually do">
+  **Know your evacuation zone before you need it** — ask your hotel at check-in, or look up the
+  county's tsunami evacuation map online. If a warning is issued, **move to high ground
+  immediately** and stay there until county officials give the official all-clear — don't return
+  early because things look calm. Hawaii's outdoor siren system is tested statewide at **11:45am on
+  the first business day of every month**, so a mid-month siren should always be taken as real. Cell
+  phone Wireless Emergency Alerts, local TV/radio, and NOAA Weather Radio are all backup channels if
+  you don't hear or aren't near a siren.
+</Note>
+
+### Reef and wildlife
+
+- **Reef-safe sunscreen is required by law**, not just a suggestion — Hawaii banned the sale of sunscreens containing oxybenzone and octinoxate in 2021 because of coral reef damage. Look for mineral (zinc oxide/titanium dioxide) formulas.
+- **Don't touch, stand on, or step on coral** — it's a living organism and takes decades to recover from damage.
+- **Green sea turtles (honu) and Hawaiian monk seals are federally protected.** Keep a distance of at least **10 feet from turtles** and **50 feet from monk seals** — touching or crowding them can carry real fines, and it's genuinely harmful to animals that are already vulnerable.
+- A rough rule of thumb for **jellyfish**: box jellyfish tend to arrive on south- and west-facing Oʻahu shores (including Waikiki) roughly **8–10 days after a full moon** — check current advisories if the timing lines up with your trip.
+
+### Cultural etiquette
+
+- **"Aloha spirit" is a real, practiced value, not just a marketing phrase** — patience, respect, and generosity go a long way locally.
+- **Don't take lava rock or sand off the islands.** Beyond the (real) ecological impact, there's a well-known local belief that removing volcanic material invites "Pele's curse" — bad luck attributed to the volcano goddess. Whether or not you take the folklore literally, taking material from beaches and parks is both discouraged and often illegal.
+- **Respect kapu (restricted/sacred) signage and private roads.** Some areas — heiau (temple sites), certain trails, and private land — are closed for cultural or safety reasons. This isn't red tape for its own sake.
+- **Hiking**: stay on marked trails. Valley trails like Manoa are prone to flash flooding during heavy rain, and off-trail terrain is often less stable than it looks.
+
+</div>
+
+</Section>
+
+<Section id="pack" num="10" title="Packing">
+
+<div class="measure">
+
+- **Reef-safe (mineral) sunscreen** — required, and easy to forget before you land.
+- **Water shoes** — genuinely necessary for lava-rock entries like Shark's Cove, not optional.
+- **A light rain layer** — North Shore Oʻahu and the Big Island's Volcano area both see real rain even in the dry season.
+- **A warmer layer for Volcanoes National Park** — elevation there runs noticeably cooler than the coast.
+- **Two swimsuits per person** — with pools, lagoons, and ocean all in daily rotation, having a dry suit to switch into matters.
+- **Reusable water bottles** — tap water is safe to drink island-wide.
+- **Cash** — several food trucks and small local spots are cash-only or prefer it.
+- **A dry bag** — useful for the submarine tour, boat activities, and the resort's water toys.
+
+</div>
+
+</Section>
+
+<Section id="kids" num="11" title="Doing this with kids">
+
+<div class="measure">
+
+The mix of **hands-on animal encounters** (koi feeding, seahorse holding, dolphin lagoon, turtle-spotting) and **low-effort, high-payoff nature** (tide pools, easy waterfall hikes, calm-water snorkeling) made both islands work well for kids. The Kualoa Ranch ATV tour and the submarine tour were the two "big ticket" activities that most exceeded expectations — both delivered a genuine sense of adventure without requiring much physical difficulty.
+
+<Note type="warn" label="Check age minimums before you plan around anything">
+  Kualoa Ranch ATV tours require **16+**; horseback tours allow **10+**. If a specific activity
+  anchors your itinerary, confirm the age minimum first — it's a common source of last-minute
+  schedule scrambles.
+</Note>
+
+Give every stop a story — reading a fact or two out loud before arriving turned a few of these stops from "another photo" into something the kids actually engaged with:
+
+<KidFacts
+  facts={[
+    {
+      place: 'Kualoa Ranch',
+      fact: 'Over 200 Hollywood movies and TV shows have been filmed in this one valley — Jurassic Park, Jumanji, Godzilla, and Lost among them.',
+    },
+    {
+      place: 'Byodo-In Temple',
+      fact: 'This temple is a smaller copy of a real 950-year-old temple in Uji, Japan, built here to mark 100 years since the first Japanese immigrants arrived in Hawaii.',
+    },
+    {
+      place: 'Punaluʻu Black Sand Beach',
+      fact: 'The black sand is made of lava that shattered into tiny pieces the instant it touched the ocean — the whole beach is basically volcanic glass.',
+    },
+    {
+      place: 'Nāhuku Lava Tube',
+      fact: 'This tunnel formed when the outside of a river of lava cooled and hardened while the lava inside kept flowing and eventually drained out, leaving the tube behind.',
+    },
+    {
+      place: 'Manoa Falls',
+      fact: "The jungle around this trail looked prehistoric enough that Jurassic Park's filmmakers used it as a filming location.",
+    },
+  ]}
+/>
+
+Motion sickness meds are worth having on hand before the submarine tour and any boat-based activity — the ride out to the sub in particular can be choppier than the calm resort water suggests.
+
+</div>
+
+</Section>
+
+<Section id="wrong" num="12" title="What we'd do differently" subtitle="Honest gaps and lessons, not just highlights.">
+
+<div class="measure">
+
+### What went wrong
+
+**A tsunami warning hit while we were on the Big Island.** We evacuated to high ground along with everyone else on that stretch of coast. It wasn't as dramatic as it sounds in hindsight — we picked up some food and snacks, found a spot to watch the sunset, and waited it out until officials gave the all-clear, then drove back down to the hotel. Genuinely fine in the end, but it's a real thing that can happen on a Hawaii trip, not just theoretical disaster-prep material — see the safety section above for what to actually do if it happens to you.
+
+### What we'd tell a first-timer
+
+- **Don't try to see "all of Hawaii" in one trip.** Two islands in 10 days was already a lot of driving and repacking; each island rewards slowing down more than covering more ground.
+- **Book the capacity-limited stuff (luau, submarine, ATV tour) well before you land** — these are the items most likely to sell out, especially in peak season.
+- **Reef-safe sunscreen and water shoes are not optional extras** — both came up as genuinely necessary, not just nice-to-haves.
+
+</div>
+
+</Section>
+
+<div class="close">
+<div class="wrap">
+
+## Would we recommend it?
+
+Completely, without hesitation. It was a beautiful trip with so many great things to do with the kids, and it's genuinely easy to set your own pace and find things that suit any kid's interests. The food is an easy palette for kids, and the whole vibe is different from a mainland US beach town in a way that made every day feel like a real escape rather than just a warmer version of home. The kids loved the food, the tide pools, the hikes, the creatures, the exploring, and the resorts themselves — it was amazing, full stop.
+
+Ten days across two islands · June 2025 · Happy to fill in more detail on any of it.
+
+</div>
+</div>
