@@ -4,15 +4,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Hai Le HQ"
-  description="A running log of the trips we plan, book, and actually take."
+  description="Travel guides and school study guides from our family, with more of what we're into on the way."
 >
   <div class="wrap">
     <header class="landing-hero">
-      <p class="eyebrow">Hai Le HQ · Family Travel Log</p>
+      <p class="eyebrow">Hai Le HQ · Family Site</p>
       <h1 class="landing-h1">Where we've<br />been stamped</h1>
       <p class="standfirst">
-        A running log of the trips we plan, book, and actually take — kept somewhere more permanent
-        than a group chat.
+        Travel guides and school study guides, mostly — kept somewhere more permanent than a group
+        chat. Plus whatever else we're into; more on that below.
       </p>
       <div class="stamps">
         <a class="stamp" href="/travel/iceland-2026/">Iceland<br />Jul 2026</a>
@@ -29,47 +29,145 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         viewBox="0 0 760 360"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
-        aria-label="Illustrated placeholder of a family looking at the northern lights in Iceland"
+        aria-label="Illustration of the four of us surrounded by icons for travel, boats, school, fishing, kaiju and anime, outdoors, arcades, aquatics, 3D printing, crafts, and toys"
       >
         <defs>
           <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1a1f3d"></stop>
-            <stop offset="55%" stop-color="#2a2350"></stop>
-            <stop offset="100%" stop-color="#3d2a4a"></stop>
-          </linearGradient>
-          <linearGradient id="auroraA" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#3EC8A8" stop-opacity="0"></stop>
-            <stop offset="50%" stop-color="#3EC8A8" stop-opacity=".55"></stop>
-            <stop offset="100%" stop-color="#9FE0EC" stop-opacity="0"></stop>
-          </linearGradient>
-          <linearGradient id="auroraB" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#8B7FD9" stop-opacity="0"></stop>
-            <stop offset="50%" stop-color="#C9A2E0" stop-opacity=".45"></stop>
-            <stop offset="100%" stop-color="#8B7FD9" stop-opacity="0"></stop>
+            <stop offset="0%" stop-color="#2e1a24"></stop>
+            <stop offset="55%" stop-color="#8a4a68"></stop>
+            <stop offset="100%" stop-color="#eab568"></stop>
           </linearGradient>
         </defs>
         <rect width="760" height="360" fill="url(#sky)"></rect>
-        <path d="M0,80 Q190,20 380,90 T760,60" stroke="url(#auroraA)" stroke-width="34" fill="none"
-        ></path>
-        <path
-          d="M0,130 Q200,70 400,140 T760,110"
-          stroke="url(#auroraB)"
-          stroke-width="26"
-          fill="none"></path>
-        <circle cx="120" cy="60" r="1.6" fill="#f2d8e5" opacity=".8"></circle>
-        <circle cx="600" cy="45" r="1.6" fill="#f2d8e5" opacity=".7"></circle>
-        <circle cx="670" cy="90" r="1.2" fill="#f2d8e5" opacity=".6"></circle>
-        <circle cx="260" cy="35" r="1.2" fill="#f2d8e5" opacity=".6"></circle>
-        <circle cx="450" cy="70" r="1.4" fill="#f2d8e5" opacity=".7"></circle>
-        <path
-          d="M0,260 L110,175 L200,240 L300,150 L410,255 L520,190 L630,250 L760,210 L760,360 L0,360 Z"
-          fill="#100d18"
-          opacity=".9"></path>
-        <path
-          d="M0,300 L140,235 L260,285 L400,220 L540,290 L680,250 L760,270 L760,360 L0,360 Z"
-          fill="#181225"></path>
-        <ellipse cx="380" cy="345" rx="380" ry="26" fill="#E8EEF2" opacity=".9"></ellipse>
-        <g transform="translate(300,282)">
+
+        <!-- confetti -->
+        <circle cx="60" cy="40" r="3" fill="#ff6fa8" opacity=".6"></circle>
+        <circle cx="700" cy="130" r="2.5" fill="#7fabe8" opacity=".6"></circle>
+        <circle cx="380" cy="30" r="2" fill="#f2c94c" opacity=".7"></circle>
+        <circle cx="250" cy="220" r="2" fill="#3EC8A8" opacity=".5"></circle>
+        <circle cx="720" cy="230" r="2.5" fill="#f2d8e5" opacity=".5"></circle>
+
+        <ellipse cx="380" cy="345" rx="380" ry="26" fill="#f2d8e5" opacity=".12"></ellipse>
+
+        <!-- interest badges -->
+        <g transform="translate(90,108)">
+          <circle r="27" fill="#ff6fa8"></circle>
+          <path d="M7.5,-7.5 L2.25,7.5 L-0.75,0.75 L-7.5,-2.25 Z" fill="#fff"></path>
+          <line
+            x1="7.5"
+            y1="-7.5"
+            x2="-0.75"
+            y2="0.75"
+            stroke="#ff6fa8"
+            stroke-width="1.3"
+            opacity=".9"></line>
+        </g>
+        <g transform="translate(30,170)">
+          <circle r="20" fill="#3EC8A8"></circle>
+          <path d="M-9,4 L9,4 L6,8 L-6,8 Z" fill="#fff"></path>
+          <line x1="0" y1="4" x2="0" y2="-9" stroke="#fff" stroke-width="1.8"></line>
+          <path d="M0,-8 L7,3 L0,3 Z" fill="#fff"></path>
+        </g>
+        <g transform="translate(210,62)">
+          <circle r="25" fill="#7fabe8"></circle>
+          <path d="M-11,-7 L-1,-9 L-1,7 L-11,9 Z" fill="#fff"></path>
+          <path d="M11,-7 L1,-9 L1,7 L11,9 Z" fill="#fff"></path>
+        </g>
+        <g transform="translate(380,35)">
+          <circle r="20" fill="#f2c94c"></circle>
+          <path d="M-9,6 L-9,-1 L-5,-7 L-2,-1 L2,-8 L5,-1 L9,-6 L9,6 Z" fill="#fff"></path>
+          <circle cx="-2" cy="1" r="1.4" fill="#f2c94c"></circle>
+        </g>
+        <g transform="translate(330,100)">
+          <circle r="26" fill="#f2c94c"></circle>
+          <ellipse cx="-3" cy="0" rx="9" ry="5.5" fill="#fff"></ellipse>
+          <path d="M6,0 L15,-6 L15,6 Z" fill="#fff"></path>
+          <circle cx="-8" cy="-1" r="1.4" fill="#f2c94c"></circle>
+        </g>
+        <g transform="translate(450,58)">
+          <circle r="25" fill="#3EC8A8"></circle>
+          <path d="M-11,8 L0,-9 L11,8 Z" fill="#fff"></path>
+        </g>
+        <g transform="translate(565,100)">
+          <circle r="26" fill="#C9A2E0"></circle>
+          <path d="M-6,10 L6,10 L4,3 L-4,3 Z" fill="#fff"></path>
+          <rect x="-1.6" y="-6" width="3.2" height="9" rx="1.6" fill="#fff"></rect>
+          <circle cx="0" cy="-8" r="5" fill="#fff"></circle>
+          <circle cx="0" cy="-8" r="1.8" fill="#C9A2E0"></circle>
+        </g>
+        <g transform="translate(675,66)">
+          <circle r="24" fill="#7fabe8"></circle>
+          <path
+            d="M-11,-3 Q-5.5,-8 0,-3 T11,-3"
+            stroke="#fff"
+            stroke-width="2.4"
+            fill="none"
+            stroke-linecap="round"></path>
+          <path
+            d="M-11,4 Q-5.5,-1 0,4 T11,4"
+            stroke="#fff"
+            stroke-width="2.4"
+            fill="none"
+            stroke-linecap="round"
+            opacity=".8"></path>
+        </g>
+        <g transform="translate(150,178)">
+          <circle r="22" fill="#ff6fa8"></circle>
+          <rect
+            x="-7"
+            y="-3"
+            width="14"
+            height="11"
+            rx="1.5"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"></rect>
+          <path
+            d="M-7,-3 L-2,-9 L12,-9 L7,-3 Z"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linejoin="round"></path>
+          <path
+            d="M7,-3 L12,-9 L12,2 L7,8 Z"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linejoin="round"></path>
+        </g>
+        <g transform="translate(615,182)">
+          <circle r="22" fill="#f2c94c"></circle>
+          <line
+            x1="-5"
+            y1="6"
+            x2="5"
+            y2="-8"
+            stroke="#fff"
+            stroke-width="2.2"
+            stroke-linecap="round"></line>
+          <line
+            x1="5"
+            y1="6"
+            x2="-5"
+            y2="-8"
+            stroke="#fff"
+            stroke-width="2.2"
+            stroke-linecap="round"></line>
+          <circle cx="-5" cy="6" r="3" fill="none" stroke="#fff" stroke-width="1.8"></circle>
+          <circle cx="5" cy="6" r="3" fill="none" stroke="#fff" stroke-width="1.8"></circle>
+        </g>
+        <g transform="translate(710,168)">
+          <circle r="20" fill="#C9A2E0"></circle>
+          <circle cx="0" cy="-8" r="3.5" fill="#fff"></circle>
+          <rect x="-3.5" y="-4" width="7" height="8" rx="1.5" fill="#fff"></rect>
+          <rect x="-8" y="-3.5" width="4.5" height="2.4" rx="1" fill="#fff"></rect>
+          <rect x="3.5" y="-3.5" width="4.5" height="2.4" rx="1" fill="#fff"></rect>
+          <rect x="-3" y="4" width="2.6" height="6" rx="1" fill="#fff"></rect>
+          <rect x="0.4" y="4" width="2.6" height="6" rx="1" fill="#fff"></rect>
+        </g>
+
+        <!-- the four of us -->
+        <g transform="translate(380,290) scale(1.3)">
           <ellipse cx="0" cy="52" rx="70" ry="8" fill="#000" opacity=".25"></ellipse>
           <circle cx="-36" cy="6" r="11" fill="#F2C9A0"></circle>
           <rect x="-46" y="15" width="20" height="30" rx="7" fill="#ff6fa8"></rect>
@@ -82,15 +180,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <circle cx="42" cy="12" r="8" fill="#F2C9A0"></circle>
           <rect x="35" y="19" width="14" height="22" rx="6" fill="#8B7FD9"></rect>
         </g>
-        <g transform="translate(560,300)" opacity=".92">
-          <rect x="-46" y="-14" width="92" height="34" rx="9" fill="#b888a0"></rect>
-          <rect x="-38" y="-24" width="52" height="18" rx="8" fill="#b888a0"></rect>
-          <circle cx="-26" cy="22" r="10" fill="#24171e"></circle>
-          <circle cx="26" cy="22" r="10" fill="#24171e"></circle>
-          <rect x="-30" y="-8" width="18" height="12" rx="2" fill="#2a2350" opacity=".6"></rect>
-        </g>
       </svg>
-      <p class="caption">Placeholder illustration — swap in your own artwork here.</p>
     </section>
 
     <section class="destinations">
@@ -138,6 +228,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p>Every Blooket set, grouped by grade and subject.</p>
         </a>
       </div>
+    </section>
+
+    <section class="also-into">
+      <h2 class="landing-h2">Also into</h2>
+      <div class="chip-row">
+        <span class="chip">Fishing</span>
+        <span class="chip">Outdoors</span>
+        <span class="chip">Arcades &amp; claw machines</span>
+        <span class="chip">Aquatics</span>
+        <span class="chip">3D printing</span>
+        <span class="chip">Crafts</span>
+      </div>
+      <p class="also-note">
+        No guides for these yet — write-ups land here as we get around to them.
+      </p>
     </section>
   </div>
 </BaseLayout>
@@ -206,14 +311,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     width: 100%;
     height: auto;
   }
-  .caption {
-    margin: 0;
-    padding: 12px var(--sp);
-    font-family: var(--mono);
-    font-size: 11.5px;
-    color: var(--muted);
-    border-top: 1px solid var(--rule);
-  }
   .destinations {
     padding-bottom: calc(var(--sp) * 2);
     border-bottom: none;
@@ -269,5 +366,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 0;
     color: var(--muted);
     font-size: 14px;
+  }
+  .also-into {
+    padding-bottom: calc(var(--sp) * 2.4);
+  }
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .chip {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+  }
+  .also-note {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 13px;
   }
 </style>
