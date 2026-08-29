@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import DownloadList from '../../components/ui/DownloadList.astro';
+import FileBrowser from '../../components/ui/FileBrowser.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('school', ({ data }) => !data.draft);
@@ -10,7 +11,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, summary, downloads } = entry.data;
+const { title, summary, downloads, filesPrefix } = entry.data;
 ---
 
 <ContentLayout title={`${title} — hailehq.com`} description={summary}>
@@ -24,6 +25,7 @@ const { title, summary, downloads } = entry.data;
         <Content />
       </div>
       {downloads && downloads.length > 0 && <DownloadList downloads={downloads} />}
+      {filesPrefix && <FileBrowser prefix={filesPrefix} />}
     </div>
   </section>
 </ContentLayout>

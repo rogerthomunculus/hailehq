@@ -1,0 +1,10 @@
+name = "hailehq-files-list"
+main = "src/index.js"
+compatibility_date = "2026-08-29"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "hailehq-files"
+
+[vars]
+PUBLIC_BASE_URL = "https://pub-c5d7e38b1cdb4a4abbcd766a261a214f.r2.dev"

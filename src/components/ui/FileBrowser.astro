@@ -1,0 +1,77 @@
+---
+// Live-lists files from the hailehq-files R2 bucket via the files-list
+// Worker, so dropping a file into the bucket shows up on next page load —
+// no redeploy needed. Matches DownloadList.astro's markup/styling.
+interface Props {
+  prefix: string;
+}
+
+const { prefix } = Astro.props;
+const apiBase =
+  import.meta.env.PUBLIC_FILES_API_URL || 'https://hailehq-files-list.files-list.workers.dev';
+---
+
+<ul class="places" data-file-browser data-prefix={prefix} data-api={apiBase}>
+  <li class="where">Loading files…</li>
+</ul>
+
+<script>
+  interface RemoteFile {
+    name: string;
+    url: string;
+  }
+
+  function render(el: HTMLElement, files: RemoteFile[]) {
+    el.replaceChildren();
+
+    if (files.length === 0) {
+      const li = document.createElement('li');
+      li.className = 'where';
+      li.textContent = 'No files yet.';
+      el.appendChild(li);
+      return;
+    }
+
+    for (const file of files) {
+      const li = document.createElement('li');
+
+      const b = document.createElement('b');
+      const a = document.createElement('a');
+      a.href = file.url;
+      a.setAttribute('download', '');
+      a.textContent = file.name;
+      b.appendChild(a);
+
+      const span = document.createElement('span');
+      span.className = 'where';
+      span.textContent = (file.name.split('.').pop() || '').toUpperCase();
+
+      li.append(b, span);
+      el.appendChild(li);
+    }
+  }
+
+  function renderError(el: HTMLElement) {
+    el.replaceChildren();
+    const li = document.createElement('li');
+    li.className = 'where';
+    li.textContent = "Couldn't load files right now.";
+    el.appendChild(li);
+  }
+
+  async function hydrate(el: HTMLElement) {
+    const prefix = el.dataset.prefix ?? '';
+    const api = el.dataset.api ?? '';
+
+    try {
+      const res = await fetch(`${api}/list?prefix=${encodeURIComponent(prefix)}`);
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      const data = await res.json();
+      render(el, Array.isArray(data.files) ? data.files : []);
+    } catch {
+      renderError(el);
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-file-browser]').forEach(hydrate);
+</script>
