@@ -62,6 +62,9 @@ const school = defineCollection({
         }),
       )
       .optional(),
+    // R2 key prefix (e.g. "school/algebra/") listed live by the files-list
+    // Worker, so dropping a file into the bucket shows up with no redeploy.
+    filesPrefix: z.string().optional(),
   }),
 });
 
