@@ -1,0 +1,23 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import StudyGuidesBrowser from '../../components/school/StudyGuidesBrowser.astro';
+---
+
+<ContentLayout
+  title="Study Guides — hailehq.com"
+  description="Study guides generated to help the kids with specific homework and topics, organized by grade."
+>
+  <section class="guide-section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Study Guides</h2>
+        <p class="sec-sub">
+          These are study guides we put together to help Hailey and Lucas with specific homework or
+          topics they're working on — not a fixed curriculum, just whatever they need at the moment.
+          New ones show up here as soon as they're added, organized by grade.
+        </p>
+      </div>
+      <StudyGuidesBrowser />
+    </div>
+  </section>
+</ContentLayout>

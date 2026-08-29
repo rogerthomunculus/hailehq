@@ -1,0 +1,155 @@
+---
+// Live-lists everything under the school/study-guides/ prefix in the
+// hailehq-files R2 bucket, grouped by grade folder — e.g.
+// school/study-guides/3/fractions-review.pdf groups under "3rd Grade".
+// Drop a PDF into that folder via the Cloudflare dashboard and it shows up
+// here on next page load, no redeploy. See workers/files-list/README.md
+// for the grade-folder naming convention.
+interface Props {
+  prefix?: string;
+}
+
+const { prefix = 'school/study-guides/' } = Astro.props;
+const apiBase =
+  import.meta.env.PUBLIC_FILES_API_URL || 'https://hailehq-files-list.files-list.workers.dev';
+---
+
+<div data-study-guides data-prefix={prefix} data-api={apiBase}>
+  <p class="where">Loading study guides…</p>
+</div>
+
+<script>
+  interface RemoteFile {
+    name: string;
+    url: string;
+  }
+
+  const ROOT_SLUG = '__root__';
+
+  function gradeRank(slug: string): number {
+    if (slug === ROOT_SLUG) return Infinity;
+    if (slug.toLowerCase() === 'k') return -1;
+    const n = parseInt(slug, 10);
+    return Number.isNaN(n) ? 500 : n;
+  }
+
+  function ordinal(n: number): string {
+    const suffixes = ['th', 'st', 'nd', 'rd'];
+    const v = n % 100;
+    return `${n}${suffixes[(v - 20) % 10] ?? suffixes[v] ?? suffixes[0]}`;
+  }
+
+  function gradeLabel(slug: string): string {
+    if (slug === ROOT_SLUG) return 'General';
+    if (slug.toLowerCase() === 'k') return 'Kindergarten';
+    const n = parseInt(slug, 10);
+    if (!Number.isNaN(n)) return `${ordinal(n)} Grade`;
+    return slug.replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  }
+
+  function fileKind(name: string): string {
+    return (name.split('.').pop() || '').toUpperCase();
+  }
+
+  function buildFileItem(file: RemoteFile, label: string): HTMLLIElement {
+    const li = document.createElement('li');
+    const b = document.createElement('b');
+    const a = document.createElement('a');
+    a.href = file.url;
+    a.setAttribute('download', '');
+    a.textContent = label;
+    b.appendChild(a);
+
+    const span = document.createElement('span');
+    span.className = 'where';
+    span.textContent = fileKind(label);
+
+    li.append(b, span);
+    return li;
+  }
+
+  function render(el: HTMLElement, files: RemoteFile[]) {
+    el.replaceChildren();
+
+    if (files.length === 0) {
+      const p = document.createElement('p');
+      p.className = 'where';
+      p.textContent = 'No study guides yet — check back soon.';
+      el.appendChild(p);
+      return;
+    }
+
+    const groups = new Map<string, RemoteFile[]>();
+    for (const file of files) {
+      const slashIndex = file.name.indexOf('/');
+      const slug = slashIndex === -1 ? ROOT_SLUG : file.name.slice(0, slashIndex);
+      if (!groups.has(slug)) groups.set(slug, []);
+      groups.get(slug)!.push(file);
+    }
+
+    const slugs = [...groups.keys()].sort(
+      (a, b) => gradeRank(a) - gradeRank(b) || a.localeCompare(b),
+    );
+
+    for (const slug of slugs) {
+      const section = document.createElement('div');
+      section.className = 'grade-group';
+
+      const h3 = document.createElement('h3');
+      h3.textContent = gradeLabel(slug);
+      section.appendChild(h3);
+
+      const ul = document.createElement('ul');
+      ul.className = 'places';
+      const items = groups.get(slug)!.sort((a, b) => a.name.localeCompare(b.name));
+      for (const file of items) {
+        const label = slug === ROOT_SLUG ? file.name : file.name.slice(slug.length + 1);
+        ul.appendChild(buildFileItem(file, label));
+      }
+      section.appendChild(ul);
+      el.appendChild(section);
+    }
+  }
+
+  function renderError(el: HTMLElement) {
+    el.replaceChildren();
+    const p = document.createElement('p');
+    p.className = 'where';
+    p.textContent = "Couldn't load study guides right now.";
+    el.appendChild(p);
+  }
+
+  async function hydrate(el: HTMLElement) {
+    const prefix = el.dataset.prefix ?? '';
+    const api = el.dataset.api ?? '';
+
+    try {
+      const res = await fetch(`${api}/list?prefix=${encodeURIComponent(prefix)}`);
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      const data = await res.json();
+      render(el, Array.isArray(data.files) ? data.files : []);
+    } catch {
+      renderError(el);
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-study-guides]').forEach(hydrate);
+</script>
+
+<style>
+  :global(.grade-group) {
+    margin-top: 2rem;
+  }
+  :global(.grade-group:first-child) {
+    margin-top: 0;
+  }
+  :global(.grade-group h3) {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--gold);
+    margin: 0 0 0.6rem;
+  }
+</style>
