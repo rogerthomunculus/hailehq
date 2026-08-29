@@ -1,15 +1,15 @@
 ---
-// Live-lists everything under the school/study-guides/ prefix in the
-// hailehq-files R2 bucket, grouped by grade folder — e.g.
-// school/study-guides/3/fractions-review.pdf groups under "3rd Grade".
-// Drop a PDF into that folder via the Cloudflare dashboard and it shows up
-// here on next page load, no redeploy. See workers/files-list/README.md
-// for the grade-folder naming convention.
+// Live-lists the hailehq-files R2 bucket, grouped by grade folder and (if
+// present) a subject subfolder — e.g. "5th Grade/ELA/some-guide.pdf" groups
+// under "5th Grade" > "ELA". Drop a PDF into the bucket via the Cloudflare
+// dashboard, name the folders however reads naturally (e.g. "5th Grade"),
+// and it shows up here on next page load, no redeploy. See
+// workers/files-list/README.md for more on the convention.
 interface Props {
   prefix?: string;
 }
 
-const { prefix = 'school/study-guides/' } = Astro.props;
+const { prefix = '' } = Astro.props;
 const apiBase =
   import.meta.env.PUBLIC_FILES_API_URL || 'https://hailehq-files-list.files-list.workers.dev';
 ---
@@ -24,27 +24,14 @@ const apiBase =
     url: string;
   }
 
-  const ROOT_SLUG = '__root__';
+  const GENERAL_LABEL = 'General';
 
-  function gradeRank(slug: string): number {
-    if (slug === ROOT_SLUG) return Infinity;
-    if (slug.toLowerCase() === 'k') return -1;
-    const n = parseInt(slug, 10);
-    return Number.isNaN(n) ? 500 : n;
-  }
-
-  function ordinal(n: number): string {
-    const suffixes = ['th', 'st', 'nd', 'rd'];
-    const v = n % 100;
-    return `${n}${suffixes[(v - 20) % 10] ?? suffixes[v] ?? suffixes[0]}`;
-  }
-
-  function gradeLabel(slug: string): string {
-    if (slug === ROOT_SLUG) return 'General';
-    if (slug.toLowerCase() === 'k') return 'Kindergarten';
-    const n = parseInt(slug, 10);
-    if (!Number.isNaN(n)) return `${ordinal(n)} Grade`;
-    return slug.replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  function gradeRank(label: string): number {
+    if (label === GENERAL_LABEL) return Infinity;
+    const l = label.trim().toLowerCase();
+    if (l === 'k' || l.startsWith('kindergarten')) return -1;
+    const m = l.match(/\d+/);
+    return m ? parseInt(m[0], 10) : 500;
   }
 
   function fileKind(name: string): string {
@@ -68,6 +55,26 @@ const apiBase =
     return li;
   }
 
+  // Groups files by top-level folder (grade) then, if present, a second
+  // folder level (subject). Files with no folder at all land in "General".
+  function groupFiles(files: RemoteFile[]) {
+    const grades = new Map<string, Map<string | null, RemoteFile[]>>();
+
+    for (const file of files) {
+      const parts = file.name.split('/');
+      const grade = parts.length === 1 ? GENERAL_LABEL : parts[0];
+      const subject = parts.length > 2 ? parts[1] : null;
+      const label = parts.length === 1 ? parts[0] : parts.slice(subject ? 2 : 1).join('/');
+
+      if (!grades.has(grade)) grades.set(grade, new Map());
+      const subjects = grades.get(grade)!;
+      if (!subjects.has(subject)) subjects.set(subject, []);
+      subjects.get(subject)!.push({ ...file, name: label });
+    }
+
+    return grades;
+  }
+
   function render(el: HTMLElement, files: RemoteFile[]) {
     el.replaceChildren();
 
@@ -79,35 +86,47 @@ const apiBase =
       return;
     }
 
-    const groups = new Map<string, RemoteFile[]>();
-    for (const file of files) {
-      const slashIndex = file.name.indexOf('/');
-      const slug = slashIndex === -1 ? ROOT_SLUG : file.name.slice(0, slashIndex);
-      if (!groups.has(slug)) groups.set(slug, []);
-      groups.get(slug)!.push(file);
-    }
-
-    const slugs = [...groups.keys()].sort(
+    const grades = groupFiles(files);
+    const gradeLabels = [...grades.keys()].sort(
       (a, b) => gradeRank(a) - gradeRank(b) || a.localeCompare(b),
     );
 
-    for (const slug of slugs) {
-      const section = document.createElement('div');
-      section.className = 'grade-group';
+    for (const gradeLabel of gradeLabels) {
+      const gradeSection = document.createElement('div');
+      gradeSection.className = 'grade-group';
 
       const h3 = document.createElement('h3');
-      h3.textContent = gradeLabel(slug);
-      section.appendChild(h3);
+      h3.textContent = gradeLabel;
+      gradeSection.appendChild(h3);
 
-      const ul = document.createElement('ul');
-      ul.className = 'places';
-      const items = groups.get(slug)!.sort((a, b) => a.name.localeCompare(b.name));
-      for (const file of items) {
-        const label = slug === ROOT_SLUG ? file.name : file.name.slice(slug.length + 1);
-        ul.appendChild(buildFileItem(file, label));
+      const subjects = grades.get(gradeLabel)!;
+      const subjectLabels = [...subjects.keys()].sort((a, b) => {
+        if (a === null) return -1;
+        if (b === null) return 1;
+        return a.localeCompare(b);
+      });
+
+      for (const subjectLabel of subjectLabels) {
+        const subjectSection = document.createElement('div');
+        subjectSection.className = 'subject-group';
+
+        if (subjectLabel !== null) {
+          const h4 = document.createElement('h4');
+          h4.textContent = subjectLabel;
+          subjectSection.appendChild(h4);
+        }
+
+        const ul = document.createElement('ul');
+        ul.className = 'places';
+        const items = subjects.get(subjectLabel)!.sort((a, b) => a.name.localeCompare(b.name));
+        for (const file of items) {
+          ul.appendChild(buildFileItem(file, file.name));
+        }
+        subjectSection.appendChild(ul);
+        gradeSection.appendChild(subjectSection);
       }
-      section.appendChild(ul);
-      el.appendChild(section);
+
+      el.appendChild(gradeSection);
     }
   }
 
@@ -143,7 +162,7 @@ const apiBase =
   :global(.grade-group:first-child) {
     margin-top: 0;
   }
-  :global(.grade-group h3) {
+  :global(.grade-group > h3) {
     font-family: var(--display);
     font-weight: 700;
     font-size: 1.1rem;
@@ -151,5 +170,19 @@ const apiBase =
     letter-spacing: 0.01em;
     color: var(--gold);
     margin: 0 0 0.6rem;
+  }
+  :global(.subject-group) {
+    margin-top: 1rem;
+  }
+  :global(.subject-group:first-child) {
+    margin-top: 0.4rem;
+  }
+  :global(.subject-group > h4) {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.4rem;
   }
 </style>

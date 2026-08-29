@@ -26,17 +26,20 @@ CLOUDFLARE_API_TOKEN=... CLOUDFLARE_ACCOUNT_ID=... npx wrangler deploy
 to match `DownloadList.astro`. Any content entry with a `filesPrefix` field renders one — see the
 `school` collection schema in `src/content.config.ts`.
 
-`src/components/school/StudyGuidesBrowser.astro` powers `/school/study-guides/` — it lists
-everything under `school/study-guides/` and groups it by grade folder client-side. One Worker,
-one bucket, one prefix; grades are just a folder-naming convention, not separate infrastructure.
+`src/components/school/StudyGuidesBrowser.astro` powers `/school/study-guides/` — it lists the
+**entire bucket** (prefix `""`) and groups client-side by top-level folder (grade), then by a
+second folder level (subject) if one is present. One Worker, one bucket; grades and subjects are
+just a folder-naming convention, not separate infrastructure. Because it reads the whole bucket,
+keep this bucket dedicated to study guides — anything else downloadable on the site should use
+its own bucket/prefix scheme with `FileBrowser.astro` instead, or it'll show up here too.
 
-### Study guide grade folders
+### Study guide folders
 
-Drop files under `school/study-guides/<grade-slug>/<file>`:
+Drop files under `<grade folder>/<file>` or `<grade folder>/<subject folder>/<file>` — name the
+folders however reads naturally in the Cloudflare dashboard, e.g. `5th Grade`, `Kindergarten`,
+`1st Grade`. Sorting pulls the leading number out of the folder name (so "5th Grade" sorts after
+"1st Grade"); `kindergarten`/`k` always sorts first; anything with no leading number sorts last,
+alphabetically. Files dropped with no grade folder at all land in a catch-all "General" group.
 
-- `k` → Kindergarten
-- `1` … `5` → 1st Grade … 5th Grade
-- no subfolder (straight under `school/study-guides/`) → grouped under "General"
-
-Example: `school/study-guides/3/fractions-review.pdf` shows up under "3rd Grade" as
+Example: `5th Grade/ELA/fractions-review.pdf` shows up under "5th Grade" → "ELA" as
 "fractions-review.pdf".
