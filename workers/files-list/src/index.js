@@ -23,7 +23,7 @@ export default {
         key: obj.key,
         size: obj.size,
         uploaded: obj.uploaded,
-        url: `${env.PUBLIC_BASE_URL}/${obj.key}`,
+        url: `${env.PUBLIC_BASE_URL}/${obj.key.split('/').map(encodeURIComponent).join('/')}`,
       }))
       .sort((a, b) => a.name.localeCompare(b.name));
 
