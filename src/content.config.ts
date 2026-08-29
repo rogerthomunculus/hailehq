@@ -20,6 +20,10 @@ const travel = defineCollection({
     endDate: z.coerce.date(),
     dayCount: z.number(),
     travellers: z.string(),
+    // Most guides are one trip, so the hero eyebrow is built from
+    // startDate–endDate. A guide covering several visits (NYC) has no single
+    // date range worth printing, so it can override the eyebrow text instead.
+    dateLabel: z.string().optional(),
     bases: z
       .array(
         z.object({

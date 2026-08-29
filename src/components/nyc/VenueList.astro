@@ -1,0 +1,176 @@
+---
+// A place list that carries an icon, a street address, and outbound links.
+//
+// The shared <PlaceList> only holds name/where/what, which is right for
+// Iceland — those entries are landmarks you drive to, not addresses you look
+// up on a phone. A city guide needs the address and the link, so this mirrors
+// the field shape already used by the `houston` collection (name / where /
+// why / site / map) rather than inventing a third vocabulary.
+//
+// `map` is generated from the name and address when it isn't supplied, so
+// every entry gets a working link without hand-pasting Maps URLs.
+
+import NycIcon from './NycIcon.astro';
+
+interface Venue {
+  icon?: string;
+  name: string;
+  where?: string;
+  what: string;
+  tag?: string;
+  tone?: 'good' | 'warn';
+  site?: string;
+  map?: string;
+}
+
+interface Props {
+  venues: Venue[];
+}
+
+const { venues } = Astro.props;
+
+const mapsUrl = (v: Venue) =>
+  v.map ??
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    [v.name, v.where].filter(Boolean).join(' '),
+  )}`;
+
+const hostOf = (url: string) =>
+  url
+    .replace(/^https?:\/\//, '')
+    .replace(/^www\./, '')
+    .split('/')[0];
+---
+
+<ul class="venues">
+  {
+    venues.map((v) => (
+      <li class="venue">
+        <span class="venue-icon">
+          <NycIcon name={v.icon ?? 'subway'} size={18} />
+        </span>
+        <div class="venue-body">
+          <p class="venue-head">
+            <b>{v.name}</b>
+            {v.tag && <span class:list={['venue-tag', v.tone]}>{v.tag}</span>}
+          </p>
+          {v.where && <span class="venue-where">{v.where}</span>}
+          <span class="venue-what">{v.what}</span>
+          <span class="venue-links">
+            {v.site && (
+              <a href={v.site} target="_blank" rel="noopener">
+                {hostOf(v.site)}
+              </a>
+            )}
+            <a href={mapsUrl(v)} target="_blank" rel="noopener">
+              Map
+            </a>
+          </span>
+        </div>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .venues {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.8rem;
+    max-width: var(--measure);
+  }
+  .venue {
+    display: flex;
+    gap: 0.85rem;
+    padding: 0.95rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .venue-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 auto;
+    margin-top: 0.1rem;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--gold);
+  }
+  .venue-body {
+    min-width: 0;
+  }
+  .venue-head {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem 0.55rem;
+  }
+  .venue-head b {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.04em;
+    color: var(--text);
+  }
+  .venue-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1px 5px;
+    white-space: nowrap;
+  }
+  .venue-tag.good {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+  .venue-tag.warn {
+    color: var(--stamp);
+    border-color: var(--stamp);
+  }
+  .venue-where {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 0.22rem;
+  }
+  .venue-what {
+    display: block;
+    color: var(--muted);
+    font-size: 0.96em;
+    margin-top: 0.3rem;
+  }
+  .venue-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 0.4rem;
+  }
+  .venue-links a {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+  }
+  .venue-links a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  @media print {
+    .venue-links a {
+      color: inherit;
+    }
+  }
+</style>
