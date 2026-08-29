@@ -7,11 +7,7 @@ interface Props {
   caption?: string;
 }
 
-const {
-  variant,
-  alt,
-  caption = 'Placeholder illustration — swap in your own artwork here.',
-} = Astro.props;
+const { variant, alt, caption } = Astro.props;
 
 const palette = {
   hawaii: { top: '#0f3a4d', mid: '#146b73', bottom: '#1f8f7a', sun: '#ffd166' },
@@ -143,7 +139,7 @@ const palette = {
       <rect x="35" y="19" width="14" height="22" rx="6" fill="#8B7FD9"></rect>
     </g>
   </svg>
-  <p class="caption">{caption}</p>
+  {caption && <p class="caption">{caption}</p>}
 </section>
 
 <style>

@@ -1,0 +1,94 @@
+---
+// NYC Trip Guide — icon set.
+//
+// Same idea as src/components/japan/japan-icons.tsx, but authored as an Astro
+// component rather than React so it renders server-side and can be dropped
+// straight into MDX (and into VenueList) with no client island.
+//
+// Every icon is a 24x24 stroke drawing using currentColor, so it inherits
+// colour from whatever wraps it. Colours come from tokens.css via the parent —
+// nothing here hardcodes a hex value.
+//
+// Usage:
+//   <NycIcon name="subway" />
+//   <NycIcon name="pizza" size={18} />
+
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 20, class: className } = Astro.props;
+
+const ICONS: Record<string, string> = {
+  // — transit & landmarks —
+  subway: `<circle cx="12" cy="12" r="9" /><path d="M8.5 8.5h7v5.5a1.5 1.5 0 0 1-1.5 1.5h-4a1.5 1.5 0 0 1-1.5-1.5z" /><path d="M9 18l-1 1.5M15 18l1 1.5" /><circle cx="10" cy="13.5" r="0.6" fill="currentColor" stroke="none" /><circle cx="14" cy="13.5" r="0.6" fill="currentColor" stroke="none" />`,
+  taxi: `<path d="M3 16v-3.2l1.8-3.4A2 2 0 0 1 6.6 8h10.8a2 2 0 0 1 1.8 1.4L21 12.8V16" /><path d="M2.5 16h19v2.5h-19z" /><path d="M9 8V6h6v2" /><circle cx="7" cy="18.5" r="1.3" /><circle cx="17" cy="18.5" r="1.3" />`,
+  ferry: `<path d="M3 15h18l-2.2 5H5.2L3 15z" /><path d="M5.5 15v-4h13v4" /><path d="M8 11V8h8v3" /><path d="M12 8V5.5" /><path d="M2 21c1.4 1.2 2.8 1.2 4.2 0s2.8-1.2 4.2 0 2.8 1.2 4.2 0 2.8-1.2 4.2 0" />`,
+  bridge: `<path d="M2 18h20" /><path d="M6 18V5M18 18V5" /><path d="M4 8h4M4 11h4M16 8h4M16 11h4" /><path d="M6 9c3 3.5 9 3.5 12 0" /><path d="M9 18v-4.6M12 18v-5.6M15 18v-4.6" />`,
+  skyline: `<path d="M2 21h20" /><path d="M4 21V11h4v10" /><path d="M10 21V6h5v15" /><path d="M17 21v-8h4v8" /><path d="M12.5 6V3" /><path d="M5.5 14h1M11.8 9h2M11.8 13h2M18.5 16h1" />`,
+  torch: `<path d="M12 2c1.8 2 2.6 3.6 2.6 5a2.6 2.6 0 0 1-5.2 0c0-1.4.8-3 2.6-5z" /><path d="M9.6 10.5h4.8l-.5 2H10z" /><path d="M11 12.5l-1 8.5h4l-1-8.5" /><path d="M8.5 21h7" />`,
+  carousel: `<path d="M12 2.5l8 4H4l8-4z" /><path d="M5 6.5v9M19 6.5v9M12 6.5v9" /><path d="M3.5 15.5h17" /><path d="M4 19.5h16" /><path d="M6 15.5v4M18 15.5v4" />`,
+  clock: `<circle cx="12" cy="12" r="8.5" /><path d="M12 7v5.2l3.2 2" /><path d="M12 3.5v1.2M20.5 12h-1.2M12 20.5v-1.2M3.5 12h1.2" />`,
+  hotel: `<path d="M3 20V6" /><path d="M3 11h16a2 2 0 0 1 2 2v7" /><path d="M2.5 20h19" /><circle cx="7.5" cy="8" r="1.8" /><path d="M3 16h18" />`,
+
+  lantern: `<path d="M12 2.6v2.2M12 19.2v2.2" /><path d="M7.6 4.8h8.8M7.6 19.2h8.8" /><path d="M12 4.8c3.4 0 5.6 2.5 5.6 7.2s-2.2 7.2-5.6 7.2-5.6-2.5-5.6-7.2S8.6 4.8 12 4.8z" /><path d="M12 4.8v14.4" opacity="0.45" /><path d="M6.6 9.2h10.8M6.6 14.8h10.8" opacity="0.45" />`,
+
+  // — parks & outdoors —
+  park: `<path d="M12 3l4.5 6h-3l3.5 5h-3l2.5 3.5h-11L8 14H5l3.5-5h-3L12 3z" /><path d="M12 17.5V21" /><path d="M9.5 21h5" />`,
+  playground: `<path d="M3 20.5L7.5 4.8h9l4.5 15.7" /><path d="M9.5 5.4v7M14.5 5.4v7" /><path d="M8.8 12.4h6.4" /><path d="M2.4 20.5h4.2M17.4 20.5h4.2" opacity="0.55" />`,
+  highline: `<path d="M2 15h20" /><path d="M4 15v5M12 15v5M20 15v5" /><path d="M6 15V9M9 15V9" /><path d="M5 9c0-2 1-3.2 2.5-3.2S10 7 10 9" /><path d="M15 15c0-3 1.5-4.5 3.5-4.5" /><path d="M17.5 15c0-2.2-1-3.4-2.5-3.4" />`,
+  zoo: `<path d="M12 2.8c3 0 5 2.7 5 6.6v5c0 3.1-2.2 5.6-5 5.6s-5-2.5-5-5.6v-5c0-3.9 2-6.6 5-6.6z" /><path d="M12 7.6c1.6 0 2.6 1.4 2.6 3.6v3.4c0 1.8-1.1 3.1-2.6 3.1s-2.6-1.3-2.6-3.1v-3.4c0-2.2 1-3.6 2.6-3.6z" opacity="0.5" /><circle cx="10.3" cy="7.4" r="0.55" fill="currentColor" stroke="none" /><circle cx="13.7" cy="7.4" r="0.55" fill="currentColor" stroke="none" /><path d="M11.2 9.2h1.6l-.8 1.3z" /><path d="M10.2 19.6l-1.7 1.6M13.8 19.6l1.7 1.6" />`,
+  dino: `<path d="M2.5 20c0-1.5.9-2.6 2.2-3" /><path d="M4.7 16.8c0-2.9 2.3-5.2 5.2-5.2h1.8c2.9 0 5.2 2.3 5.2 5.2" /><path d="M4.7 16.8h12.2" /><path d="M6.8 16.8v3.7M9.8 16.8v3.7M12.4 16.8v3.7M15.2 16.8v3.7" /><path d="M16.9 12.2c0-4.2.9-6.7 3.1-6.7 1.7 0 2.8 1.1 2.8 2.6 0 1.3-.9 2.1-2.1 2.1" /><circle cx="21" cy="7.4" r="0.5" fill="currentColor" stroke="none" />`,
+
+  // — indoors —
+  museum: `<path d="M12 3l9 4.5H3L12 3z" /><path d="M3 9.5h18" /><path d="M6 9.5v8M10 9.5v8M14 9.5v8M18 9.5v8" /><path d="M3 17.5h18" /><path d="M2.5 21h19" />`,
+  art: `<path d="M12 2.5l7 5.5-2.7 8.5H7.7L5 8l7-5.5z" /><path d="M12 2.5v14M5 8h14M7.7 16.5L5 21M16.3 16.5L19 21" /><circle cx="12" cy="9.5" r="1.2" />`,
+  shop: `<path d="M4.5 8h15l-1 12.5h-13L4.5 8z" /><path d="M8.5 10.5V6.5a3.5 3.5 0 0 1 7 0v4" />`,
+  ticket: `<path d="M3 8h18v3a2 2 0 0 0 0 4v3H3v-3a2 2 0 0 0 0-4V8z" /><path d="M14 8v1.6M14 13v1.6M14 18v-1.6" />`,
+
+  // — food —
+  pizza: `<path d="M12 3l8.5 16.5c-5.4 2-11.6 2-17 0L12 3z" /><path d="M6.2 14.6c3.7 1.3 8 1.3 11.7 0" /><circle cx="12" cy="9.5" r="0.9" fill="currentColor" stroke="none" /><circle cx="9.4" cy="14" r="0.9" fill="currentColor" stroke="none" /><circle cx="14.6" cy="14.6" r="0.9" fill="currentColor" stroke="none" />`,
+  bagel: `<circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3.2" /><path d="M7 6.6c.6.7.6 1.4 0 2M16.4 6c.6.7.6 1.4 0 2M18.5 15.4c.6.7.6 1.4 0 2M5.6 15c.6.7.6 1.4 0 2" opacity="0.6" />`,
+  noodle: `<path d="M4 11c0-1 .5-1.6 1.5-1.6S7 10 8 10s1.5-.6 2.5-.6S12 10 13 10s1.5-.6 2.5-.6S17 10 18 10s1.5-.6 2-.6" /><path d="M3 11h18l-1.5 8a2 2 0 0 1-2 1.7H6.5a2 2 0 0 1-2-1.7L3 11z" /><path d="M14.5 7.5l3-4M17 8.5l3-4" opacity="0.6" />`,
+  dumpling: `<path d="M3.5 16c0-4.2 3.8-7.5 8.5-7.5s8.5 3.3 8.5 7.5" /><path d="M2.5 16h19a1.5 1.5 0 0 1-1.5 1.5H4A1.5 1.5 0 0 1 2.5 16z" /><path d="M7 12.5c1-1.2 1-1.2 2 0s1 1.2 2 0 1-1.2 2 0 1 1.2 2 0" opacity="0.7" />`,
+  riceroll: `<path d="M2.8 16.4h18.4" /><path d="M5 16.4c0-2.4 1-4.1 2.5-4.1s2.5 1.7 2.5 4.1M9.5 16.4c0-2.4 1-4.1 2.5-4.1s2.5 1.7 2.5 4.1M14 16.4c0-2.4 1-4.1 2.5-4.1s2.5 1.7 2.5 4.1" /><path d="M4 16.4c.6 1.7 2.1 2.6 4.1 2.6h7.8c2 0 3.5-.9 4.1-2.6" /><path d="M9 8.2c.6.8.6 1.5 0 2.3M13.2 7.6c.6.8.6 1.5 0 2.3" opacity="0.55" />`,
+  fish: `<path d="M2 12c3-4 8-6 13-6 3 0 5.5 2.5 7 6-1.5 3.5-4 6-7 6-5 0-10-2-13-6z" /><path d="M15 6l4-3-1 5" /><path d="M15 18l4 3-1-5" /><circle cx="7" cy="11" r="0.8" fill="currentColor" stroke="none" />`,
+  taco: `<path d="M2.5 17.5c0-5.3 4.3-9.5 9.5-9.5s9.5 4.2 9.5 9.5" /><path d="M2.5 17.5h19" /><path d="M6.5 13.5c1.2-1 2.4-1 3.6 0M13.9 13.5c1.2-1 2.4-1 3.6 0" opacity="0.7" /><path d="M12 8V5" opacity="0.5" />`,
+  lobster: `<path d="M12 7.4c2.2 0 3.6 1.9 3.6 4.7 0 3.4-1.5 6.4-3.6 6.4s-3.6-3-3.6-6.4c0-2.8 1.4-4.7 3.6-4.7z" /><path d="M9 10.8c-2.2-.3-3.7-1.6-3.7-3.2 0-1 .6-1.7 1.4-1.7M15 10.8c2.2-.3 3.7-1.6 3.7-3.2 0-1-.6-1.7-1.4-1.7" /><path d="M10.3 4.4L12 7.2l1.7-2.8" /><path d="M9.3 12.8h5.4M9.5 15.2h5" opacity="0.55" /><path d="M12 18.5l-2.1 2.6M12 18.5l2.1 2.6" />`,
+  pancake: `<path d="M4.5 15.5c0-1.4 3.4-2.5 7.5-2.5s7.5 1.1 7.5 2.5-3.4 2.5-7.5 2.5-7.5-1.1-7.5-2.5z" /><path d="M4.5 11.5c0-1.4 3.4-2.5 7.5-2.5s7.5 1.1 7.5 2.5" /><path d="M9 9c1.4-.8 2.6-2 2.6-3.4M12 5.6c0-.9.7-1.4 1.4-2.1" opacity="0.7" /><path d="M4.5 11.5v4M19.5 11.5v4" />`,
+  icecream: `<path d="M8 10.5a4 4 0 0 1 8 0z" /><path d="M7 10.5h10l-5 10-5-10z" /><path d="M8.6 14h6.8M10 17.5h4" opacity="0.6" /><path d="M12 6.5a2 2 0 0 1 2 2M12 6.5a2 2 0 0 0-2 2" opacity="0.7" />`,
+  cookie: `<circle cx="12" cy="12" r="8.5" /><circle cx="9.5" cy="9.5" r="1.1" fill="currentColor" stroke="none" /><circle cx="14.5" cy="11" r="1.1" fill="currentColor" stroke="none" /><circle cx="10.5" cy="15" r="1.1" fill="currentColor" stroke="none" /><circle cx="15" cy="15.5" r="0.9" fill="currentColor" stroke="none" />`,
+  cake: `<path d="M4 20v-6.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2V20" /><path d="M3 20h18" /><path d="M4 15.5c1.6 1.4 3.2 1.4 4.8 0s3.2-1.4 4.8 0 3.2 1.4 4.8 0L20 15" /><path d="M12 11.5V8M12 8c-1 0-1.6-.7-1.6-1.5S11 5 12 3.5c1 1.5 1.6 2.2 1.6 3S13 8 12 8z" />`,
+  deli: `<path d="M3.5 13.5h17a1.5 1.5 0 0 1 0 3h-17a1.5 1.5 0 0 1 0-3z" /><path d="M4.5 13.5c0-3 3.4-5 7.5-5s7.5 2 7.5 5" /><path d="M6 11.5c1.4-1 3-1 4.4 0M13 11c1.4-1 3-1 4.4 0" opacity="0.7" /><path d="M5 16.5c1.5 1.6 4 2.5 7 2.5s5.5-.9 7-2.5" />`,
+  kebab: `<path d="M12 2.2v19.6" /><path d="M12 4.6c3.1 0 4.9 1.5 4.9 3.3s-1.8 1.9-4.9 1.9-4.9-.1-4.9-1.9S8.9 4.6 12 4.6z" /><path d="M12 9.8c3.5 0 5.5 1.4 5.5 3.1s-2 1.9-5.5 1.9-5.5-.2-5.5-1.9 2-3.1 5.5-3.1z" /><path d="M12 14.8c3.1 0 4.9 1.2 4.9 2.7s-1.8 1.7-4.9 1.7-4.9-.2-4.9-1.7 1.8-2.7 4.9-2.7z" />`,
+  octopus: `<path d="M7 11a5 5 0 0 1 10 0v2.5H7z" /><path d="M7 13.5c-.8 2-2 3-3.5 3.4M10 13.5c-.4 2.4-1.2 4-2.4 5.1M14 13.5c.4 2.4 1.2 4 2.4 5.1M17 13.5c.8 2 2 3 3.5 3.4" /><circle cx="10.2" cy="10" r="0.6" fill="currentColor" stroke="none" /><circle cx="13.8" cy="10" r="0.6" fill="currentColor" stroke="none" />`,
+  coffee: `<path d="M4 9.5h13v5.5a4.5 4.5 0 0 1-4.5 4.5h-4A4.5 4.5 0 0 1 4 15V9.5z" /><path d="M17 10.5h2a2.5 2.5 0 0 1 0 5h-2" /><path d="M8 6c0-1 1-1 1-2M12 6c0-1 1-1 1-2" opacity="0.6" /><path d="M3 21h16" />`,
+  market: `<path d="M3 9.5h18l-1 2.5H4L3 9.5z" /><path d="M4.5 4.5h15l1.5 5H3l1.5-5z" /><path d="M8 4.5l-.8 5M12 4.5v5M16 4.5l.8 5" opacity="0.6" /><path d="M5 12v8h14v-8" /><path d="M9.5 20v-4.5h5V20" />`,
+};
+
+const path = ICONS[name] ?? ICONS.subway;
+---
+
+<svg
+  viewBox="0 0 24 24"
+  width={size}
+  height={size}
+  class:list={['nyc-icon', className]}
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+  set:html={path}
+/>
+
+<style>
+  .nyc-icon {
+    display: block;
+    flex: 0 0 auto;
+  }
+</style>

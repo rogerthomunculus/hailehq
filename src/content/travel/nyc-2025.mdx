@@ -1,33 +1,856 @@
 ---
 title: New York City
-summary: Placeholder guide for our June 2025 NYC trip — write-up coming once the photos are sorted.
+summary: Not one trip — several. A running list of where we've stayed, what we've eaten, and what we've done in NYC with two kids, plus the subway and logistics advice we wish someone had handed us the first time.
 destination: NYC
 year: 2025
-startDate: 2025-06-14
+startDate: 2023-06-14
 endDate: 2025-06-18
-dayCount: 4
+dayCount: 0
 travellers: Family of 4
-updated: 2025-06-18
+dateLabel: Several trips · 2023–2025
+updated: 2026-08-29
 order: 3
+sections:
+  - { id: about, label: How to use this }
+  - { id: subway, label: Subway & getting around }
+  - { id: stay, label: Where we've stayed }
+  - { id: eat-soho, label: SoHo & the Village }
+  - { id: eat-chinatown, label: Chinatown & LES }
+  - { id: eat-union, label: Union Sq & East Village }
+  - { id: eat-uptown, label: Uptown & Midtown }
+  - { id: sweets, label: The sweets list }
+  - { id: museums, label: Museums & indoor days }
+  - { id: outdoors, label: Parks, walks & water }
+  - { id: kids, label: Doing NYC with kids }
+  - { id: skip, label: What we'd skip }
+  - { id: verdict, label: The verdict }
 ---
 
 import Section from '../../components/travel/Section.astro';
 import Note from '../../components/ui/Note.astro';
+import FactGrid from '../../components/ui/FactGrid.astro';
+import KidFacts from '../../components/travel/KidFacts.astro';
+import SkipList from '../../components/travel/SkipList.astro';
 import TripArt from '../../components/travel/TripArt.astro';
+import VenueList from '../../components/nyc/VenueList.astro';
 
-<Section id="about" num="01" title="New York City, June 2025" subtitle="Placeholder page — the real guide goes here once the trip's done and we've written it up.">
+<Section
+  id="about"
+  num="01"
+  title="How to use this one"
+  subtitle="This isn't a trip report. It's the running list we've built across several visits — everywhere we've slept, eaten, and taken the kids, with an honest verdict on each."
+>
 
 <TripArt
   variant="nyc"
-  alt="Placeholder illustration of a family in front of the New York City skyline"
+  alt="Illustration of a family in front of the New York City skyline at dusk"
+/>
+
+<FactGrid
+  facts={[
+    { label: 'Format', value: 'Reference list, not an itinerary' },
+    { label: 'Kids on every trip', value: 'Two' },
+    { label: 'How we got around', value: 'Subway, almost entirely' },
+    { label: 'Neighbourhoods we keep returning to', value: 'SoHo, Union Sq, UWS' },
+  ]}
 />
 
 <div class="measure">
 
-<Note label="Coming soon">
-  This is a placeholder for the NYC trip guide — where we stayed, what we did, what we'd skip next
-  time. Same treatment as the Iceland guide once it's written.
+### Why this one is structured differently
+
+Our other guides are trips — a start date, an end date, a route. New York isn't that for us. We've been several times, from different hotels, in different seasons, and what's actually useful isn't a day-by-day of any one visit. It's the accumulated list: the udon place we'd go back to tomorrow, the pizza the kids ask for by name, the walk that turned out to be a slog.
+
+So this is organised the way you'd actually use it on a phone, standing on a corner deciding where to eat. Food is grouped by neighbourhood, because in New York the question is never "what's the best X in the city," it's "what's good within ten minutes of where I'm standing." Everything else is grouped by what kind of day it is — indoor, outdoor, or wandering.
+
+Every entry has an address and a map link. The opinions are ours.
+
+### The one structural thing to get right
+
+Pick your neighbourhood before you pick your hotel. In a city this dense, the twenty minutes you save not travelling to dinner is worth more than a nicer room, and with kids that twenty minutes is the difference between a good night and a meltdown. All three of the hotels below were fine rooms. Only two of them were in the right place.
+
+<Note type="win" label="Go if">
+  You want a trip where the kids are genuinely entertained without you driving anywhere, and where a
+  single subway ride gets you from dinosaurs to dumplings. NYC rewards families who are willing to
+  walk and eat.
 </Note>
+
+<Note type="warn" label="Think harder if">
+  You need naps on a schedule, hate crowds, or want a trip that's restful. This city is loud, dense,
+  and physically demanding — we routinely put in eight or nine miles a day on foot with kids in tow.
+</Note>
+
+</div>
+
+</Section>
+
+<Section
+  id="subway"
+  num="02"
+  title="The subway, and everything else that moves"
+  subtitle="This is the section we'd most want handed to us before a first trip. The fare system changed completely in January 2026 — if you last visited with a MetroCard, that card no longer works."
+>
+
+<div class="measure">
+
+### MetroCard is gone. It's OMNY now.
+
+MetroCard was retired in January 2026. Every fare now runs through OMNY, the contactless tap-to-pay system. There is no card to buy in advance and no machine to queue at. You tap:
+
+- a contactless credit or debit card,
+- a phone or watch with that card in its wallet, or
+- a physical OMNY card, sold from vending machines in every subway station and at roughly 2,700 corner shops if you'd rather not use a bank card.
+
+You tap on entry only. There's no tap-out, no zones, and no distance pricing — one flat fare gets you from the Bronx to Coney Island.
+
+### What it costs, and the cap that makes it cheap
+
+The fare is $3 for most riders on the subway and local buses; express buses are $7.25. The part worth understanding is the weekly cap:
+
+Once you've paid for 12 trips within a rolling seven-day period on the same card or device, every additional ride that week is free — $35 is the most you'll pay. The seven days start from your first tap, not from Monday.
+
+There's no signup and no pass to pre-purchase. It's the old 7-day Unlimited without the upfront gamble. The one rule that matters: **tap with the exact same card or device every single time.** If you tap your phone on Monday and your physical Amex on Tuesday, OMNY counts them as two different riders and neither one reaches the cap. Pick one payment method per person on day one and stick to it for the whole trip.
+
+### Kids and the turnstile
+
+Up to three children under 44 inches tall ride free on the subway and local buses when they're with a fare-paying adult. Forty-four inches is roughly an average five-year-old, and it's measured by height, not age — a tall four-year-old pays, a short six-year-old doesn't. Nobody checks ID. The kid goes under the turnstile with you, or through the wide accessible gate if you've got a stroller.
+
+Above that height, kids pay the full $3 adult fare. There's no child discount on the subway. (There _is_ a $1 Family Fare, but it applies to Metro-North and the LIRR — the commuter railroads — not to the subway, so it won't help you inside the city.)
+
+### Reading the system without an app fighting you
+
+Two things unlock the map:
+
+**Local vs. express.** Most lines run both. Local trains stop everywhere; express trains skip most stations. On the platform signage and the maps, express stops are the white circles, locals are the small black dots. Getting on an express by accident is the classic tourist error — you'll sail past your stop and surface fifteen blocks north. If you're only going a few stops, take the local.
+
+**Uptown vs. downtown.** Many stations have separate street entrances for each direction with no crossover underneath. The stair railing tells you: "Uptown & The Bronx" or "Downtown & Brooklyn." Read it before you go down, because if you get it wrong you'll tap in, realise, and have to exit and pay again on the other side.
+
+Use Google Maps or Citymapper for routing — both have live service data, which matters because weekend track work reroutes lines constantly and the map on the wall won't reflect it.
+
+### From the airports
+
+- **JFK** — AirTrain to Jamaica or Howard Beach, then the subway ($3 fare plus the AirTrain charge). Cheap, and about an hour to Midtown. With luggage and tired kids, it's a lot of stairs.
+- **LaGuardia** — no rail link. Taxi, rideshare, or the M60/Q70 bus. Closest to Manhattan, most exposed to traffic.
+- **Newark** — AirTrain to Newark Liberty station, then NJ Transit into Penn Station. Reliable, and often the least painful with bags.
+
+On arrival with kids and suitcases, we've taken a car from the airport every time and felt fine about it. It's the one leg where the subway isn't worth the savings. After that, the subway does everything.
+
+### Uber Car Seat — real, but read the fine print
+
+New York is one of a handful of US cities where you can book a ride that arrives with a car seat already installed, which is genuinely why we've travelled to NYC without lugging one through an airport. It works. Two caveats worth knowing before you count on it:
+
+Each Uber Car Seat trip includes **only one car seat**. If you need a second, you bring it yourself. There's a $10 surcharge, the rides are reservation-only, and the seat is a Nuna RAVA convertible — rear- or forward-facing, rated for children 5 to 65 lbs.
+
+So for one small child it's excellent. For two kids who both still need seats, it solves half your problem. Lyft runs a similar Car Seat Mode in NYC with a forward-facing seat.
+
+Also worth knowing, and slightly uncomfortable: New York's child restraint law exempts taxis and liveries, so yellow cabs and TLC-licensed cars can legally carry a child with no seat at all. Legal isn't the same as safe, and it's your call — but it means nobody will stop you, and nobody will provide one either unless you've booked it.
+
+<Note label="The taxi trick nobody mentions">
+  Yellow cabs are metered and often *cheaper* than surge-priced rideshare in Midtown at rush hour,
+  and you don't wait for a car to find you. Hail one, tap the card reader, done. Worth remembering
+  when the app quotes you something absurd.
+</Note>
+
+</div>
+
+</Section>
+
+<Section
+  id="stay"
+  num="03"
+  title="Where we've stayed"
+  subtitle="Three hotels, three very different verdicts — and the verdicts are almost entirely about location, not the rooms."
+>
+
+<VenueList
+  venues={[
+    {
+      icon: 'hotel',
+      name: 'SoHo Grand Hotel',
+      where: '310 W Broadway, New York, NY 10013',
+      tag: 'Best for food access',
+      tone: 'good',
+      site: 'https://www.sohogrand.com',
+      what: 'Puts you inside walking distance of Little Italy, Chinatown, and SoHo proper, which means legitimately good Chinese food is a stroll away rather than a subway ride — a genuinely rare thing for a hotel at this level. The hip restaurants are right there too. The staff were wonderful with our kids; they enthusiastically let Hailey practise on the piano in the jazz bar, which is not a thing most hotels would do. Subway is a 5–10 minute walk. One real caveat below.',
+    },
+    {
+      icon: 'hotel',
+      name: 'W New York – Union Square',
+      where: '201 Park Ave S, New York, NY 10003',
+      tag: 'Our favourite',
+      tone: 'good',
+      what: 'Probably our favourite base as a family. It sits right on Union Square, so subway access is about as easy as it gets in Manhattan — the 4/5/6, N/Q/R/W, and L all converge underneath. The restaurant density nearby is excellent. And the Union Square Greenmarket runs most days in the square itself, which Hailey loved: fresh fruit, cider, baked goods, all of it a two-minute walk from the lobby. Clean, well-kept, staff friendly enough.',
+    },
+    {
+      icon: 'hotel',
+      name: 'InterContinental New York Barclay',
+      where: '111 E 48th St, New York, NY 10017',
+      tag: 'Location let us down',
+      tone: 'warn',
+      what: "The hotel itself was fine — a handsome 1926 building, comfortable rooms, nothing to complain about. The location just wasn't our favourite. It's deep in the Midtown East office district, which empties out at night and doesn't give you much to walk to as a family. Perfectly good if you're here for business; not where we'd put a family again.",
+    },
+  ]}
+/>
+
+<div class="measure">
+
+<Note type="warn" label="The Canal Street caveat">
+  SoHo Grand's location is great in three directions and not in the fourth. Head the wrong way and
+  you're on a rough stretch of Canal Street with a significant homeless population and a lot of
+  street hustle. It's not dangerous so much as unpleasant and not what you want to walk your kids
+  through at night. Know which way you're going before you leave the lobby.
+</Note>
+
+### What we'd tell someone choosing
+
+If you want food to be the trip, stay downtown — SoHo Grand or anywhere in that radius. If you want the easiest possible logistics with kids, stay at Union Square: you're on top of the subway, you're near the park, you have a farmers' market, and you can reach both uptown museums and downtown food in about fifteen minutes. Midtown East we'd skip.
+
+</div>
+
+</Section>
+
+<Section
+  id="eat-soho"
+  num="04"
+  title="SoHo, Nolita & the Village"
+  subtitle="The densest good eating in the city for our money, and the reason we keep coming back downtown."
+>
+
+<VenueList
+  venues={[
+    {
+      icon: 'noodle',
+      name: 'Raku',
+      where: '48 MacDougal St, New York, NY 10012',
+      tag: 'Do not miss',
+      tone: 'good',
+      site: 'https://www.rakunyc.com',
+      what: 'Some of the best handmade udon we have ever had, anywhere — and that includes Japan. Chef Norihiro Ishizuka builds the noodles and the dashi from scratch and the texture is the whole point: silky, properly chewy, tapered by hand. Plenty on the menu for kids, which is not always true at this quality level. Mostly walk-in and it gets slammed by 7pm, so go early or go at lunch. They finish your meal with a couple of frozen grapes and no explanation.',
+    },
+    {
+      icon: 'kebab',
+      name: 'Shuka',
+      where: '38 MacDougal St, New York, NY 10012',
+      tag: 'Adults will love it',
+      what: "Some of the most delicious and freshest shawarma I've ever tasted, in a Mediterranean room that runs heavy on dips, flatbread, and charred things. Be warned on the vibe: it's trendy and hip and kids aren't especially catered to. We made it work, but it's not a place designed with them in mind. Lunch is a softer landing than dinner.",
+    },
+    {
+      icon: 'pancake',
+      name: "Flipper's",
+      where: '337 W Broadway Unit A, New York, NY 10013',
+      tag: 'Kid magnet',
+      tone: 'good',
+      what: "Japanese-style soufflé pancakes — the tall, wobbly, absurdly light kind. If your kids have seen these on a screen, this is the payoff. Delicious, and a genuinely fun breakfast. Get on the waitlist online before you walk over; the wait can run close to an hour on weekends. Dishes come out as they're ready rather than together, so order accordingly.",
+    },
+    {
+      icon: 'pizza',
+      name: "Famous Ben's Pizza of SoHo",
+      where: '177 Spring St, New York, NY 10012',
+      tag: 'Get the square',
+      what: 'A really solid slice and a proper old-SoHo counter that has outlasted everything fashionable around it. Get the square slice here — the Sicilian-style ones are the reason to come rather than the plain round. No frills, no table service, no water.',
+    },
+    {
+      icon: 'cake',
+      name: 'Dominique Ansel Bakery',
+      where: '189 Spring St, New York, NY 10012',
+      tag: 'The original',
+      tone: 'good',
+      site: 'https://dominiqueansel.com',
+      what: "Where the Cronut was invented in 2013, and it's still worth eating. The sleeper order is the egg sandwich — it's genuinely one of the best breakfast things in the neighbourhood and gets overshadowed by the pastry queue. Cronuts sell out early and can be pre-ordered online. There's a small garden out back, which helps with kids.",
+    },
+    {
+      icon: 'pizza',
+      name: "Joe's Pizza",
+      where: '7 Carmine St, New York, NY 10014',
+      tag: 'Kid favourite',
+      tone: 'good',
+      site: 'https://www.joespizzanyc.com',
+      what: "A favourite with the kids, full stop. Open until 3 or 4am, which has saved us more than once, and completely no-frills — you order at the counter, you eat standing or on the bench across the street. Serving classic New York slices since 1975. There's a small park directly opposite, which makes it an easy stop with children.",
+    },
+    {
+      icon: 'pizza',
+      name: 'Champion Pizza – SoHo',
+      where: '17 Cleveland Pl, New York, NY 10012',
+      tag: 'Another solid slice',
+      what: 'Tiny, covered wall-to-wall in photos, and another genuinely solid slice. Open very late. Useful to know about when the queue at the more famous places is out the door.',
+    },
+    {
+      icon: 'icecream',
+      name: 'Van Leeuwen Ice Cream',
+      where: 'Multiple locations — 48½ E 7th St and 640 Broadway among them',
+      site: 'https://vanleeuwenicecream.com',
+      what: 'Several locations across the city and consistently great ice cream. Convenient enough that you will pass one, and good enough that you should stop.',
+    },
+    {
+      icon: 'cake',
+      name: 'Magnolia Bakery',
+      where: '401 Bleecker St, New York, NY 10014',
+      tag: 'Get the banana pudding',
+      site: 'https://www.magnoliabakery.com',
+      what: "Get the banana pudding. That's the order. The cupcakes are fine and the pudding is the reason the queue exists — creamy, properly banana-forward, and easy to share four ways. This Bleecker Street shop is the original, though there are outposts all over the city now.",
+    },
+  ]}
+/>
+
+</Section>
+
+<Section
+  id="eat-chinatown"
+  num="05"
+  title="Chinatown & the Lower East Side"
+  subtitle="The best value eating in Manhattan and, for us, the single most rewarding neighbourhood to wander with kids."
+>
+
+<VenueList
+  venues={[
+    {
+      icon: 'dumpling',
+      name: 'Shanghai 21',
+      where: '21 Mott St, New York, NY 10013',
+      tag: 'Solid dim sum',
+      tone: 'good',
+      what: 'Another solid dim sum stop and one we keep going back to. Soup dumplings, Szechuan wontons, Shanghai-style noodles — the sort of unfussy Chinatown room where the food arrives fast and the bill is a fraction of what the same meal costs above Canal Street. Small space, expect a short queue at peak.',
+    },
+    {
+      icon: 'dumpling',
+      name: 'Nom Wah Tea Parlor',
+      where: '13 Doyers St, New York, NY 10013',
+      tag: 'Nice with kids',
+      site: 'https://nomwah.com',
+      what: 'A nice dim sum spot for kids — you tick off a paper order sheet rather than flagging down carts, which is much easier with children than the traditional roving-trolley system. Open on Doyers Street since 1920, and the room genuinely looks it. Cash or American Express only; they warn you repeatedly and people still get caught.',
+    },
+    {
+      icon: 'riceroll',
+      name: "Joe's Steam Rice Roll",
+      where: '10 Doyers St, New York, NY 10013',
+      tag: 'Fresh, fast, cheap',
+      tone: 'good',
+      what: 'Really fresh rice rolls, steamed to order in front of you and rolled while you watch — which is half the appeal for kids. You pick your fillings and add the peanut, soy, or sweet sauce yourself, so you control how much goes on. Cheap, quick, and a great low-commitment stop mid-wander.',
+    },
+    {
+      icon: 'icecream',
+      name: 'Taiyaki NYC',
+      where: '119 Baxter St, New York, NY 10013',
+      tag: 'Kids loved it',
+      tone: 'good',
+      what: 'A really cool dessert spot — soft serve served in a warm fish-shaped taiyaki cone, with red bean or custard filling in the tail. The kids really enjoyed it, and it photographs about as well as anything in the city. Grab-and-go: the seating is minimal, so plan on eating it outside.',
+    },
+    {
+      icon: 'icecream',
+      name: 'Milk & Cream Cereal Bar',
+      where: '159 Mott St, New York, NY 10013',
+      tag: 'Fun gimmick, done well',
+      what: 'An interesting spot that spins the cereal of your choice into soft ice cream. The kids enjoyed it, and it lands better than the concept suggests — the cereal flavour is subtle and the texture is good. Portions are generous. Lines can be long even when the shop looks empty.',
+    },
+    {
+      icon: 'deli',
+      name: "Katz's Delicatessen",
+      where: '205 E Houston St, New York, NY 10002',
+      tag: 'Worth the hype',
+      tone: 'good',
+      site: 'https://katzsdelicatessen.com',
+      what: "Worth the hype, and pricey — both things are true. Open since 1888, and the pastrami is the thing you're there for. The ordering system is chaotic by modern standards: you're handed a paper ticket at the door and told very firmly not to lose it, then you queue at separate counters for sandwiches, sides, and drinks. One sandwich genuinely feeds two kids.",
+    },
+    {
+      icon: 'lantern',
+      name: 'Wandering Chinatown itself',
+      where: 'Mott, Mulberry, Bayard & Doyers Streets, New York, NY 10013',
+      tag: 'Best free afternoon',
+      tone: 'good',
+      what: "Honestly one of the best things you can do here with kids and it costs nothing. Wander the streets, grab a bite, buy a souvenir, pick up baked goods. The density of small shops, produce stalls, and bakeries means there's something new every twenty metres, and unlike a museum there's no pressure to finish. Doyers Street — the sharp bend — is worth finding.",
+    },
+  ]}
+/>
+
+</Section>
+
+<Section
+  id="eat-union"
+  num="06"
+  title="Union Square & the East Village"
+  subtitle="Where we've eaten most, because it's where we've most often stayed."
+>
+
+<VenueList
+  venues={[
+    {
+      icon: 'taco',
+      name: 'Los Tacos No. 1 – Union Square',
+      where: '200 Park Ave S, New York, NY 10003',
+      tag: 'Worth it',
+      tone: 'good',
+      what: "Incredible tacos, definitely worth it. Handmade tortillas, meat off the vertical spit, salsas made properly. Standing room only — there are no seats — so it's a fast stop rather than a meal out. The Union Square branch is markedly less mobbed than the Times Square one.",
+    },
+    {
+      icon: 'octopus',
+      name: 'Kyma',
+      where: '15 W 18th St, New York, NY 10011',
+      tag: 'Best octopus',
+      tone: 'good',
+      what: "Some of the best octopus I've had, and the rest of the kitchen backs it up — the fish is genuinely fresh, the whole fish was amazing, and the lamb skewers were excellent. Greek, Flatiron, hip vibe. The one real warning: it is loud. Properly loud, with a DJ some nights, and having a conversation across the table is hard work. Mains are large and built for sharing.",
+    },
+    {
+      icon: 'noodle',
+      name: 'IPPUDO NY',
+      where: '65 4th Ave, New York, NY 10003',
+      tag: 'Delish ramen',
+      tone: 'good',
+      site: 'https://www.ippudony.com',
+      what: 'Delicious ramen in a room that feels more like a bar than a noodle shop — loud, energetic, good fun with kids in a way quiet restaurants are not. The pork buns are the standard order alongside. Large groups may get seated at communal tables.',
+    },
+    {
+      icon: 'noodle',
+      name: 'Momofuku Noodle Bar',
+      where: '171 1st Ave, New York, NY 10003',
+      tag: 'Hip, and good',
+      site: 'https://momofuku.com',
+      what: "A hip restaurant with genuinely delicious food, and this First Avenue room is the original that started the whole group. Pork buns, ramen, rice cakes. There's a second location at Columbus Circle if you're uptown. Reserve — walk-ins at dinner are optimistic.",
+    },
+    {
+      icon: 'shop',
+      name: 'CAMP – Union Square',
+      where: '110 5th Ave, New York, NY 10011',
+      tag: 'Rotating kid heaven',
+      tone: 'good',
+      site: 'https://www.camp.com',
+      what: "A family experience store with a rotating themed exhibit behind the shop front. We've done the Encanto house and the Bluey house and the kids enjoyed both — staff run story time, dance breaks, and hunts throughout, so it's structured rather than a free-for-all. Timed tickets; book ahead and check what's running before you go, since the theme changes.",
+    },
+    {
+      icon: 'shop',
+      name: 'MUJI Chelsea',
+      where: '16 W 19th St, New York, NY 10011',
+      tag: 'A calm hour',
+      site: 'https://www.muji.com/us/',
+      what: 'The Japanese minimalist household and stationery chain — pens, notebooks, storage, simple clothing, snacks, and a small café at this branch. It reads as a shop but functions as a break: quiet, orderly, and cheap enough that kids can pick something out without a negotiation. A genuinely good rainy-hour move between Union Square and Chelsea.',
+    },
+    {
+      icon: 'noodle',
+      name: 'TsuruTonTan',
+      where: 'Union Square location closed — now 64 W 48th St, New York, NY 10036',
+      tag: 'Moved on us',
+      tone: 'warn',
+      site: 'https://www.tsurutontan.com',
+      what: 'We had delicious udon at the Union Square branch on 16th Street, served in bowls roughly the size of a sink. That location has since closed. The Midtown outpost near Rockefeller Center is still open and serves the same menu across three floors — worth knowing before you walk to 16th Street expecting noodles.',
+    },
+    {
+      icon: 'dumpling',
+      name: 'Tim Ho Wan – East Village',
+      where: '85 4th Ave, New York, NY 10003',
+      tag: 'Skip it',
+      tone: 'warn',
+      what: "Average dim sum for such a high pedigree. Worth a skip — go to Chinatown instead, where you'll eat better for meaningfully less. The baked BBQ pork buns are the one thing that lives up to the name, and the menu is small for a dim sum restaurant.",
+    },
+  ]}
+/>
+
+<div class="measure">
+
+<Note type="win" label="Union Square Greenmarket">
+  Running in the square itself four days a week (Monday, Wednesday, Friday, Saturday), and one of
+  the better free things to do with kids in the city — fresh fruit, cider, cheese, and baked goods,
+  with actual farmers to talk to. Hailey treated it as the morning activity rather than an errand.
+</Note>
+
+</div>
+
+</Section>
+
+<Section
+  id="eat-uptown"
+  num="07"
+  title="Upper West Side & Midtown"
+  subtitle="Mostly the food we've eaten around the two big museums, plus the market you'll pass in Columbus Circle."
+>
+
+<VenueList
+  venues={[
+    {
+      icon: 'noodle',
+      name: 'La Pecora Bianca UWS',
+      where: '359 Columbus Ave, New York, NY 10024',
+      tag: 'Best museum-day dinner',
+      tone: 'good',
+      site: 'https://lapecorabianca.com',
+      what: 'An amazingly delicious Italian restaurant a few minutes from the Natural History Museum, which makes it the obvious end to a dinosaur day. Fresh pasta is the strength. Family-friendly without being a family restaurant, and the upstairs room is calmer than the front.',
+    },
+    {
+      icon: 'lobster',
+      name: "Luke's Lobster Upper West Side",
+      where: '426 Amsterdam Ave, New York, NY 10024',
+      tag: 'Get the flight',
+      tone: 'good',
+      site: 'https://www.lukeslobster.com',
+      what: 'We had the flight — shrimp, lobster, and crab rolls side by side — and it was delicious. That trio is the order: it lets everyone taste all three without committing, which works well with kids who might not know what they want. Quick, counter-service, and a short walk from the museum.',
+    },
+    {
+      icon: 'deli',
+      name: "Jacob's Pickles",
+      where: '680 Columbus Ave, New York, NY 10025',
+      tag: 'Lots for kids',
+      site: 'https://www.jacobspickles.com',
+      what: 'Lots of options for the kids and pretty tasty — Southern-leaning comfort food, biscuits, fried pickles, mac and cheese, big portions. Cavernous, so it absorbs a family without a wait more often than most UWS places. Good for a late breakfast.',
+    },
+    {
+      icon: 'cookie',
+      name: 'Levain Bakery',
+      where: '167 W 74th St and 351 Amsterdam Ave, New York, NY 10023/10024',
+      tag: 'Huge',
+      site: 'https://levainbakery.com',
+      what: "Really good cookies, but huge — six ounces each, thick, and molten in the middle. One cookie genuinely splits between two kids and you should plan on that rather than buying four. The chocolate chip walnut is the classic. Both Upper West Side shops are within a few minutes' walk of the museum.",
+    },
+    {
+      icon: 'market',
+      name: 'Turnstyle Underground Market',
+      where: '1000 8th Ave, New York, NY 10019 — inside the Columbus Circle station',
+      tag: 'Better than it sounds',
+      what: 'A nice food court with solid options for the kids — pizza, dumplings, donuts — built into the subway passage under Columbus Circle. Genuinely useful as a warm, dry, quick stop when the weather turns or you need to feed everyone between activities. About a dozen small vendors.',
+    },
+    {
+      icon: 'clock',
+      name: 'Grand Central Terminal',
+      where: '89 E 42nd St, New York, NY 10017',
+      tag: 'Once, properly',
+      site: 'https://www.grandcentralterminal.com',
+      what: 'Just a fun thing to check out once. Walk into the main concourse and look up — the celestial ceiling is painted backwards, which is a good thing to make kids notice. Find the whispering gallery outside the Oyster Bar, where you can stand in opposite corners of the tiled arch and hear each other. Twenty minutes is plenty.',
+    },
+  ]}
+/>
+
+</Section>
+
+<Section
+  id="sweets"
+  num="08"
+  title="The sweets list"
+  subtitle="We have eaten a lot of dessert in this city. Here is the shortlist, ranked by whether we'd cross town for it."
+>
+
+<VenueList
+  venues={[
+    {
+      icon: 'cake',
+      name: 'Magnolia Bakery — banana pudding',
+      where: '401 Bleecker St, New York, NY 10014',
+      tag: 'Cross town for it',
+      tone: 'good',
+      site: 'https://www.magnoliabakery.com',
+      what: 'The single dessert on this list we would go out of our way for. Skip the cupcakes.',
+    },
+    {
+      icon: 'cookie',
+      name: 'Levain Bakery — the cookie',
+      where: '167 W 74th St, New York, NY 10023',
+      tag: 'Share it',
+      site: 'https://levainbakery.com',
+      what: 'Really good, genuinely enormous. One between two.',
+    },
+    {
+      icon: 'icecream',
+      name: 'Taiyaki NYC',
+      where: '119 Baxter St, New York, NY 10013',
+      tag: 'Most fun',
+      tone: 'good',
+      what: 'The fish cone wins on novelty and holds up on taste. Kids loved it.',
+    },
+    {
+      icon: 'icecream',
+      name: 'Milk Bar',
+      where: '1196 Broadway and 246 Mott St',
+      tag: 'Nice stop',
+      site: 'https://milkbarstore.com',
+      what: 'A nice dessert stop. Cereal milk soft serve and the compost cookie are the signatures.',
+    },
+    {
+      icon: 'icecream',
+      name: 'Van Leeuwen',
+      where: 'Multiple locations',
+      site: 'https://vanleeuwenicecream.com',
+      what: 'Great ice cream, and there is always one nearby.',
+    },
+    {
+      icon: 'icecream',
+      name: 'Milk & Cream Cereal Bar',
+      where: '159 Mott St, New York, NY 10013',
+      what: 'Cereal spun into soft ice cream. More fun than it sounds.',
+    },
+    {
+      icon: 'cake',
+      name: 'Dominique Ansel Bakery — the Cronut',
+      where: '189 Spring St, New York, NY 10012',
+      tag: 'Order ahead',
+      site: 'https://dominiqueansel.com',
+      what: 'The original, and still good. Pre-order online or arrive early.',
+    },
+    {
+      icon: 'cake',
+      name: 'Bake Culture',
+      where: '55 Richmond Terrace, Level 1, Staten Island, NY 10301',
+      tag: 'Ferry snack',
+      what: 'Right off the Staten Island Ferry, inside Empire Outlets. We picked up a nice snack for the kids while waiting for the boat back — sweet buns, taro pastries, bubble tea. Genuinely the only reason to leave the terminal.',
+    },
+  ]}
+/>
+
+</Section>
+
+<Section
+  id="museums"
+  num="09"
+  title="Museums & indoor days"
+  subtitle="What we do when it rains, or when everyone needs to be somewhere with a roof and a bathroom."
+>
+
+<VenueList
+  venues={[
+    {
+      icon: 'museum',
+      name: 'The Metropolitan Museum of Art',
+      where: '1000 5th Ave, New York, NY 10028',
+      tag: 'A must',
+      tone: 'good',
+      site: 'https://www.metmuseum.org',
+      what: 'This is a must. The kids loved the art and we could have stayed here forever — the scale is the point, and you should surrender to seeing a fraction of it rather than trying to do it properly. The Egyptian wing and the Temple of Dendur are the reliable opener with children. Closed Wednesdays. Children under 12 are free; New York State residents and NY/NJ/CT students pay what they wish.',
+    },
+    {
+      icon: 'dino',
+      name: 'American Museum of Natural History',
+      where: '200 Central Park West, New York, NY 10024',
+      tag: 'Our favourite',
+      tone: 'good',
+      site: 'https://www.amnh.org',
+      what: "Our favourite natural history museum anywhere. The new bug exhibit is awesome — that's the Solomon Family Insectarium in the Gilder Center, which opened in 2023 and has live species including a leafcutter ant colony that carries leaves across a skybridge above your head. The Butterfly Vivarium next door needs a separate timed ticket and is worth it. Enter at Columbus Avenue and 79th for shorter security queues.",
+    },
+    {
+      icon: 'art',
+      name: 'Mercer Labs',
+      where: '21 Dey St, New York, NY 10007',
+      tag: 'If you like this sort of thing',
+      what: "An immersive art and technology exhibit — rooms of projection, sound, and interactive floors. Worth a visit if you're into it; my kids loved it. Fully hands-on rather than look-don't-touch, which is what makes it work with children. It's a taste thing: if immersive digital art leaves you cold, it will not convert you.",
+    },
+    {
+      icon: 'skyline',
+      name: 'Oculus / Westfield World Trade Center',
+      where: '185 Greenwich St, New York, NY 10007',
+      tag: 'Free, pairs with Mercer',
+      what: "A nice shopping centre right by Mercer Labs, and the Santiago Calatrava building is the actual reason to walk through — a vast white ribbed hall meant to read as a bird taking flight. Costs nothing to look. It's also a transit hub, so you can arrive and leave on almost any line.",
+    },
+    {
+      icon: 'zoo',
+      name: 'Central Park Zoo',
+      where: 'E 64th St & 5th Ave, inside Central Park, New York, NY 10021',
+      tag: 'Skip if short on time',
+      tone: 'warn',
+      site: 'https://centralparkzoo.com',
+      what: "A fun zoo in Central Park for the kids, but nothing crazy special — sea lions, penguins, snow leopards, and grizzlies in a compact footprint. Worth a skip if you're crunched for time. If you do go, it's about ninety minutes and pairs naturally with a walk through the park rather than standing alone as an outing.",
+    },
+  ]}
+/>
+
+<div class="measure">
+
+<KidFacts
+  facts={[
+    {
+      place: 'The Met',
+      fact: 'The Temple of Dendur is over 2,000 years old and was given to the United States by Egypt — it was taken apart into more than 600 blocks, shipped across the ocean, and rebuilt inside the museum.',
+    },
+    {
+      place: 'Natural History Museum',
+      fact: "The leafcutter ants in the Insectarium don't eat the leaves they carry. They farm a fungus with them, underground, and eat that — ants invented agriculture around 50 million years before people did.",
+    },
+    {
+      place: 'The Oculus',
+      fact: 'Every year on September 11th, a skylight in the roof lines up so that a single beam of sunlight falls across the floor at the exact time the first tower was struck.',
+    },
+    {
+      place: 'Grand Central',
+      fact: 'The constellations on the ceiling are painted backwards. Nobody is completely sure why — one story is that the artist copied a medieval manuscript that showed the sky as God would see it, from the outside.',
+    },
+  ]}
+/>
+
+</div>
+
+</Section>
+
+<Section
+  id="outdoors"
+  num="10"
+  title="Parks, walks & water"
+  subtitle="Free, mostly, and how we break up museum days before anyone melts down."
+>
+
+<VenueList
+  venues={[
+    {
+      icon: 'playground',
+      name: 'Central Park playgrounds',
+      where: 'Heckscher (mid-park at 63rd), Ancient (E 84th, by the Met), Billy Johnson (E 67th)',
+      tag: 'The reset button',
+      tone: 'good',
+      what: 'A great break for the kids, and the thing we underused on the first trip. There are more than twenty playgrounds in the park and they are individually excellent — Heckscher is the biggest with sprinklers, Ancient sits right behind the Met and is Egyptian-themed, and Billy Johnson has a long granite slide built into the hillside. Central Park in general is worth an exploration and a walk in its own right.',
+    },
+    {
+      icon: 'highline',
+      name: 'The High Line',
+      where: 'Gansevoort St to W 34th St, New York, NY 10011',
+      tag: 'Really cool walk',
+      tone: 'good',
+      site: 'https://www.thehighline.org',
+      what: "A really cool walk, and the way we've always got to Chelsea Market. The architecture and the views are the point — you're on a disused elevated freight line, one storey above the street, looking into and over the West Side. About 1.45 miles end to end. Elevators at several access points, which matters with a stroller. Go early; by midday it's shoulder-to-shoulder.",
+    },
+    {
+      icon: 'market',
+      name: 'Chelsea Market',
+      where: '75 9th Ave, New York, NY 10011',
+      tag: 'Everything we ate was good',
+      tone: 'good',
+      site: 'https://www.chelseamarket.com',
+      what: 'An awesome market and food court with genuine history — this is the old Nabisco factory, and the Oreo was invented in this building. Everything we ate here was delicious. Clean bathrooms, which is not a small thing. It sits directly under the north end of the High Line, so the two are one outing.',
+    },
+    {
+      icon: 'carousel',
+      name: 'Pier 62 Carousel & Hudson River Park',
+      where: 'Hudson River Park between W 22nd and W 23rd St, New York, NY 10011',
+      tag: 'Good chill stop',
+      site: 'https://hudsonriverpark.org',
+      what: 'Near the High Line, and a nice stop to chill with the kids after the walk. The carousel animals are all hand-carved species native to New York State — bears, sturgeon, turkeys — which is a better story than horses. Open Friday to Sunday in season. Grass, river, and space to run.',
+    },
+    {
+      icon: 'ferry',
+      name: 'Staten Island Ferry',
+      where: 'Whitehall Terminal, 4 Whitehall St, New York, NY 10004',
+      tag: 'Free Statue of Liberty',
+      tone: 'good',
+      site: 'https://www.mta.info',
+      what: "A quick and fun way to see the Statue of Liberty, and it is completely free — no ticket, no booking, you walk on. About 25 minutes each way, running every half hour. Stand on the right-hand side heading out for the Liberty views, then swap for the skyline coming back. There's not much to see or do on the other side, so you turn right back around.",
+    },
+    {
+      icon: 'carousel',
+      name: 'SeaGlass Carousel',
+      where: 'State St & Water St, Battery Park, New York, NY 10004',
+      tag: 'Worth a spin',
+      tone: 'good',
+      site: 'https://www.thebattery.org',
+      what: "Totally worth a spin if you're in this area — and you will be, because it's a few minutes from the ferry terminal. You ride inside glowing fish rather than on horses, in a darkened shell, and it's genuinely lovely rather than merely cute. Cheap. Better after dark.",
+    },
+    {
+      icon: 'bridge',
+      name: 'DUMBO',
+      where: 'Brooklyn Bridge Park & Time Out Market, 55 Water St, Brooklyn, NY 11201',
+      tag: 'Worth the trip',
+      tone: 'good',
+      what: 'A nice neighbourhood, park, riverfront, and food hall at the foot of the Brooklyn Bridge, and worth a stop in its own right — we had some delicious food. The Time Out Market food hall has a free rooftop with a bridge-and-skyline view. Easiest approach: take the subway to High Street or York Street rather than walking the bridge to get here.',
+    },
+  ]}
+/>
+
+</Section>
+
+<Section
+  id="kids"
+  num="11"
+  title="Doing NYC with kids"
+  subtitle="The practical stuff — bathrooms, pacing, and the things that made the difference between a good day and a bad one."
+>
+
+<div class="measure">
+
+### Bathrooms are the whole game
+
+This is the single most important logistical thing about New York with children, and nobody puts it first. **Always know where the next bathroom is.** Public restrooms are scarce, and most restaurants, cafés, and shops will expect you to be a customer — you may well have to buy something to use one.
+
+The reliable ones, worth memorising:
+
+- **Museums** — always, and usually clean. The Met and AMNH both have them on every floor.
+- **Department stores and big chains** — Macy's, Nordstrom, and the like. Starbucks is inconsistent now; don't count on it.
+- **Food halls** — Chelsea Market, Turnstyle, Time Out Market. Reliable and free.
+- **Hotel lobbies** — walk in like you're staying there. This works more often than it should.
+- **Grand Central and Penn Station** — proper public facilities.
+- **Central Park playgrounds** — several of the larger ones have restroom buildings, including Heckscher and Ancient.
+
+Our rule ended up being: use the bathroom whenever you're already in a place that has one, whether or not anyone says they need to. Don't wait for the request.
+
+### Pace, and the mileage nobody warns you about
+
+We routinely walked eight or nine miles a day here without planning to. The city rewards walking, and the distances look shorter on a map than they feel on the pavement — twenty blocks is a mile, and Manhattan is twenty blocks tall about eleven times over.
+
+What worked: one big thing per day, not two. A museum in the morning, food, then something outdoors and unstructured — a playground, a park, a market. The unstructured half is what makes the structured half survivable.
+
+### Strollers and the subway
+
+Only about a quarter of subway stations have elevators, so plan on carrying the stroller down stairs at some point. Two adults makes this trivial and one adult makes it hard. A compact, one-hand-fold stroller is worth much more here than a comfortable one.
+
+At the turnstile, use the wide accessible gate at the side rather than trying to fold and squeeze through. You still tap; the gate opens.
+
+### Eating out with kids, honestly
+
+Downtown New York's best restaurants are frequently small, loud, trendy rooms that are not designed around children. We've made those work, but the trick is timing rather than persuasion: go at opening, or go at lunch. A 5:30pm dinner at a hip place is an entirely different experience from an 8pm one, and nobody minds you at 5:30.
+
+The genuinely kid-easy formats here are counter service and food halls — Joe's, Los Tacos, Turnstyle, Chelsea Market, Time Out Market. Rotate those in between the sit-down meals.
+
+### A few things we're glad we did
+
+- **Kept a "pizza in reserve."** Joe's is open until 3am. Knowing there was a guaranteed acceptable meal available at any hour took the pressure off every experimental dinner.
+- **Let the kids pick one thing a day.** Usually a dessert. It bought a lot of goodwill on the walking.
+- **Used the hotel as a mid-afternoon base.** If you're staying centrally, going back for an hour is not the wasted time it feels like.
+- **Booked the timed-entry things early.** CAMP, the Butterfly Vivarium, Mercer Labs — all sell specific slots, and the good ones go.
+
+</div>
+
+</Section>
+
+<Section
+  id="skip"
+  num="12"
+  title="What we'd skip"
+  subtitle="Honest verdicts. These are the things we did once and wouldn't do again, at least not with kids."
+>
+
+<SkipList
+  items={[
+    {
+      item: 'Walking across the Brooklyn Bridge',
+      why: 'Would not recommend. The promenade is full of vendors selling cheap knock-off souvenirs, and it is an arduous walk with kids for a genuine let-down at the end.',
+      reason:
+        'Take the subway to DUMBO instead — you get the same view of the bridge, better, from underneath it.',
+    },
+    {
+      item: 'Tim Ho Wan, East Village',
+      why: 'Average dim sum for such a high pedigree. The Michelin history does a lot of work the food does not.',
+      reason: 'Go to Chinatown. Shanghai 21 or Nom Wah, for less money.',
+    },
+    {
+      item: 'Central Park Zoo, if time is short',
+      why: 'Fun for the kids but nothing crazy special, and it eats an hour and a half plus admission.',
+      reason: 'Walk the park and hit a playground instead — free, and the kids get more out of it.',
+    },
+    {
+      item: 'Getting off the ferry at Staten Island',
+      why: 'There is not much to see or do on the other side. The ride is the attraction, not the destination.',
+      reason: 'Grab something at Bake Culture by the terminal and turn straight back around.',
+    },
+    {
+      item: 'Midtown East as a base',
+      why: 'The InterContinental Barclay was a perfectly good hotel in a neighbourhood that empties out after 6pm and gives a family nothing to walk to.',
+      reason: 'Union Square or SoHo. Both put food and subway within a few minutes.',
+    },
+  ]}
+/>
+
+</Section>
+
+<Section id="verdict" num="13" title="The verdict" subtitle="After several trips.">
+
+<div class="measure">
+
+New York is the easiest great city we take our kids to. There's no passport, no language gap, no car to rent or park, and the subway means a five-year-old can get from dinosaurs to dumplings in twenty minutes without anyone driving. The trade-off is that it asks a lot physically — it's loud, dense, and you will walk further than you mean to every single day.
+
+The thing we'd say to someone going for the first time with children: pick a neighbourhood and let it do the work. Our best trips have been the ones where we stayed at Union Square or downtown and treated the surrounding fifteen minutes as the trip, with occasional expeditions uptown for a museum. Our worst was the one where we stayed somewhere convenient for offices.
+
+If we could only keep five things off this whole list: Raku, the Natural History Museum's bug hall, wandering Chinatown, the High Line into Chelsea Market, and a slice at Joe's at an hour no restaurant should be open. Everything else is a bonus.
+
+We'll be back, and this list will keep growing.
 
 </div>
 

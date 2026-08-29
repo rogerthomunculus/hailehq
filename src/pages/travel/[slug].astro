@@ -19,9 +19,11 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, summary, travellers, year, bases, sections } = entry.data;
+const { title, summary, travellers, year, bases, sections, dateLabel } = entry.data;
 
-const dateRange = `${entry.data.startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}–${entry.data.endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}, ${year}`;
+const dateRange =
+  dateLabel ??
+  `${entry.data.startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}–${entry.data.endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}, ${year}`;
 ---
 
 <ContentLayout title={`${title} — hailehq.com`} description={summary}>
