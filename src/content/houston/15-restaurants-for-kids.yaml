@@ -1,0 +1,100 @@
+order: 15
+title: Restaurants that actually work with kids
+note: Pulled from Houston's kid-specific dining guides — The Infatuation, Houstonia — not Google star ratings. Real play space, real kids' menus, and patios loud enough that nobody has to shush anyone.
+items:
+  - name: Cochinita & Co.
+    where: East End
+    why: Mexican fast-casual with bright colors and fresh-squeezed juice — the kind of place kids actually want to eat at. Kids' menu tops out around $5.50.
+    tags:
+      - - Kids' menu under $6
+        - good
+    filters:
+      - food
+      - kids
+    map: Cochinita and Co Houston East End
+    area: East End
+  - name: The '401 Table and Tap
+    where: Bellaire
+    why: A kids' lounge stocked with books sits off the main dining room, and kids eat free on Mondays. High chairs and a big room built to absorb noise.
+    tags:
+      - - Kids' lounge
+        - good
+      - - Free kids' meals Mon
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - kids
+    map: The 401 Table and Tap Houston Bellaire
+    area: Bellaire
+  - name: The Pit Room
+    where: Memorial
+    why: Counter-service barbecue with a covered patio big enough for kids to actually run around on, plus a dessert stand at the end. Nobody's shushing anyone here.
+    tags:
+      - - Patio kids can run on
+        - good
+      - - Counter service
+    filters:
+      - food
+      - kids
+    map: The Pit Room Houston Memorial
+    area: Memorial
+  - name: d'Alba
+    where: Garden Oaks
+    why: Brunch-focused American spot with a massive patio and an actual playground built in — the meal can run long and nobody's bored.
+    tags:
+      - - Patio playground
+        - good
+    filters:
+      - food
+      - kids
+    map: dAlba Houston Garden Oaks
+    area: Garden Oaks
+  - name: Wakefield Crowbar
+    where: Garden Oaks
+    why: A bar with a genuinely large outdoor play area and sand volleyball, kid-friendly until 10pm — a rare place that works for the adults and the kids at once.
+    tags:
+      - - Kid-friendly till 10pm
+        - good
+      - - Sand volleyball
+    filters:
+      - food
+      - kids
+      - late
+    map: Wakefield Crowbar Houston Garden Oaks
+    area: Garden Oaks
+  - name: Nonno's Family Pizza Tavern
+    where: Montrose
+    why: Arcade games alongside the pizza — the name says the whole pitch. Oversized desserts and mozzarella sticks round it out.
+    tags:
+      - - Arcade on site
+        - good
+    filters:
+      - food
+      - indoor
+      - kids
+    map: Nonnos Family Pizza Tavern Houston Montrose
+    area: Montrose
+  - name: Crisp
+    where: The Heights
+    why: A gastropub with a patio-playground combo and high-energy music kids respond to — Kraft mac and cheese is on the menu for exactly this reason.
+    tags:
+      - - Patio playground
+        - good
+    filters:
+      - food
+      - kids
+    map: Crisp Houston Heights
+    area: The Heights
+  - name: Dish Society
+    where: Galleria
+    why: Farm-to-table comfort food with an outdoor water fountain feature at the Galleria location — a built-in reason for kids to stay entertained between courses.
+    tags:
+      - - Water fountain patio
+        - good
+    filters:
+      - food
+      - kids
+    map: Dish Society Houston Galleria
+    area: Galleria

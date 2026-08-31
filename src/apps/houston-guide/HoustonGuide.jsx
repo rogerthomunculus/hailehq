@@ -10,6 +10,7 @@ const FILTERS = [
   { f: 'late', label: 'Open late' },
   { f: 'book', label: 'Book ahead' },
   { f: 'active', label: 'Active' },
+  { f: 'kids', label: 'Kids' },
   { f: 'group9', label: 'Group of 9' },
   { f: 'obscure', label: 'Obscure pile' },
 ];
@@ -65,33 +66,38 @@ export default function HoustonGuide({ sections }) {
               <h2>{sec.title}</h2>
             </div>
             <p className="sec-note">{sec.note}</p>
-            {sec.visibleItems.map((it) => (
-              <article className="card" key={it.name}>
-                <div className="rank" aria-hidden="true">
-                  {sec.items.indexOf(it) + 1}
-                </div>
-                <h3 className="name">{it.name}</h3>
-                <p className="where">{it.where}</p>
-                <p className="why">{it.why}</p>
-                <div className="strip">
-                  {it.tags.map(([label, kind], i) => (
-                    <span className={kind ? `tag ${kind}` : 'tag'} key={i}>
-                      {label}
-                    </span>
-                  ))}
-                </div>
-                <div className="links">
-                  <a className="btn map" href={mapURL(it.map)} target="_blank" rel="noopener">
-                    Open in Maps
-                  </a>
-                  {it.site && (
-                    <a className="btn" href={it.site} target="_blank" rel="noopener">
-                      Website
+            {sec.visibleItems.map((it, i) => (
+              <div key={it.name}>
+                {it.area && it.area !== sec.visibleItems[i - 1]?.area && (
+                  <h3 className="area-head">{it.area}</h3>
+                )}
+                <article className="card">
+                  <div className="rank" aria-hidden="true">
+                    {sec.items.indexOf(it) + 1}
+                  </div>
+                  <h3 className="name">{it.name}</h3>
+                  <p className="where">{it.where}</p>
+                  <p className="why">{it.why}</p>
+                  <div className="strip">
+                    {it.tags.map(([label, kind], ti) => (
+                      <span className={kind ? `tag ${kind}` : 'tag'} key={ti}>
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="links">
+                    <a className="btn map" href={mapURL(it.map)} target="_blank" rel="noopener">
+                      Open in Maps
                     </a>
-                  )}
-                </div>
-                {it.site && <p className="url">{bare(it.site)}</p>}
-              </article>
+                    {it.site && (
+                      <a className="btn" href={it.site} target="_blank" rel="noopener">
+                        Website
+                      </a>
+                    )}
+                  </div>
+                  {it.site && <p className="url">{bare(it.site)}</p>}
+                </article>
+              </div>
             ))}
           </section>
         ))}
