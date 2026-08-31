@@ -1,0 +1,125 @@
+order: 14
+title: Critic-approved dining for 9
+note: Sourced from Houston's actual food critics and editorial guides — Eater, the Houston Chronicle, The Infatuation — not review-aggregator scores. Cross-checked for whether the room and format actually work for a table of nine.
+items:
+  - name: Hai Cang
+    where: Chinatown · Bellaire Blvd
+    why: Vietnamese seafood built around massive lazy-susan-topped round tables that seat at least 10 — a group of nine is nothing here. Dry-fried lobster and crab roe fried rice are what it's known for.
+    tags:
+      - - Tables seat 10+
+        - good
+      - - Seafood-forward
+    filters:
+      - food
+      - indoor
+      - group9
+    map: Hai Cang Houston Bellaire
+    area: Chinatown
+  - name: Hẻm Kitchen & Bar
+    where: Chinatown
+    why: Vietnamese small plates in a room built like a string of brick tunnels, with giant booths meant for sharing seafood platters across a big group.
+    tags:
+      - - Giant booths
+        - good
+    filters:
+      - food
+      - indoor
+      - group9
+    map: Hem Kitchen and Bar Houston Chinatown
+    area: Chinatown
+  - name: Bon Korean BBQ
+    where: Chinatown
+    why: All-you-can-eat Korean barbecue with spacious tabletop grills built for a crowd — the format keeps nine people occupied and fed at the same pace. Two-hour seating.
+    tags:
+      - - All-you-can-eat
+        - good
+      - - 2-hour limit
+        - warn
+    filters:
+      - food
+      - indoor
+      - group9
+    map: Bon Korean BBQ Houston Chinatown
+    area: Chinatown
+  - name: Gao's Kabob
+    where: Chinatown
+    why: Grilled skewers and center tables purpose-built for large parties, plus karaoke on site if the night wants to keep going. Open late.
+    tags:
+      - - Karaoke on site
+        - good
+      - - Open late
+        - good
+    filters:
+      - food
+      - indoor
+      - late
+      - group9
+    map: Gaos Kabob Houston Chinatown
+    area: Chinatown
+  - name: Taqueria del Sol
+    where: East End
+    why: A dedicated banquet hall attached to the taqueria, built for exactly this — walk-ins and catering both handled easily. Queso and fajitas are the order.
+    tags:
+      - - Dedicated banquet hall
+        - good
+    filters:
+      - food
+      - indoor
+      - group9
+    map: Taqueria del Sol Houston East End
+    area: East End
+  - name: Tia Maria's
+    where: Spring Branch
+    why: The side dining room fits parties of 30 with no reservation needed — nine is easy. Also one of the city's genuine kid-friendly picks, with a free soft-serve machine by the door.
+    tags:
+      - - Side room fits 30+
+        - good
+      - - No reservation needed
+        - good
+    filters:
+      - food
+      - indoor
+      - group9
+      - kids
+    map: Tia Marias Houston Spring Branch
+    area: Spring Branch
+  - name: Lucille's
+    where: Museum District
+    why: Southern food built for a sit-down Sunday-dinner feeling — long communal tables, shareable dishes. Reserve the upstairs dining room for a group this size.
+    tags:
+      - - Reserve upstairs room
+        - warn
+    filters:
+      - food
+      - indoor
+      - book
+      - group9
+    map: Lucilles Houston Museum District
+    area: Museum District
+  - name: Hickory Hollow
+    where: North Houston
+    why: Southern barbecue with a wood-paneled upstairs party room built for groups, and oversized portions across the board. Call ahead to hold the room.
+    tags:
+      - - Upstairs party room
+        - good
+      - - Call ahead
+        - warn
+    filters:
+      - food
+      - indoor
+      - book
+      - group9
+    map: Hickory Hollow Houston
+    area: North Houston
+  - name: Bar 5015
+    where: Third Ward
+    why: Cajun food on a patio that's 90% of the restaurant — weekday walk-ins are easy, weekends want a reservation. DJ some nights.
+    tags:
+      - - Mostly patio
+      - - Weekends — reserve
+        - warn
+    filters:
+      - food
+      - group9
+    map: Bar 5015 Houston Third Ward
+    area: Third Ward

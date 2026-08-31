@@ -112,6 +112,7 @@ const houston = defineCollection({
         filters: z.array(z.string()),
         site: z.string().url().optional(),
         map: z.string(),
+        area: z.string().optional(), // neighborhood sub-heading, e.g. "Chinatown"
       }),
     ),
   }),
