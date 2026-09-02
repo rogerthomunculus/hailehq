@@ -1,0 +1,195 @@
+/* Parent view. Lives on the site hub, so it wears the site's theme rather than
+   the app's paper one. */
+
+.spp {
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 20px;
+}
+
+.spp-empty {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+  max-width: 52ch;
+}
+
+.spp-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.spp-tab {
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  cursor: pointer;
+}
+
+.spp-tab.is-on {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.spp-headline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.spp-percent {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.spp-headline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.spp-headline-text strong {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.spp-basis {
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.spp-trend {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+
+.spp-spark {
+  width: 220px;
+  height: 44px;
+  overflow: visible;
+}
+
+.spp-trend span {
+  color: var(--muted);
+}
+
+.spp-shaky {
+  margin: 16px 0 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.spp-shaky strong {
+  color: var(--warn);
+}
+
+.spp-words {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 6px;
+}
+
+.spp-word {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 11px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  font-size: 13.5px;
+  background: var(--surface2);
+}
+
+.spp-level {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.spp-word.lvl-4 {
+  border-color: var(--paper-correct);
+}
+.spp-word.lvl-4 .spp-level {
+  color: var(--paper-correct);
+}
+.spp-word.lvl-3 .spp-level {
+  color: var(--gold);
+}
+.spp-word.lvl-1 {
+  border-color: var(--warn);
+}
+.spp-word.lvl-1 .spp-level {
+  color: var(--warn);
+}
+
+.spp-history {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.spp-history th {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  font-weight: 400;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.spp-history td {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.spp-mode {
+  color: var(--muted);
+  font-size: 11.5px;
+}
+
+.spp-reset {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.spp-reset:hover {
+  color: var(--warn);
+}

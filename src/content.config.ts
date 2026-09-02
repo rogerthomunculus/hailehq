@@ -118,4 +118,29 @@ const houston = defineCollection({
   }),
 });
 
-export const collections = { travel, school, notes, blookets, houston };
+// One file per practice week, named by the Monday it starts (2026-08-31.yaml).
+// The display title ("August 31st Spelling") is derived from weekStart, never
+// typed, so it cannot drift from the filename. See src/lib/spelling.ts.
+const spelling = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/spelling' }),
+  schema: z.object({
+    weekStart: z.coerce.date(),
+    grade: z.string(), // display label, e.g. "2nd Grade"
+    // A word is either a bare string or a word plus a dictation sentence. The
+    // sentence is what makes a homophone (steak/stake, eight/ate) fair to test
+    // out loud, so it is only worth writing for words that need it.
+    words: z
+      .array(
+        z.union([
+          z.string(),
+          z.object({
+            word: z.string(),
+            sentence: z.string().optional(),
+          }),
+        ]),
+      )
+      .min(1),
+  }),
+});
+
+export const collections = { travel, school, notes, blookets, houston, spelling };

@@ -1,0 +1,325 @@
+@import '../../styles/tokens.css';
+
+/* Ruled-paper theme. The palette lives in tokens.css; nothing here is a
+   literal colour except the translucent overlays built on top of it. */
+
+.sp-page {
+  --line-height: 35px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 460px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 28px 22px 48px 44px;
+  border-left: 3px solid var(--paper-margin);
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent calc(var(--line-height) - 1px),
+    var(--paper-rule) calc(var(--line-height) - 1px),
+    var(--paper-rule) var(--line-height)
+  );
+  background-position: 0 90px;
+  color: var(--paper-ink);
+  font-family: var(--paper-body);
+  padding-bottom: max(48px, env(safe-area-inset-bottom));
+}
+
+.sp-page *,
+.sp-page *::before,
+.sp-page *::after {
+  box-sizing: border-box;
+}
+
+.sp-title {
+  font-family: var(--hand);
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1;
+  margin: 6px 0 2px;
+  transform: rotate(-1.5deg);
+  transform-origin: left;
+}
+
+.sp-sub {
+  color: var(--paper-ink-soft);
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+}
+
+.sp-weeks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.sp-week-chip {
+  border: 1.5px solid var(--paper-rule);
+  background: transparent;
+  color: var(--paper-ink-soft);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.sp-week-chip.is-on {
+  border-color: var(--paper-margin);
+  color: var(--paper-margin);
+}
+
+.sp-card {
+  background: color-mix(in srgb, var(--paper) 40%, white);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+}
+
+.sp-disclosure {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--paper-ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.sp-word-list {
+  margin: 14px 0 0;
+  padding-left: 22px;
+}
+
+.sp-word-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.sp-word {
+  font-weight: 600;
+}
+
+.sp-word-sentence {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--paper-ink-soft);
+}
+
+.sp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 26px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.sp-btn:active {
+  transform: scale(0.97);
+}
+
+.sp-btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.sp-btn:focus-visible,
+.sp-speaker:focus-visible,
+.sp-week-chip:focus-visible,
+.sp-disclosure:focus-visible,
+.sp-linkish:focus-visible {
+  outline: 3px solid var(--paper-ink);
+  outline-offset: 2px;
+}
+
+.sp-btn-primary {
+  background: var(--paper-gold);
+  color: var(--paper-ink);
+}
+
+.sp-btn-secondary {
+  background: transparent;
+  color: var(--paper-ink-soft);
+  border: 1.5px solid var(--paper-rule);
+}
+
+.sp-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.sp-exit {
+  display: inline-block;
+  margin-top: 26px;
+  font-size: 0.85rem;
+  color: var(--paper-ink-soft);
+}
+
+.sp-progress {
+  font-size: 0.9rem;
+  color: var(--paper-ink-soft);
+  margin-bottom: 10px;
+}
+
+.sp-speaker-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 24px;
+}
+
+.sp-speaker {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--paper-ink);
+  color: var(--paper);
+  border: none;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sp-speaker:active {
+  transform: scale(0.95);
+}
+
+.sp-replay-hint {
+  text-align: center;
+  color: var(--paper-ink-soft);
+  font-size: 0.85rem;
+  margin: -14px 0 22px;
+}
+
+.sp-linkish {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--paper-ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.sp-answer {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--paper-ink);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--paper-ink-soft);
+  padding: 8px 4px 12px;
+  outline: none;
+}
+
+.sp-answer:focus {
+  border-bottom-color: var(--paper-gold);
+}
+
+.sp-answer.is-wrong {
+  border-bottom-color: var(--paper-margin);
+  animation: sp-shake 0.35s;
+}
+
+@keyframes sp-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-answer.is-wrong {
+    animation: none;
+  }
+  .sp-btn,
+  .sp-speaker {
+    transition: none;
+  }
+}
+
+.sp-feedback {
+  text-align: center;
+  margin: 18px 0;
+  font-family: var(--hand);
+  font-size: 1.7rem;
+  min-height: 1.7rem;
+}
+
+.sp-feedback.is-ok {
+  color: var(--paper-correct);
+}
+
+.sp-feedback.is-bad {
+  color: var(--paper-margin);
+}
+
+.sp-score {
+  font-family: var(--hand);
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1;
+  margin: 10px 0 4px;
+}
+
+.sp-score-label {
+  text-align: center;
+  color: var(--paper-ink-soft);
+  margin-bottom: 20px;
+}
+
+.sp-missed {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.sp-missed li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--paper-rule);
+}
+
+.sp-attempt {
+  color: var(--paper-margin);
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.sp-correct {
+  color: var(--paper-correct);
+  font-weight: 600;
+}
+
+.sp-all-right {
+  text-align: center;
+  color: var(--paper-ink-soft);
+  margin-bottom: 20px;
+}

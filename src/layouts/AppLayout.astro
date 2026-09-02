@@ -19,6 +19,9 @@ const { title, description = 'An interactive app.', themeColor = '#16191d' } = A
     <meta name="description" content={description} />
     <meta name="theme-color" content={themeColor} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Apps own their own type as well as their own background, so each one
+         loads whatever faces it needs rather than inheriting the site's. -->
+    <slot name="head" />
   </head>
   <body>
     <div class="app-frame">

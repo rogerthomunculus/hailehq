@@ -1,0 +1,32 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import SpellingPractice from '../../apps/spelling-practice/SpellingPractice.jsx';
+import { loadWeeks } from '../../lib/spelling';
+
+const weeks = await loadWeeks();
+---
+
+<AppLayout
+  title="Spelling Practice — APAAS 2nd Grade"
+  description="Weekly spelling practice: hear the word, type it, and track which words still need work."
+  themeColor="#f7f2e7"
+>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </Fragment>
+  <SpellingPractice weeks={weeks} client:load />
+</AppLayout>
+
+<style is:global>
+  /* The island is a centred sheet of paper; the page behind it should be the
+     same paper rather than the browser default. */
+  body {
+    margin: 0;
+    background: var(--paper);
+  }
+</style>
