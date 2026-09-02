@@ -137,10 +137,10 @@
 }
 
 .sp-btn:focus-visible,
-.sp-speaker:focus-visible,
+.sp-listen-btn:focus-visible,
+.sp-back:focus-visible,
 .sp-week-chip:focus-visible,
-.sp-disclosure:focus-visible,
-.sp-linkish:focus-visible {
+.sp-disclosure:focus-visible {
   outline: 3px solid var(--paper-ink);
   outline-offset: 2px;
 }
@@ -154,6 +154,7 @@
   background: transparent;
   color: var(--paper-ink-soft);
   border: 1.5px solid var(--paper-rule);
+  text-decoration: none;
 }
 
 .sp-actions {
@@ -163,11 +164,31 @@
   margin-top: 8px;
 }
 
-.sp-exit {
+/* Always reachable: getting back out must never need the browser's back
+   button, on any screen. */
+.sp-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sp-back {
   display: inline-block;
-  margin-top: 26px;
+  font-family: inherit;
   font-size: 0.85rem;
   color: var(--paper-ink-soft);
+  text-decoration: none;
+  border: 1.5px solid var(--paper-rule);
+  border-radius: 999px;
+  padding: 7px 14px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sp-back:hover {
+  color: var(--paper-ink);
+  border-color: var(--paper-margin);
 }
 
 .sp-progress {
@@ -176,46 +197,74 @@
   margin-bottom: 10px;
 }
 
-.sp-speaker-wrap {
+/* Two explicit choices beat one speaker icon: he knows which one he wants. */
+.sp-listen {
   display: flex;
-  justify-content: center;
-  margin: 18px 0 24px;
+  flex-direction: column;
+  gap: 10px;
+  margin: 18px 0 26px;
 }
 
-.sp-speaker {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background: var(--paper-ink);
-  color: var(--paper);
-  border: none;
-  font-size: 2.2rem;
+.sp-listen-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-}
-
-.sp-speaker:active {
-  transform: scale(0.95);
-}
-
-.sp-replay-hint {
-  text-align: center;
-  color: var(--paper-ink-soft);
-  font-size: 0.85rem;
-  margin: -14px 0 22px;
-}
-
-.sp-linkish {
-  background: none;
+  gap: 10px;
   border: none;
-  padding: 0;
-  font: inherit;
-  color: var(--paper-ink-soft);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  border-radius: 14px;
+  padding: 18px 20px;
+  background: var(--paper-ink);
+  color: var(--paper);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.05rem;
   cursor: pointer;
+}
+
+.sp-listen-btn:active {
+  transform: scale(0.98);
+}
+
+.sp-listen-btn:disabled {
+  background: transparent;
+  color: var(--paper-ink-soft);
+  border: 1.5px solid var(--paper-rule);
+  cursor: default;
+}
+
+.sp-listen-btn span {
+  font-size: 1.3rem;
+}
+
+/* The correction. He got it wrong, so this is the thing on screen worth
+   looking at — it stays until he taps on. */
+.sp-correction {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.sp-correction-label {
+  color: var(--paper-ink-soft);
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+}
+
+.sp-correction-word {
+  font-family: var(--hand);
+  font-size: clamp(3.2rem, 18vw, 4.6rem);
+  line-height: 1.05;
+  color: var(--paper-correct);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.sp-correction-letters {
+  font-size: clamp(1.1rem, 5.5vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--paper-ink);
+  margin: 4px 0 26px;
+  overflow-wrap: anywhere;
 }
 
 .sp-answer {
@@ -235,30 +284,9 @@
   border-bottom-color: var(--paper-gold);
 }
 
-.sp-answer.is-wrong {
-  border-bottom-color: var(--paper-margin);
-  animation: sp-shake 0.35s;
-}
-
-@keyframes sp-shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-6px);
-  }
-  75% {
-    transform: translateX(6px);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .sp-answer.is-wrong {
-    animation: none;
-  }
   .sp-btn,
-  .sp-speaker {
+  .sp-listen-btn {
     transition: none;
   }
 }

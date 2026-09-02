@@ -1,25 +1,36 @@
 weekStart: 2026-08-31
 grade: 2nd Grade
 # Long-vowel spellings: a_e, ea, ai, ay, ee, ei.
-# Sentences are only here where dictation would otherwise be unfair — the four
-# homophones, plus theme because it is the one word he may not know by meaning.
+# Every word carries a sentence. Dictation reads word, sentence, word — and a
+# word heard on its own is exactly where speech synthesis turns "reach" into
+# "rage", so the sentence is what disambiguates it.
 words:
-  - grade
+  - word: grade
+    sentence: Lucas is in second grade.
   - word: theme
     sentence: The theme of the story is friendship.
-  - easy
-  - save
-  - reach
+  - word: easy
+    sentence: That math problem was easy.
+  - word: save
+    sentence: I want to save my money for a new game.
+  - word: reach
+    sentence: Can you reach the top shelf?
   - word: raise
     sentence: Please raise your hand if you know the answer.
-  - plate
-  - keep
-  - cheap
-  - play
+  - word: plate
+    sentence: I put my sandwich on a plate.
+  - word: keep
+    sentence: You can keep the book as long as you need it.
+  - word: cheap
+    sentence: The stickers were cheap, so I bought two.
+  - word: play
+    sentence: We like to play soccer after school.
   - word: steak
     sentence: Dad cooked a steak on the grill.
-  - leaf
-  - speak
+  - word: leaf
+    sentence: A red leaf fell from the tree.
+  - word: speak
+    sentence: Please speak louder so we can hear you.
   - word: pain
     sentence: I felt a sharp pain in my knee.
   - word: eight
