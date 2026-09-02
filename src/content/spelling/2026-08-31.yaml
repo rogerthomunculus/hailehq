@@ -1,0 +1,26 @@
+weekStart: 2026-08-31
+grade: 2nd Grade
+# Long-vowel spellings: a_e, ea, ai, ay, ee, ei.
+# Sentences are only here where dictation would otherwise be unfair — the four
+# homophones, plus theme because it is the one word he may not know by meaning.
+words:
+  - grade
+  - word: theme
+    sentence: The theme of the story is friendship.
+  - easy
+  - save
+  - reach
+  - word: raise
+    sentence: Please raise your hand if you know the answer.
+  - plate
+  - keep
+  - cheap
+  - play
+  - word: steak
+    sentence: Dad cooked a steak on the grill.
+  - leaf
+  - speak
+  - word: pain
+    sentence: I felt a sharp pain in my knee.
+  - word: eight
+    sentence: A spider has eight legs.

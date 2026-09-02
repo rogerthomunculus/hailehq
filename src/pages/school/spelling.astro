@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProgressPanel from '../../apps/spelling-practice/ProgressPanel.jsx';
+import { loadWeeks } from '../../lib/spelling';
+
+const weeks = await loadWeeks();
+const latest = weeks[0] ?? null;
+---
+
+<BaseLayout
+  title="Spelling Practice · Hai Le HQ"
+  description="Weekly APAAS 2nd grade spelling lists, practised out loud."
+>
+  <div class="wrap">
+    <a class="back" href="/school/">← School</a>
+    <p class="eyebrow">School · Spelling</p>
+    <h1 class="page-h1">APAAS 2nd Grade Spelling Practice</h1>
+    <p class="standfirst">
+      One list a week, named for the Monday it starts. The app reads each word aloud, Lucas types
+      what he hears, and it keeps track of which words still need work.
+    </p>
+
+    {
+      latest && (
+        <a class="start" href={`/apps/spelling-practice/?week=${latest.id}`}>
+          Practise {latest.title} →
+        </a>
+      )
+    }
+
+    <section class="block">
+      <h2>Weeks</h2>
+      {
+        weeks.length === 0 ? (
+          <p class="none">No word lists yet.</p>
+        ) : (
+          <div class="wgrid">
+            {weeks.map((w) => (
+              <a class="wcard" href={`/apps/spelling-practice/?week=${w.id}`}>
+                <h3>{w.title}</h3>
+                <span class="meta">{w.words.length} words</span>
+                <span class="words">{w.words.map((x) => x.word).join(' · ')}</span>
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </section>
+
+    <section class="block">
+      <h2>Progress</h2>
+      <p class="note">
+        Readiness is a projected test score: words he spells right, first try, quickly and without
+        replaying the audio count fully; words he gets right slowly or after a second listen count
+        for less. History is kept in this browser only.
+      </p>
+      <ProgressPanel weeks={weeks} client:load />
+    </section>
+
+    <div class="foot">hailehq.com/school/spelling</div>
+  </div>
+</BaseLayout>
+
+<style>
+  .wrap {
+    max-width: 900px;
+    padding-top: calc(var(--sp) * 1.6);
+    padding-bottom: calc(var(--sp) * 3);
+  }
+  .back {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 7px 12px;
+    text-decoration: none;
+  }
+  .back:hover {
+    color: var(--text);
+    border-color: var(--gold);
+  }
+  .page-h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(34px, 6.4vw, 54px);
+    line-height: 0.96;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+  .standfirst {
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0 0 26px;
+    font-size: 15.5px;
+  }
+  .start {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    padding: 11px 22px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .start:hover {
+    background: var(--surface2);
+  }
+  .block {
+    margin-top: 46px;
+    padding-top: 26px;
+    border-top: 1px solid var(--rule);
+  }
+  .block > h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    margin: 0 0 16px;
+    color: var(--gold);
+  }
+  .note {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 62ch;
+    margin: 0 0 18px;
+  }
+  .none {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .wgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 640px) {
+    .wgrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .wcard {
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 16px;
+    background: var(--surface);
+    text-decoration: none;
+    transition: 0.15s;
+  }
+  .wcard:hover {
+    border-color: var(--gold);
+    background: var(--surface2);
+  }
+  .wcard h3 {
+    margin: 0 0 4px;
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .wcard .meta {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .wcard .words {
+    display: block;
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  .foot {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+  }
+</style>

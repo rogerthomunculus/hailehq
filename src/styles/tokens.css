@@ -12,6 +12,21 @@
   --stamp: #ff6fa8;
   --warn: #ff61b0;
 
+  /* Notebook palette. The spelling app renders as ruled paper rather than the
+     site's dark theme — it is the one surface a 7-year-old uses directly, and
+     schoolwork should look like schoolwork. Kept here so the island stays free
+     of hardcoded hex. */
+  --paper: #f7f2e7;
+  --paper-rule: #c7d2e0;
+  --paper-margin: #c1503f;
+  --paper-ink: #1d2b45;
+  --paper-ink-soft: #5b6b85;
+  --paper-correct: #3f7a52;
+  --paper-gold: #d9a441;
+
+  --hand: 'Caveat', cursive;
+  --paper-body: 'Lexend', system-ui, sans-serif;
+
   --sp: clamp(16px, 4vw, 28px);
 
   --display: 'Big Shoulders Display', sans-serif;

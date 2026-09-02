@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
+import { loadWeeks } from '../../lib/spelling';
 
 const resources = (await getCollection('school', ({ data }) => !data.draft)).sort(
   (a, b) => a.data.order - b.data.order,
@@ -10,6 +11,7 @@ const blooketCount = blooketGrades.reduce(
   (total, g) => total + g.data.subjects.reduce((n, s) => n + s.sets.length, 0),
   0,
 );
+const spellingWeeks = await loadWeeks();
 ---
 
 <ContentLayout title="School — hailehq.com" description="Study packs and resources.">
@@ -33,6 +35,16 @@ const blooketCount = blooketGrades.reduce(
           <span class="where">Study Guides</span>
           <span class="what">
             PDF guides generated to help with specific homework and topics, organized by grade.
+          </span>
+        </li>
+        <li>
+          <b>
+            <a href="/school/spelling/">Spelling Practice</a>
+          </b>
+          <span class="where">Grade 2 · APAAS</span>
+          <span class="what">
+            {spellingWeeks.length} weekly word list{spellingWeeks.length === 1 ? '' : 's'}, read
+            aloud and checked, with a running note of the words that still need work.
           </span>
         </li>
         {
