@@ -1,6 +1,6 @@
 order: 15
 title: Restaurants that actually work with kids
-note: Pulled from Houston's kid-specific dining guides — The Infatuation, Houstonia — not Google star ratings. Real play space, real kids' menus, and patios loud enough that nobody has to shush anyone.
+note: Pulled from Houston's kid-specific dining guides — The Infatuation, Houstonia — not Google star ratings, plus a couple of the family's own tested picks. Real play space, real kids' menus, and patios loud enough that nobody has to shush anyone.
 items:
   - name: Cochinita & Co.
     where: East End
@@ -98,3 +98,30 @@ items:
       - kids
     map: Dish Society Houston Galleria
     area: Galleria
+  - name: Paris Baguette
+    where: Chinatown · 9110 Bellaire Blvd
+    why: Korean-style French bakery-cafe — cakes, pastries, and coffee, with an outdoor patio at the flagship Bellaire location. An easy mid-day snack stop that breaks up a day of Chinatown food without committing to a full sit-down meal.
+    tags:
+      - - Open Monday
+        - good
+      - - Patio seating
+        - good
+    filters:
+      - food
+      - indoor
+      - mon
+      - kids
+    map: Paris Baguette Houston Bellaire
+    area: Chinatown
+  - name: Loves Dumpling House
+    where: Katy Fwy · 8408 Katy Fwy
+    why: Handmade dumplings — this is a first-hand family favorite from an earlier visit, not a critic pick. Casual counter-style room, easy for kids, and it's on the Katy Freeway side rather than the Bellaire Chinatown cluster, so it doesn't compete with the same-night traffic if you're headed that way too.
+    tags:
+      - - Family favorite
+        - good
+    filters:
+      - food
+      - indoor
+      - kids
+    map: Loves Dumpling House Houston Katy Freeway
+    area: Katy Freeway
