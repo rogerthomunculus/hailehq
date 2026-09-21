@@ -189,6 +189,11 @@ em {
   color: var(--text);
   background: var(--surface2);
 }
+/* Marks a nav entry that leaves hailehq.com, e.g. write.hailehq.com. */
+.nav-group a .ext {
+  font-size: 10px;
+  opacity: 0.55;
+}
 .badge {
   font-family: var(--mono);
   font-size: 9.5px;
