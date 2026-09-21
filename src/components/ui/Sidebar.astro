@@ -13,10 +13,13 @@ const travelLinks = [
   { href: '/travel/houston-2026/', label: 'Houston' },
 ].sort((a, b) => a.label.localeCompare(b.label));
 
+// The writing coach is its own Vercel project on write.hailehq.com (see that
+// repo's BUILD_SPEC), so it's an absolute link rather than a route here.
 const schoolLinks = [
   { href: '/school/blookets/', label: 'Blookets' },
   { href: '/school/study-guides/', label: 'Study Guides' },
   { href: '/school/spelling/', label: 'Spelling' },
+  { href: 'https://write.hailehq.com/', label: 'Writing Coach', external: true },
 ];
 ---
 
@@ -52,8 +55,12 @@ const schoolLinks = [
     <div class="nav-group open" id="schoolGroup">
       {
         schoolLinks.map((l) => (
-          <a href={l.href} aria-current={pathname.startsWith(l.href) ? 'page' : undefined}>
+          <a
+            href={l.href}
+            aria-current={!l.external && pathname.startsWith(l.href) ? 'page' : undefined}
+          >
             {l.label}
+            {l.external && <span class="ext" aria-hidden="true">↗</span>}
           </a>
         ))
       }
