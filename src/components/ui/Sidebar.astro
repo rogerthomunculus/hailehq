@@ -13,12 +13,13 @@ const travelLinks = [
   { href: '/travel/houston-2026/', label: 'Houston' },
 ].sort((a, b) => a.label.localeCompare(b.label));
 
-// The writing coach is its own Vercel project on write.hailehq.com (see that
-// repo's BUILD_SPEC), so it's an absolute link rather than a route here.
+// The last two are their own Vercel projects on their own subdomains, not
+// routes in this repo, so they're absolute links marked as leaving the site.
 const schoolLinks = [
   { href: '/school/blookets/', label: 'Blookets' },
   { href: '/school/study-guides/', label: 'Study Guides' },
   { href: '/school/spelling/', label: 'Spelling' },
+  { href: 'https://practice.hailehq.com/', label: 'Practice Tests', external: true },
   { href: 'https://write.hailehq.com/', label: 'Writing Coach', external: true },
 ];
 ---
