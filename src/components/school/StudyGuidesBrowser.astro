@@ -1,10 +1,11 @@
 ---
-// Live-lists the hailehq-files R2 bucket, grouped by grade folder and (if
-// present) a subject subfolder — e.g. "5th Grade/ELA/some-guide.pdf" groups
-// under "5th Grade" > "ELA". Drop a PDF into the bucket via the Cloudflare
-// dashboard, name the folders however reads naturally (e.g. "5th Grade"),
-// and it shows up here on next page load, no redeploy. See
-// workers/files-list/README.md for more on the convention.
+// Live-lists the hailehq-files R2 bucket, grouped by grade folder, a
+// subject subfolder, and (if present) a unit/chapter subfolder one level
+// deeper — e.g. "5th Grade/Social Studies/Unit 2 Ch 1 — Ghana Empire/some.pdf"
+// groups under "5th Grade" > "Social Studies" > "Unit 2 Ch 1 — Ghana Empire".
+// Drop a PDF into the bucket via the Cloudflare dashboard, name the folders
+// however reads naturally, and it shows up here on next page load, no
+// redeploy. See workers/files-list/README.md for more on the convention.
 interface Props {
   prefix?: string;
 }
@@ -34,6 +35,16 @@ const apiBase =
     return m ? parseInt(m[0], 10) : 500;
   }
 
+  // Sorts "Unit 2 Ch 1 — ..." style labels by unit then chapter number.
+  // Folders with no parseable unit/chapter land after ones that have it;
+  // files with no chapter folder at all (chapterLabel === null) sort first.
+  function chapterRank(label: string | null): number {
+    if (label === null) return -1;
+    const m = label.match(/Unit\s*(\d+)\D+Ch\.?\s*(\d+)/i);
+    if (m) return parseInt(m[1], 10) * 1000 + parseInt(m[2], 10);
+    return 999999;
+  }
+
   function fileKind(name: string): string {
     return (name.split('.').pop() || '').toUpperCase();
   }
@@ -55,21 +66,27 @@ const apiBase =
     return li;
   }
 
-  // Groups files by top-level folder (grade) then, if present, a second
-  // folder level (subject). Files with no folder at all land in "General".
+  // Groups files by top-level folder (grade), then a second folder level
+  // (subject), then a third (unit/chapter) if present. Files with no folder
+  // at all land in "General"; a subject with no chapter folder renders flat,
+  // same as before.
   function groupFiles(files: RemoteFile[]) {
-    const grades = new Map<string, Map<string | null, RemoteFile[]>>();
+    const grades = new Map<string, Map<string | null, Map<string | null, RemoteFile[]>>>();
 
     for (const file of files) {
       const parts = file.name.split('/');
       const grade = parts.length === 1 ? GENERAL_LABEL : parts[0];
       const subject = parts.length > 2 ? parts[1] : null;
-      const label = parts.length === 1 ? parts[0] : parts.slice(subject ? 2 : 1).join('/');
+      const chapter = parts.length > 3 ? parts[2] : null;
+      const skip = 1 + (subject !== null ? 1 : 0) + (chapter !== null ? 1 : 0);
+      const label = parts.length === 1 ? parts[0] : parts.slice(skip).join('/');
 
       if (!grades.has(grade)) grades.set(grade, new Map());
       const subjects = grades.get(grade)!;
-      if (!subjects.has(subject)) subjects.set(subject, []);
-      subjects.get(subject)!.push({ ...file, name: label });
+      if (!subjects.has(subject)) subjects.set(subject, new Map());
+      const chapters = subjects.get(subject)!;
+      if (!chapters.has(chapter)) chapters.set(chapter, []);
+      chapters.get(chapter)!.push({ ...file, name: label });
     }
 
     return grades;
@@ -116,13 +133,31 @@ const apiBase =
           subjectSection.appendChild(h4);
         }
 
-        const ul = document.createElement('ul');
-        ul.className = 'places';
-        const items = subjects.get(subjectLabel)!.sort((a, b) => a.name.localeCompare(b.name));
-        for (const file of items) {
-          ul.appendChild(buildFileItem(file, file.name));
+        const chapters = subjects.get(subjectLabel)!;
+        const chapterLabels = [...chapters.keys()].sort(
+          (a, b) => chapterRank(a) - chapterRank(b) || (a ?? '').localeCompare(b ?? ''),
+        );
+
+        for (const chapterLabel of chapterLabels) {
+          const chapterSection = document.createElement('div');
+          chapterSection.className = 'chapter-group';
+
+          if (chapterLabel !== null) {
+            const h5 = document.createElement('h5');
+            h5.textContent = chapterLabel;
+            chapterSection.appendChild(h5);
+          }
+
+          const ul = document.createElement('ul');
+          ul.className = 'places';
+          const items = chapters.get(chapterLabel)!.sort((a, b) => a.name.localeCompare(b.name));
+          for (const file of items) {
+            ul.appendChild(buildFileItem(file, file.name));
+          }
+          chapterSection.appendChild(ul);
+          subjectSection.appendChild(chapterSection);
         }
-        subjectSection.appendChild(ul);
+
         gradeSection.appendChild(subjectSection);
       }
 
@@ -184,5 +219,22 @@ const apiBase =
     text-transform: uppercase;
     color: var(--muted);
     margin: 0 0 0.4rem;
+  }
+  :global(.chapter-group) {
+    margin-top: 1.1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--rule);
+  }
+  :global(.chapter-group:first-child) {
+    margin-top: 0.5rem;
+    padding-top: 0;
+    border-top: none;
+  }
+  :global(.chapter-group > h5) {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--text);
+    margin: 0 0 0.5rem;
   }
 </style>

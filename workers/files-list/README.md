@@ -35,11 +35,31 @@ its own bucket/prefix scheme with `FileBrowser.astro` instead, or it'll show up 
 
 ### Study guide folders
 
-Drop files under `<grade folder>/<file>` or `<grade folder>/<subject folder>/<file>` — name the
-folders however reads naturally in the Cloudflare dashboard, e.g. `5th Grade`, `Kindergarten`,
-`1st Grade`. Sorting pulls the leading number out of the folder name (so "5th Grade" sorts after
-"1st Grade"); `kindergarten`/`k` always sorts first; anything with no leading number sorts last,
-alphabetically. Files dropped with no grade folder at all land in a catch-all "General" group.
+Drop files under `<grade folder>/<file>`, `<grade folder>/<subject folder>/<file>`, or
+`<grade folder>/<subject folder>/<unit/chapter folder>/<file>` — name the folders however reads
+naturally in the Cloudflare dashboard, e.g. `5th Grade`, `Kindergarten`, `1st Grade`,
+`Unit 2 Ch 1 — Ghana Empire`. Sorting pulls the leading number out of the folder name at every
+level (so "5th Grade" sorts after "1st Grade", "Unit 2 Ch 1" after "Unit 1 Ch 3"); `kindergarten`/`k`
+always sorts first; anything with no leading number sorts last, alphabetically. Files dropped with
+no grade folder at all land in a catch-all "General" group; a subject with no chapter folder still
+renders as a flat list, same as before — the chapter level is opt-in per subject.
 
-Example: `5th Grade/ELA/fractions-review.pdf` shows up under "5th Grade" → "ELA" as
-"fractions-review.pdf".
+Example: `5th Grade/Social Studies/Unit 2 Ch 1 — Ghana Empire/vocabulary.pdf` shows up under
+"5th Grade" → "Social Studies" → "Unit 2 Ch 1 — Ghana Empire" as "vocabulary.pdf".
+
+Once a subject has more than a handful of files, add the chapter folder — that's the fix for a
+cluttered subject list, not a new filter or a schema change.
+
+### Never upload these here
+
+This bucket is public with no auth — anyone with the URL can read anything in it. Study-pack output
+sometimes includes files that must stay private:
+
+- Anything named `*_KEY.pdf` (practice test / writing practice answer keys).
+- `test.json` and its stimulus images, from a `*_practice_test_web.zip` — the answers and `why`
+  text sit in plain JSON. These belong in the `practice.hailehq.com` project's own repo (a separate
+  Vercel project), which grades server-side and never ships the key to the browser. Not this bucket.
+
+Everything else from a study-pack run (vocabulary, GRAPES/CER guides, the parent cheat sheet, the
+plain practice-test PDF with no answers, the read-aloud HTML, the student-facing writing-practice
+PDF) is safe to publish here.
