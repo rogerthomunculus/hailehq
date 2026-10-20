@@ -194,6 +194,42 @@ em {
   font-size: 10px;
   opacity: 0.55;
 }
+/* A named bundle inside "Travel Planning" (e.g. "Snow Trip"), one level
+   deeper than a regular nav-group — a label, then its own indented links. */
+.nav-subgroup {
+  margin: 2px 0;
+}
+.nav-subgroup-label {
+  display: block;
+  padding: 6px 12px 3px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.75;
+}
+.nav-subgroup-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding-left: 10px;
+  margin-left: 12px;
+  border-left: 1px solid var(--rule);
+}
+.nav-subgroup-links a {
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 13.5px;
+  color: var(--muted);
+  text-decoration: none;
+  display: block;
+}
+.nav-subgroup-links a:hover,
+.nav-subgroup-links a[aria-current='page'] {
+  color: var(--text);
+  background: var(--surface2);
+}
 .badge {
   font-family: var(--mono);
   font-size: 9.5px;

@@ -34,6 +34,11 @@ const travel = defineCollection({
       )
       .optional(),
     appUrl: z.string().optional(), // link to a planner
+    // Set for a trip that's still being planned (not yet booked/happened) and
+    // comes as a bundle of coordinated docs (a guide plus a budget comparison,
+    // say). Pulls it out of the flat "Travel" sidebar list into its own
+    // "Travel Planning" > <planningGroup> nested section instead.
+    planningGroup: z.string().optional(),
     sections: z
       .array(
         z.object({

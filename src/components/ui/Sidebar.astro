@@ -3,15 +3,32 @@ import { getCollection } from 'astro:content';
 
 const { pathname } = Astro.url;
 
-const travelGuides = (await getCollection('travel', ({ data }) => !data.draft)).sort(
+const allTravelGuides = (await getCollection('travel', ({ data }) => !data.draft)).sort(
   (a, b) => a.data.order - b.data.order,
 );
+// A guide with a `planningGroup` (a trip still being planned, delivered as a
+// bundle of coordinated docs — a guide plus a budget comparison, say) moves
+// out of the flat Travel list into its own "Travel Planning" > <group> nest
+// instead, so a multi-doc trip-in-progress doesn't clutter the trip-log list.
+const travelGuides = allTravelGuides.filter((g) => !g.data.planningGroup);
+const planningGuides = allTravelGuides.filter((g) => g.data.planningGroup);
+
 // Houston isn't MDX prose (see src/content/houston/), so it isn't in the `travel`
 // collection — it gets its own static route but belongs in the same nav group.
 const travelLinks = [
   ...travelGuides.map((g) => ({ href: `/travel/${g.id}/`, label: g.data.destination })),
   { href: '/travel/houston-2026/', label: 'Houston' },
 ].sort((a, b) => a.label.localeCompare(b.label));
+
+// Grouped in document order (already sorted by `order` above), not
+// alphabetically — a plan reads top-to-bottom like the trip guide itself.
+const planningGroups = new Map<string, { href: string; label: string }[]>();
+for (const g of planningGuides) {
+  const group = g.data.planningGroup!;
+  const links = planningGroups.get(group) ?? [];
+  links.push({ href: `/travel/${g.id}/`, label: g.data.destination });
+  planningGroups.set(group, links);
+}
 
 // The last two are their own Vercel projects on their own subdomains, not
 // routes in this repo, so they're absolute links marked as leaving the site.
@@ -47,6 +64,36 @@ const schoolLinks = [
       }
     </div>
 
+    {
+      planningGroups.size > 0 && (
+        <>
+          <button class="nav-group-toggle" id="travelPlanningToggle" aria-expanded="true">
+            Travel Planning
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+              <path d="M9 6l6 6-6 6" />
+            </svg>
+          </button>
+          <div class="nav-group open" id="travelPlanningGroup">
+            {[...planningGroups].map(([group, links]) => (
+              <div class="nav-subgroup">
+                <span class="nav-subgroup-label">{group}</span>
+                <div class="nav-subgroup-links">
+                  {links.map((l) => (
+                    <a
+                      href={l.href}
+                      aria-current={pathname.startsWith(l.href) ? 'page' : undefined}
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )
+    }
+
     <button class="nav-group-toggle" id="schoolToggle" aria-expanded="true">
       School
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
@@ -61,7 +108,11 @@ const schoolLinks = [
             aria-current={!l.external && pathname.startsWith(l.href) ? 'page' : undefined}
           >
             {l.label}
-            {l.external && <span class="ext" aria-hidden="true">↗</span>}
+            {l.external && (
+              <span class="ext" aria-hidden="true">
+                ↗
+              </span>
+            )}
           </a>
         ))
       }
@@ -82,6 +133,7 @@ const schoolLinks = [
     });
   }
   wireToggle('travelToggle', 'travelGroup');
+  wireToggle('travelPlanningToggle', 'travelPlanningGroup');
   wireToggle('schoolToggle', 'schoolGroup');
 
   document.getElementById('menuToggle')?.addEventListener('click', () => {
