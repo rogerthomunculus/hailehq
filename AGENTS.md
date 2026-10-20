@@ -11,11 +11,13 @@ Family site. Astro, static output, deployed on Vercel.
 ## Conventions
 
 - Never commit directly to `main`. Branch, PR, merge.
-- Branch names: `content/<slug>`, `feat/<slug>`, `fix/<slug>`.
+- Branch names: `content/<slug>`, `feat/<slug>`, `fix/<slug>`, `chore/<slug>`.
 - Conventional commits: `content:`, `feat:`, `fix:`, `chore:`, `style:`.
 - New content = new `.mdx` file (or `.yaml` for the `blookets` data collection). Do not add routes; `[slug].astro` handles it.
 - Colours and type come from `src/styles/tokens.css`. Do not hardcode hex values.
 - Run `npx astro check` before opening a PR.
+- A commit isn't done until it's pushed and the PR is open. A PR isn't done until it's merged (or explicitly left for review). Don't end a session with local-only commits or an open, un-merged PR sitting there — either finish it or say clearly what's left and why.
+- Before building on an existing branch (including a branch this repo's tooling names for you), check whether its last PR already merged: `git log origin/main..HEAD` empty, or the PR shows `merged_at`, means it did — restart from `origin/main` rather than stacking new work on an abandoned tip. A squash-merged PR leaves the remote branch looking "ahead" of `main` even though the work already shipped.
 
 ## Adding a trip guide
 
