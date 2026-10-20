@@ -1,0 +1,788 @@
+---
+title: Park City in February
+summary: A first snow and ski trip for two families — four adults, four kids ages 7 to 14, none of whom have skied. Two ski days in group lessons, dog sleds, a sleigh dinner, and a hot swim inside a crater.
+destination: Park City
+year: 2027
+startDate: 2027-02-05
+endDate: 2027-02-12
+dayCount: 8
+travellers: 2 families · 4 adults & 4 kids (7, 10, 10 & 14)
+updated: 2026-10-20
+order: 1.5
+sections:
+  - { id: about, label: About Park City }
+  - { id: week, label: The week }
+  - { id: timeline, label: Book when }
+  - { id: travel, label: Getting there }
+  - { id: stay, label: Where to stay }
+  - { id: ski, label: Ski days }
+  - { id: gear, label: Gear }
+  - { id: activities, label: Activities }
+  - { id: places, label: Places to swap in }
+  - { id: money, label: Budget }
+  - { id: insure, label: Insurance }
+  - { id: pack, label: What to buy }
+  - { id: eat, label: Eating }
+  - { id: basics, label: On the ground }
+  - { id: kids, label: Stories }
+  - { id: decide, label: Decisions }
+---
+
+import Section from '../../components/travel/Section.astro';
+import Note from '../../components/ui/Note.astro';
+import FactGrid from '../../components/ui/FactGrid.astro';
+import PlaceList from '../../components/ui/PlaceList.astro';
+import DayList from '../../components/travel/DayList.astro';
+import Day from '../../components/travel/Day.astro';
+import KidFacts from '../../components/travel/KidFacts.astro';
+
+<Section id="about" num="01" title="What Park City is" subtitle="Written for two families taking a first snow and ski trip together: four adults and four kids aged 7 to 14, none of whom have skied. Where it is, why it suits a first snow trip from New Orleans, and what to watch out for.">
+
+<FactGrid
+  facts={[
+    { label: 'Elevation (town)', value: '~7,000 ft' },
+    { label: 'From SLC airport', value: '~35 mi' },
+    { label: 'Ski resorts in town', value: '2' },
+    { label: 'Town buses', value: 'Free' },
+  ]}
+/>
+
+<div class="measure">
+
+### A mining town that turned into a ski town
+
+Park City started as a silver camp after ore was found in the hills in 1868. Settlers called the valley Parley's Park, and the town took the shortened name when it incorporated in 1884. The mines made a handful of fortunes, then faded, and the town shrank badly before skiing brought it back in the 1980s and 1990s ([history](https://en.wikipedia.org/wiki/Park_City,_Utah)). You can still see the mining era everywhere: old mine buildings on the ski slopes, and a 19th-century Main Street of wooden storefronts climbing the hill.
+
+### An Olympic town, twice
+
+Park City was the mountain half of the 2002 Salt Lake City Winter Olympics — more than 40% of the events were held here, including a third of all medal events ([Visit Park City](https://www.visitparkcity.com/about-park-city/olympics/)). The Games come back to Utah in 2034 using the same venues, and Olympic athletes still train here, so you can watch bobsledders and ski jumpers practice at the Olympic Park.
+
+### Two resorts, and the one we'll use
+
+**Park City Mountain** is the largest ski resort in the United States, about 7,300 acres. Its main base sits at the edge of Old Town, a few blocks from Main Street, with the sleigh-ride dinner and the Alpine Coaster at the same base. Its group ski school covers **every age in our group**: kids 7–14 and adults 15+ — that's why it's the pick for this trip.
+
+**Deer Valley** is the polished, ski-only resort next door, with an excellent ski school. It doesn't fit us as well: its teen group lessons don't run on our ski days, and adults' lessons and tickets cost more.
+
+### Why Park City over Colorado
+
+- **Shortest trip.** One nonstop flight from New Orleans, then about 40 minutes on an interstate.
+- **Lower altitude.** The town sits around 7,000 ft. Colorado's Summit County bases are closer to 9,500 ft.
+- **The most to do off the slopes,** all within about 30 minutes — matters most on a trip that's mainly about group fun.
+- **Mardi Gras week is quiet out here.** Most of the country is in school Feb 5–12, and we leave before Presidents' Day weekend (Feb 13–15).
+
+### Honest downsides
+
+- **It's expensive.** A peak-day adult lift ticket at the window is $369 at Park City Mountain this season ([TownLift](https://townlift.com/2026/09/park-city-deer-valley-among-the-countrys-priciest-ski-days-as-2026-27-tickets-climb-again/)). Buying in advance avoids most of that.
+- **The canyon drive can close.** I-80 up from Salt Lake gets snow-packed in storms, and Utah's traction law can require AWD. Leave buffer on airport days.
+- **Altitude is real.** Expect headaches, dry noses and poor sleep the first night or two — one reason the ski days come later in the week.
+
+### Who and when
+
+Jefferson Parish's Mardi Gras break runs Fri Feb 5 through Fri Feb 12. Fly out the first Friday, home the second Friday — everyone's agreed to skip Carnival this year.
+
+| Family   | Who              | Kids' ages | Ski school group                                              |
+| -------- | ---------------- | ---------- | ------------------------------------------------------------- |
+| Family A | 2 adults, 2 kids | 7, 10      | Kids in child group (7–14). Adults in adult group (15+).      |
+| Family B | 2 adults, 2 kids | 14, 10     | Both kids in child group (7–14). Adults in adult group (15+). |
+
+<Note type="warn" label="One risk to plan around">
+  Both families are on the same school calendar, which marks the Mardi Gras break days as possible
+  make-up days for emergencies or bad weather. If the district takes some back, ordinary trip
+  insurance likely won't pay. The [insurance section](#insure) covers the policy type that does
+  handle it, and it has a purchase deadline tied to your first deposit.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="week" num="02" title="The week" subtitle="Two easy snow days first to adjust to the altitude and the cold, then the two ski days back to back so the second lesson builds on the first, then the big group experiences.">
+
+<div class="measure">
+
+<Note type="win" label="Base itinerary">
+  This is the default plan, built to the ~$18k-per-family budget. Treat everything except the two
+  ski days, the dog sledding and the sleigh dinner as swappable — see [Activities](#activities) and
+  [Places to swap in](#places) for the alternates. If a day feels too full, or the weather turns,
+  pick a replacement from there.
+</Note>
+
+Sunset in early February is around 5:45–6 p.m., so plan outdoor afternoons to finish by then, apart from the lit tubing hills.
+
+</div>
+
+<DayList>
+  <Day
+    n={1}
+    date="Fri Feb 5"
+    base="out"
+    intensity={2}
+    title="Fly in, settle, first snow"
+    drive="Delta nonstop MSY→SLC, then ~45 min up Parleys Canyon"
+  >
+    Pick up the AWD cars and drive up Parleys Canyon. Groceries on the way. Before dark, buy a few
+    $10 sleds and hit a town sledding hill — the kids' first time touching snow.
+  </Day>
+  <Day
+    n={2}
+    date="Sat Feb 6"
+    base="out"
+    intensity={2}
+    title="Olympic Park, snowshoes and tubing"
+    drive="Kimball Junction · ~15 min"
+  >
+    Late morning at Utah Olympic Park: free museums and a guided tour to the top of the ski jumps.
+    Five minutes away to the Swaner EcoCenter for its Saturday guided snowshoe walk across the
+    wetlands (check the start time and swap the order if it's a morning walk), or rented snowshoes
+    and the four-story wildlife tower — look for elk and deer. Evening tubing at Woodward, five
+    minutes away.
+  </Day>
+  <Day
+    n={3}
+    date="Sun Feb 7"
+    base="out"
+    intensity={2}
+    title="Dog sledding and Main Street"
+    drive="Ranch 20–30 min out, then free bus into town"
+  >
+    Morning dog sledding at a ranch 20–30 minutes out. Afternoon: pick up ski rentals for tomorrow,
+    then the Park City Museum and dinner on Main Street via the free bus.
+  </Day>
+  <Day
+    n={4}
+    date="Mon Feb 8"
+    base="out"
+    intensity={4}
+    title="Ski day 1 — everyone in ski school"
+    drive="Walk to Park City Mountain base"
+  >
+    All four kids in the full-day child group lesson (includes lunch in recent seasons). All four
+    adults in the adult first-time full-day group lesson. Hot tub and an early night. A Monday means
+    smaller crowds than the weekend.
+  </Day>
+  <Day
+    n={5}
+    date="Tue Feb 9"
+    base="out"
+    intensity={4}
+    title="Ski day 2 — then ski together"
+    drive="Walk to Park City Mountain base"
+  >
+    Second full-day group lesson. Most kids reach a chairlift and an easy green run by day two.
+    After the lesson, meet up for a run together and a ride on the Alpine Coaster at the same base.
+    This is Mardi Gras day back home.
+  </Day>
+  <Day
+    n={6}
+    date="Wed Feb 10"
+    base="out"
+    intensity={1}
+    title="Hot crater and long tubing lanes"
+    drive="Midway · ~25 min"
+  >
+    Rest for the legs. Drive to Midway: a midday swim in the 90–96°F Homestead Crater, lunch, then
+    tubing on the 1,200-ft lanes at Soldier Hollow (the 2002 Olympic venue).
+  </Day>
+  <Day
+    n={7}
+    date="Thu Feb 11"
+    base="out"
+    intensity={2}
+    title="Snowmobiles and a sleigh"
+    drive="Shuttle from lodging"
+  >
+    Morning snowmobile tour with Deer Valley Snowmobiling, shuttle from the house. Free afternoon:
+    ice skating, shopping or packing. The Snowed Inn sleigh-ride dinner to finish the week.
+  </Day>
+  <Day
+    n={8}
+    date="Fri Feb 12"
+    base="out"
+    intensity={1}
+    title="Fly home"
+    drive="~40 min to SLC airport"
+  >
+    Return the cars and leave early for the airport, since Presidents' Day weekend traffic starts
+    building. Home with the weekend to recover.
+  </Day>
+</DayList>
+
+<div class="measure">
+
+### Bad-weather plan
+
+| If this happens                            | Do this                                                                                                                                                                                                                              |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| The canyon is closed or slow when you land | Don't fight it. Eat in Salt Lake, or spend two hours at the Natural History Museum of Utah (dinosaurs, indoors, near the canyon mouth), and check [UDOT Traffic](https://udottraffic.utah.gov). Closures usually clear within hours. |
+| It snows on a ski day                      | Ski anyway. Lessons run in falling snow, and fresh snow is softer to fall on. Only high wind or lightning stops lifts.                                                                                                               |
+| A big storm or high winds on Mon–Tue       | Swap the ski days with Wed–Thu, and move the Midway day earlier. Park City Mountain lessons can be changed without penalty 48 hours or more ahead.                                                                                   |
+| Too cold or too tired for outdoor plans    | Indoor backups: the Olympic Park museums, Swaner's exhibits, the Ice Arena, Woodward's indoor trampolines and skate park, or a Salt Lake museum day.                                                                                 |
+| A low-snow winter                          | The beginner areas and tubing hills rely on snowmaking, so lessons and tubing still happen. Watch the snow reports in January. Dog sledding and the Ice Castles are the activities most at risk.                                     |
+| Thin snow cancels dog sledding             | Luna Lobos switches to a wheeled "dry land" sled ride. Deposits aren't refundable, so go anyway.                                                                                                                                     |
+| Storm on departure day                     | Leave for the airport early, by at least an extra hour. Check UDOT first. If flights cancel, the insurance's travel-delay coverage helps with the extra night.                                                                       |
+
+</div>
+
+</Section>
+
+<Section id="timeline" num="03" title="What to book, and when" subtitle="Ordered by what sells out or gets more expensive first.">
+
+<div class="measure">
+
+1. **This week** — Name the four drivers. Pick the travel insurance plan before paying the first deposit ([section 11](#insure)).
+2. **Within 14 days of first deposit** — Buy travel insurance with Cancel For Any Reason. The CFAR window closes 14–30 days after your first trip payment, depending on the plan. Miss it and the upgrade is gone.
+3. **By end of Oct** — Flights (Delta runs one nonstop a day, so eight seats on the same plane go first). Lodging (southern families book Mardi Gras week early). Dog sledding — operators advise booking about three months ahead, and Luna Lobos sold out its whole 2025 season. The Snowed Inn sleigh dinner.
+4. **By Nov 30** — Ski Utah Passports for both 10-year-olds ($79 each through Nov 30, $99 after). Ski school for Feb 8–9, all eight people. Rental cars in the guaranteed-AWD class.
+5. **Before early Dec** — Epic 2-Day Passes for the four adults, the 14-year-old and the 7-year-old — they go off sale in early December (Dec 4 last season) and can't be bought after. The snowmobile tour.
+6. **January** — Ski rentals and helmets. Woodward and Soldier Hollow tubing sessions, the Crater swim, the Swaner guided snowshoe walk. Kids' snow clothes, ordered in November or December at the latest ([section 12](#pack)).
+7. **Week before** — Watch the forecast and the canyon conditions on [UDOT Traffic](https://udottraffic.utah.gov). Confirm ski school meeting times and rental pickup.
+
+</div>
+
+</Section>
+
+<Section id="travel" num="04" title="Getting there and around" subtitle="It's about 35 miles from the airport and usually 40–50 minutes. In a storm it can be much longer.">
+
+<div class="measure">
+
+### Flights
+
+**Delta, New Orleans to Salt Lake City, nonstop** on [delta.com](https://www.delta.com). Delta flies the route once a day ([MSY airport](https://flymsy.com/delta-airlines/)), and the flight takes about 3 hours 40 minutes. Everything else connects, which adds hours and a missed-connection risk in February weather.
+
+**Estimate:** $500–750 round trip per person, so $4,000–6,000 for eight. Book all eight seats on the same flight, and check the nonstop's departure time before planning day one — if it lands after dark, do the canyon drive and groceries, and save sledding for Saturday morning.
+
+**Checked bags:** Delta charges about $45 for the first bag and $55 for the second, each way, unless someone holds a Delta credit card with free bags. Winter clothes take a lot of space, so **wear the bulkiest layers on the plane** (boots, jacket, fleece) and pack the rest in compression bags.
+
+**ID:** every adult needs a **REAL ID** driver's license (the one with a star) or a passport to fly. Kids under 18 don't need ID on domestic flights.
+
+### Airport to Park City
+
+| Option                                                                                                                                           | Estimate for 8                    | Good                                                                              | Not so good                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| **Two AWD SUVs** (decided) — [Enterprise](https://www.enterprise.com) · [National](https://www.nationalcar.com) · [Alamo](https://www.alamo.com) | $1,200–2,000<br/>7 days, estimate | Needed for the Olympic Park, Woodward and Midway days. Carries luggage for eight. | Two drivers needed for the canyon. Main Street parking is paid. |
+| Shared shuttle — [Canyon Transportation](https://canyontransport.com/airport-transportation/)                                                    | ~$780<br/>~$49/person each way    | No snow driving                                                                   | No car for half the week's activities                           |
+
+<Note label="Utah's traction law">
+  During storms, UDOT can require proper traction on I-80 through Parleys Canyon and in Park City
+  ([UDOT](https://wasatchback.udot.utah.gov/traction-law/)). AWD vehicles need M+S or
+  snowflake-rated tires on all four wheels. Enterprise, Alamo and National let you reserve a
+  **"Guaranteed AWD"** class, so book that rather than "SUV or similar".
+</Note>
+
+### Booster seat for the 7-year-old
+
+Utah requires a car seat or booster for children under 8, unless they're taller than 57 inches. The 7-year-old needs a booster in the SUV — the easiest option is a **backless booster from home**, small and light enough to carry on the plane. Rental companies rent them too, usually for a daily fee. The 10 and 14-year-olds can use regular seat belts.
+
+### In town: free buses
+
+Park City's buses are free every day and connect Old Town, Main Street, both resorts and Kimball Junction. On the ski days and the Main Street evening, leave the cars parked.
+
+</div>
+
+</Section>
+
+<Section id="stay" num="05" title="Where to stay" subtitle="Ski school, the sleigh-ride dinner, the Alpine Coaster and the walk to Main Street are all around Park City Mountain's main base. Staying there is what makes the week easy.">
+
+<div class="measure">
+
+<Note type="win" label="Decided">
+  **Two neighboring 2–3 bedroom condos, or one 4–5 bedroom home, near Park City Mountain's base
+  village or in lower Old Town.** You can walk to ski school and to dinner, and the free bus covers
+  the rest. Two units usually cost about the same as one big house and give each family its own
+  space with tired kids.
+</Note>
+
+| Option                                                                                                                                                    | Estimate / night                              | Why it fits                                                                                                          | Trade-offs                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Condos at the Park City Mountain base** — [Vrbo](https://www.vrbo.com/vacation-rentals/usa/utah/northeast/park-city) · [Vacasa](https://www.vacasa.com) | $1,000–2,000<br/>both families, Feb, estimate | Walk to ski school, the sleigh dinner and the coaster. Kitchens for breakfasts and kid dinners.                      | Quality varies by owner — read recent reviews. Ask about parking for two cars. |
+| **Marriott's MountainSide** — [marriott.com](https://www.marriott.com)                                                                                    | $500–900 per villa<br/>estimate               | Right at the base of Park City Mountain, with villas that have kitchens and a pool. Book two villas, one per family. | Timeshare-style resort. Units book up early for February.                      |
+| **Old Town house** — [Vrbo](https://www.vrbo.com/vacation-rentals/usa/utah/northeast/park-city)                                                           | $1,200–2,500<br/>estimate                     | Walk to Main Street and the museum. Short walk or bus to the base, or ride the Town Lift up from Main Street.        | Steep streets and stairs with gear. Tight parking.                             |
+| **Canyons Village condos** — Grand Summit, Hyatt Centric                                                                                                  | $800–1,800<br/>estimate                       | Ski-in/ski-out on Park City Mountain's quieter side, which has its own ski school.                                   | A 10–15 minute drive to Main Street and the sleigh dinner.                     |
+
+<p class="est" style="font-family:var(--mono); font-size:0.8rem; color:var(--muted);">
+  Lodging rates are rough planning estimates, not quotes. Get real prices for Feb 5–12 before
+  deciding.
+</p>
+
+<Note label="Parking at the base">
+  Park City Mountain's base-area lots have used paid parking with morning reservations in recent
+  seasons (surface lots from about $25 a day), with free parking for cars carrying four or more
+  people. Another reason to stay within walking distance: you never need to drive to ski school.
+  Confirm that the condos include parking for two cars.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="ski" num="06" title="Two ski days" subtitle="Everyone in group lessons, at one resort, on the same two days. Park City Mountain's group school covers all eight people, so nobody needs a private lesson and no family splits up across resorts.">
+
+<div class="measure">
+
+| Who           | Lesson ([details](https://www.parkcitymountain.com/plan-your-trip/ski-and-ride-lessons/first-timers)) | Includes                                                                                     | Lesson estimate                                             |
+| ------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| 7, 10, 10, 14 | **Child full-day group lesson**, ages 7–14, grouped by ability                                        | Lunch on full-day lessons in recent seasons. **Helmets required, not rented by the school.** | $300–400/day<br/>estimate. $299 published for 2022–23.      |
+| 4 adults      | **Adult first-time full-day group lesson**, ages 15+                                                  | Instruction only. Bring or buy lunch.                                                        | $200–300/day<br/>estimate. Half-day last published at $209. |
+
+Park City Mountain hasn't published 2026–27 lesson prices online. Lift tickets and rentals can be added to a lesson booking at a discount.
+
+### Lift access
+
+- **Both 10-year-olds:** [Ski Utah Passport](https://www.skiutah.com/passes/passports/fifth-grade-passport-faq/), $79 each if bought by Nov 30 ([TownLift](https://townlift.com/2026/06/ski-utah-opens-2026-27-passport-program-for-young-skiers-and-snowboarders/)). Covers 3 days at each of Utah's 15 resorts, including Park City Mountain. Requires proof of 4th–6th grade; no Utah residency needed.
+- **Adults, the 14-year-old and the 7-year-old:** [Epic 2-Day Pass](https://www.epicpass.com), bought before early December. Park City Mountain starts at $98/day this way ([Park Record](https://www.parkrecord.com/?p=275003)), against $369 at the window on peak days. Estimate $200–280 per adult or teen for 2 days. The 7-year-old pays the cheaper child rate (ages 5–12), roughly half.
+- **Or:** add the discounted lift ticket when booking the lesson, and compare that price with the Epic 2-Day Pass.
+
+<Note type="win" label="Why this works for a fun-first trip">
+  Full-day group lessons on back-to-back days take every first-timer from "never stood on skis" to
+  riding a chairlift down an easy green run. Park City Mountain also has a **Green Run Guarantee**:
+  if a first-timer in full-day group lessons hasn't reached green runs by the end of the third
+  lesson, the fourth is free. With two days we won't use it, but it signals how the program is
+  built.
+</Note>
+
+### Ski-day logistics
+
+- **A parent has to be there at kids' drop-off and pick-up.** With all four adults in lessons too, ask for the kids' check-in time and the adult lesson start time when booking, and drop the kids first.
+- **Book on the Park City side, not Canyons,** so lessons meet at the base you're walking to.
+- **Get there early.** Boots, helmets and goggles take longer than you expect with four kids — aim to arrive 45 minutes before check-in on day one.
+- **The 14-year-old will be in the 7–14 group,** grouped by ability and roughly by age. Tell them ahead of time so it's not a surprise to be with younger kids.
+- **Each kid carries:** a parent's phone number in a pocket, a small snack, lip balm and sunscreen. Lunch is included on full-day lessons; adults buy or bring their own, and an early lunch (before 11:30) beats the noon crowds.
+- **Tip the instructors** at pick-up ([section 14](#basics)).
+
+Day one is on the flat learning area and the conveyor ("magic carpet") lifts: putting skis on, gliding, stopping in a wedge. Day two usually gets kids onto a chairlift and an easy green run. Adults often learn more slowly than kids, which is normal — plan to finish day two with a group run together, then the Alpine Coaster.
+
+Deer Valley is the alternative if you want its ski-only slopes and smaller classes, but its adult groups are 18+ and its teen groups don't run Feb 8–9, so the 14-year-old would need a private lesson, and adult tickets cost more.
+
+</div>
+
+</Section>
+
+<Section id="gear" num="07" title="Gear and clothing" subtitle="Rent skis, boots, poles and helmets for the two ski days. Buy most of the clothing, especially for the kids — you'll wear it all week for tubing, sledding and dog sledding, and rental outerwear mostly comes in adult sizes.">
+
+<div class="measure">
+
+| Shop                                                                                                         | How it works                                        | Price                                            | Notes                                                                               |
+| ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| **[Jans](https://jans.com/park-city-ski-rentals)** — Park Ave + resort shops                                 | In-store fitting                                    | Adult $39/day · Kids $29/day · Helmet $13–17/day | Published rates (1–3 days). Jackets/pants $28/day each, in store only. No delivery. |
+| **[Park City Mountain Rentals](https://www.parkcitymountain.com/Plan-Your-Trip/Rentals/Winter%20Equipment)** | At the base, or delivered to your lodging for a fee | Cheaper booked online ahead                      | Easy swaps right next to ski school. Can be added to the lesson booking.            |
+| **[Ski Butlers](https://www.skibutlers.com)**                                                                | Fits gear at your lodging, picks it up after        | Package pricing, delivery included               | Easiest with eight people. Book 48 hours ahead, 2-day minimum.                      |
+
+**Estimate for 8 people × 2 days, with helmets:** $700–1,000.
+
+<Note type="win" label="Simplest option">
+  Add rentals and helmets to the Park City Mountain lesson booking, or book Ski Butlers to deliver
+  on Sunday evening. Either way nobody stands in a rental line on a lesson morning.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="activities" num="08" title="Everything worth doing" subtitle="Every snow activity within about 30 minutes that suits this group. Most prices are the latest published, often from earlier seasons, so confirm when booking.">
+
+<div class="measure">
+
+### In the plan
+
+| Activity                                                                                                                | Day | Ages                                                       | Cost for 8                 | Why / trade-off                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------- | --- | ---------------------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [Tubing at Woodward Park City](https://www.woodwardparkcity.com)                                                        | Sat | 3+, upper lanes 6+                                         | ~$350–550                  | Lift-served lanes, conveyor back up, lit evenings. Saturday sessions sell out — book ahead.                                             |
+| [Utah Olympic Park](https://utaholympiclegacy.org)                                                                      | Sat | Everyone                                                   | Museums free; tours extra  | 2002 venue, two free museums, guided tours to the top of the jumps, athletes training most days.                                        |
+| [Swaner EcoCenter snowshoeing](https://extension.usu.edu/swaner/index)                                                  | Sat | Everyone, flat trails                                      | ~$50–150                   | Saturday guided snowshoe walks, a four-story wildlife tower, elk/deer/coyote sightings. Open Wed–Sun 10–4 only; book the walk ahead.    |
+| Dog sledding — [Luna Lobos](https://www.lunalobos.com) / [All Seasons Adventures](https://www.allseasonsadventures.com) | Sun | 3+ (Luna Lobos)                                            | ~$1,200–1,600              | The most memorable non-ski activity for kids. Sells out months ahead; deposits non-refundable.                                          |
+| Park City Museum and Main Street                                                                                        | Sun | All — the 1885 jail is the hit                             | Under $15/person           | Interactive mining-town museum in the old City Hall, with the kids' History Detectives activity.                                        |
+| Alpine Coaster                                                                                                          | Tue | Solo 54"+ (16+ to carry a passenger); 38–53" as passengers | ~$150–200                  | A mountain roller coaster at the ski school base — the end-of-day-two treat. Confirm it's running in February.                          |
+| [Homestead Crater swim](https://www.utahcrater.com)                                                                     | Wed | 8+ $15 weekday · 3–7 $12                                   | ~$115                      | 90–96°F water inside a 55-ft limestone dome, ~65 ft deep, ~10,000 years old. Book 10 a.m.–2 p.m. for sun through the opening.           |
+| Tubing at Soldier Hollow                                                                                                | Wed | 3+                                                         | ~$250–400                  | 1,200-ft lanes with a lift, lights and music at the 2002 Olympic venue, 10 min from the Crater.                                         |
+| [Deer Valley Snowmobiling](https://deervalley.com/snowmobiling)                                                         | Thu | Kids 8 and under ride free as passengers; drivers 16+      | ~$800–1,200 for 4 machines | Four adult drivers means four machines.                                                                                                 |
+| Snowed Inn sleigh-ride dinner                                                                                           | Thu | All — kids' menu available                                 | ~$700                      | Draft horses pull an open sleigh up the ski runs at night, dinner by the fire, a second sleigh ride back. Rarely cancelled for weather. |
+| Free sledding hills                                                                                                     | Any | All                                                        | ~$40–60 for sleds          | Park City Library hill, Willow Creek Park, the Overland Trail hill, the Ice Arena hill. The perfect arrival-day activity.               |
+| Ice skating (Park City Ice Arena)                                                                                       | Any | All                                                        | ~$80–120                   | A good evening or bad-weather backup. Public sessions are limited — check the schedule.                                                 |
+
+### Worth considering instead
+
+| Activity                                          | Who it fits                | Cost                             | Why / trade-off                                                                                              |
+| ------------------------------------------------- | -------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Olympic bobsled ride (Utah Olympic Park, Fri–Sun) | 13+ and ~100 lb+           | ~$225/person                     | A real 2002 track at up to 80 mph. Under a minute of riding inside ~75 minutes of check-in. Sells out.       |
+| Viking Yurt dinner                                | Adults                     | $225/person                      | A snowcat-pulled sleigh to a yurt at 8,700 ft for a six-course Nordic dinner. Too long for the kids.         |
+| Backcountry snowmobiling (Thousand Peaks Ranch)   | Passengers 8+, drivers 16+ | From ~$319/driver, $69/passenger | Real backcountry terrain up to 11,000 ft. The 7-year-old can't go; three hours is a lot for kids.            |
+| Ice Castles (Midway)                              | All — if it returns        | ~$20–30/person                   | Unconfirmed for 2026–27 after skipping the 2025–26 season. Check in November; add to the Midway day if back. |
+
+</div>
+
+</Section>
+
+<Section id="places" num="09" title="Places to swap in" subtitle="Destinations and attractions around Park City, for filling a free afternoon, replacing a day that doesn't suit the group, or riding out a storm. Drive times are from the Park City Mountain base in normal weather.">
+
+<div class="measure">
+
+### Nearby destinations
+
+<PlaceList
+  places={[
+    {
+      name: 'Main Street / Old Town',
+      where: 'Walk or free bus',
+      what: 'The 1880s mining-town main street: the Park City Museum, the historic Egyptian Theatre, galleries, candy and toy shops, and most of the notable restaurants. Already in the plan Sunday.',
+    },
+    {
+      name: 'Kimball Junction',
+      where: '10–15 min',
+      what: 'Utah Olympic Park, Woodward, the Swaner EcoCenter, the outlet mall, groceries and the ramen shops. Pairs with the Saturday Olympic Park day.',
+    },
+    {
+      name: 'Midway and the Heber Valley',
+      where: '25 min',
+      what: 'The Swiss-settled valley locals call "Little Switzerland": the Homestead Crater, Soldier Hollow tubing, and the Ice Castles in years they run. Already the Wednesday plan.',
+    },
+    {
+      name: 'Sundance Mountain Resort',
+      where: '~50 min',
+      what: "Robert Redford's small, rustic mountain resort in Provo Canyon: lodge dining, a general store, snowshoe and Nordic trails, and very pretty winter scenery. ~$250–450 for lunch for 8.",
+    },
+    {
+      name: 'Salt Lake City',
+      where: '40–50 min',
+      what: 'Indoor museums and an aquarium, plus free Temple Square downtown. A storm day, or a lighter day if legs are sore.',
+    },
+  ]}
+/>
+
+Skip the Cottonwood Canyons (Alta, Snowbird, Brighton, Solitude) on this trip — their canyon roads have the strictest traction rules in the state and often close in storms.
+
+### Attractions
+
+<PlaceList
+  places={[
+    {
+      name: 'Egyptian Theatre',
+      where: 'Main Street',
+      what: 'A historic 1920s Egyptian-revival theater with live shows, concerts and family performances. $200–400 for 8 if a show fits — check the calendar in December.',
+    },
+    {
+      name: 'McPolin Farm',
+      where: 'SR-224, entrance to town',
+      what: "The big white barn that's the symbol of Park City. A free 10-minute photo stop in fresh snow.",
+    },
+    {
+      name: 'Natural History Museum of Utah',
+      where: 'Salt Lake City foothills, ~45 min',
+      what: 'Five floors of dinosaur fossils and Utah history in a striking building on the mountainside. ~$150–200 for 8 — the best indoor storm-day pick.',
+    },
+    {
+      name: 'Loveland Living Planet Aquarium',
+      where: 'Draper, ~55 min',
+      what: 'A shark tunnel, penguin encounters, a stingray touch pool and a rainforest exhibit. ~$250–330 for 8 — better for the 7 and 10-year-olds than the teen.',
+    },
+    {
+      name: 'Discovery Gateway',
+      where: 'Downtown SLC',
+      what: "A hands-on children's museum: science, engineering, paleontology, art. ~$140–180 for 8 — too young for the 14-year-old.",
+    },
+    {
+      name: 'Temple Square',
+      where: 'Downtown SLC',
+      what: 'Historic gardens, pioneer exhibits and free performances in the Tabernacle. Pairs with Discovery Gateway on a city day.',
+    },
+  ]}
+/>
+
+Estimates for eight people are rough guesses from typical admission prices — check current prices before going.
+
+</div>
+
+</Section>
+
+<Section id="money" num="10" title="The budget" subtitle="The plan is built to about $18,000 per family, or ~$36,000 for all eight people. Most lines are still estimates, so replace them with real prices as you book.">
+
+<div class="measure">
+
+| Item                                  | Assumption                                                                   | Low          | Plan target  | High         |
+| ------------------------------------- | ---------------------------------------------------------------------------- | ------------ | ------------ | ------------ |
+| [Flights](#travel)                    | 8 round trips MSY–SLC, Delta Main Cabin                                      | $4,000       | $5,000       | $6,000       |
+| [Checked bags](#travel)               | ~6 bags each way at $45–55                                                   | $550         | $650         | $900         |
+| [Lodging](#stay)                      | Two condos near the Park City Mountain base, 7 nights                        | $7,000       | $10,000      | $14,000      |
+| [Two AWD SUVs](#travel)               | 7 days, guaranteed-AWD class                                                 | $1,200       | $1,500       | $2,000       |
+| [Ski school](#ski)                    | 8 people × 2 full-day group lessons                                          | $4,000       | $4,800       | $5,600       |
+| [Lift access](#ski)                   | 2 Ski Utah Passports, plus Epic 2-Day Passes for the others                  | $1,250       | $1,450       | $1,700       |
+| [Rentals and helmets](#gear)          | 8 people × 2 days                                                            | $700         | $850         | $1,000       |
+| [Activities in the plan](#activities) | Tubing ×2, dog sledding, snowmobiles, sleigh dinner, crater, coaster, museum | $3,700       | $4,300       | $5,000       |
+| [Swaner snowshoeing](#activities)     | Guided walk or snowshoe rentals for 8                                        | $50          | $100         | $150         |
+| [Food](#eat)                          | Groceries plus about one restaurant meal a day                               | $2,000       | $2,700       | $3,500       |
+| [Snow gear to buy](#pack)             | Both families, starting from nothing                                         | $2,600       | $3,200       | $3,900       |
+| [Travel insurance](#insure)           | Two family policies with Cancel For Any Reason                               | $800         | $1,200       | $1,800       |
+| **Total, both families**              | Split roughly in half                                                        | **~$28,000** | **~$36,000** | **~$45,500** |
+
+<Note label="Where the money moves">
+  Lodging is the swing item. Two condos at about $1,400 a night keeps you on target. If the condos
+  you like come in higher, the easiest offsets are dropping one tubing session, skipping the
+  snowmobiles, or eating out less often.
+</Note>
+
+<Note type="win" label="Not sure about $18k per family?">
+  A companion page prices this same trip seven ways — from a $6k-per-family drive to the Smokies up
+  to a $55k-per-family luxury week in Vail — plus a trimmed Park City option at $15k per family. See
+  **[Snow Trip Budgets](/travel/snow-trip-budgets-2027/)**.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="insure" num="11" title="Travel insurance" subtitle="For a domestic trip, insurance is mostly about protecting the money you prepay. This trip has one specific risk that standard policies probably won't cover.">
+
+<div class="measure">
+
+### The specific risk: make-up days
+
+The Jefferson Parish calendar marks the Mardi Gras break days as possible make-up days for emergencies or bad weather. If a hurricane or storm closes schools in the fall, the district could pull kids back into class during your trip.
+
+**Standard trip cancellation probably won't pay for that.** It covers a fixed list of reasons — illness, injury, a death in the family, severe weather that disrupts travel. Some plans cover a school extending its year into your travel dates when attendance is required ([Generali](https://www.generalitravelinsurance.com/travel-resources/coverage-for-school.html)), but make-up days inside a scheduled break may not count. Don't rely on it unless the plan document says so explicitly.
+
+### What does cover it: Cancel For Any Reason
+
+A **Cancel For Any Reason (CFAR)** upgrade pays out no matter why you cancel ([Squaremouth](https://www.squaremouth.com/current-event-information-centers/faqs/what-is-cancel-for-any-reason-coverage)):
+
+- **It reimburses up to 75%** of your trip cost, depending on the plan. Many plans pay 50–75%.
+- **You must buy it within 14–30 days of your first trip payment.** With flights and lodging going on cards this month, that window opens soon.
+- **You must insure 100% of your prepaid, non-refundable costs.** Refundable bookings don't need to be included.
+- **You must cancel the whole trip at least 2–3 days before departure.**
+
+### What to look for
+
+- **CFAR upgrade available,** at the highest percentage you can find
+- **Snow sports covered as recreation.** Some plans exclude skiing or charge extra — lessons and green runs should count as amateur recreation, but read the exclusions.
+- **Trip interruption,** in case someone gets hurt mid-week and you fly home early
+- **Travel delay and missed connection,** for a canyon or airport snow closure
+- **Medical and evacuation** are less critical in the US, since your health insurance works here, but evacuation coverage still helps for a mountain injury
+
+### How to buy it
+
+- **Each family buys its own policy,** covering only its own prepaid costs.
+- **Compare plans on [Squaremouth](https://www.squaremouth.com)**, a comparison site with a "Cancel For Any Reason" filter.
+- **Estimate:** $400–900 per family with CFAR, assuming ~$8,000–10,000 of non-refundable costs per family.
+
+<Note type="win" label="Recommendation">
+  Buy a CFAR policy through Squaremouth on the same day you pay your first deposit. Also lower the
+  amount at risk: book **Delta Main Cabin, not Basic Economy**, so a cancelled flight becomes a
+  credit instead of a loss, and choose lodging with the most flexible cancellation policy you can
+  get.
+</Note>
+
+</div>
+
+</Section>
+
+<Section id="pack" num="12" title="What to buy and pack" subtitle="This guide assumes neither family owns snow gear, so most of this is a shopping list: a layering system that works for every activity, buy only what you can't rent, and don't overspend on kids' sizes they'll outgrow by next winter.">
+
+<div class="measure">
+
+### The layering system
+
+February in Park City usually means daytime highs around freezing and nights well below. The cold is dry and the sun is strong, so you'll get hot climbing a tubing hill and cold sitting in a sleigh. Everyone, every day, wears three layers:
+
+- **Base layer,** top and bottom, against the skin. Synthetic or merino, **never cotton** — cotton holds sweat and gets cold.
+- **Mid layer:** a fleece or a light puffy jacket for warmth. Take it off when you're working hard.
+- **Outer layer:** a waterproof jacket and **snow pants**. Snow pants matter more than you'd think — tubing, sledding and falling on skis all mean sitting in snow.
+
+Add mittens, a neck gaiter, goggles, a helmet on ski days, and warm boots, and that one outfit covers the whole week.
+
+<Note type="win" label="Already own some of it?">
+  Check closets before shopping. A waterproof rain shell with a fleece and a light puffy underneath
+  can stand in for a ski jacket, and wool hiking socks work for every non-ski day.
+</Note>
+
+### What we'd buy
+
+| Item                  | Pick                                                                              | Typical price                  | Why this one                                                                                                                                                                                                        |
+| --------------------- | --------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kids' snow pants      | [Arctix Kids Essential Insulated Bibs](https://www.walmart.com/ip/135412168)      | ~$35                           | The budget standard — insulated, bib keeps snow out of the waistband. Step up to the [Columbia Bugaboo IV](https://www.rei.com/product/C09040/columbia-bugaboo-iv-snow-pants-kids) (~$80) if you'll use them again. |
+| Kids' jacket          | Columbia Bugaboo kids' jacket                                                     | ~$100–150                      | Waterproof shell with a zip-in fleece, room to grow. If a kid has a waterproof rain jacket already, skip this and add a cheap puffy (~$30–40) instead.                                                              |
+| Adult snow pants      | Arctix insulated snow pants                                                       | ~$50–70                        | Inexpensive, warm, sold in every size. Adults sit in the snow on tubing hills and dog sleds too.                                                                                                                    |
+| Adult jacket          | Arctix insulated ski jacket, or a Columbia Bugaboo 3-in-1                         | ~$70–90 / ~$150–200            | Warm enough for a week of dry Utah snow. The Columbia zips apart into a shell and a fleece for milder days.                                                                                                         |
+| Fleece or light puffy | Any fleece, or a light puffy (Costco, Uniqlo, 32 Degrees)                         | ~$30–70                        | The mid layer, and warm enough on its own around town                                                                                                                                                               |
+| Base layers           | [32 Degrees](https://www.32degrees.com) or Costco base layer sets                 | ~$15–25/piece                  | Cheap, thin and warm. Two sets per person so one can dry.                                                                                                                                                           |
+| Ski socks             | [Darn Tough](https://darntough.com) or Smartwool over-the-calf                    | ~$25–30/pair                   | Thin and tall so they don't bunch inside ski boots. Wear one pair, never two.                                                                                                                                       |
+| Mittens / gloves      | [Gordini](https://www.gordini.com) waterproof mittens for kids, gloves for adults | ~$25–40                        | Mittens are warmer and easier for small hands. Two pairs per kid — wet gloves end the fun fast.                                                                                                                     |
+| Goggles               | OutdoorMaster (kids' and adult sizes)                                             | ~$25–40                        | Make sure they fit over or under the rental helmet before you leave the rental shop.                                                                                                                                |
+| Neck gaiter           | Any fleece gaiter, or a Buff                                                      | ~$10–20                        | Covers the face on lifts and sleigh rides                                                                                                                                                                           |
+| Snow boots            | Kamik or Columbia kids' boots, Columbia or Sorel for adults                       | Kids ~$40–60 / Adults ~$80–130 | For every minute you're not in ski boots. Sneakers get soaked in minutes.                                                                                                                                           |
+| Hand/toe warmers      | HotHands, bulk box                                                                | ~$20/box                       | Cheapest at Costco before the trip. A lifesaver for the 7-year-old.                                                                                                                                                 |
+
+**Don't buy, rent:** skis, boots and poles for the two ski days; helmets (required for kids in lessons); snowshoes at Swaner; tubes and sleds at the tubing hills (buy a few cheap sleds in town for the free hills).
+
+**Don't need:** premium ski jackets; heavy parkas (you'll overheat on ski days); cotton anything, especially socks and base layers; ski boots or ski bags.
+
+### Shopping estimate
+
+For a family of four starting from nothing, using the budget picks: about $1,300–1,950, roughly $250–400 per kid and $400–575 per adult. Both families together: about $2,600–3,900, which is in the budget — anything you already own comes off that.
+
+**Everyone, packed:** snow pants, jacket or shell, fleece or puffy; 2 base-layer sets, 2 pairs of ski socks, plus regular warm socks; mittens or gloves (two pairs for kids), neck gaiter, warm hat, goggles; snow boots; swimsuit for the Crater and the hot tubs; sunglasses, SPF 30+ sunscreen, SPF lip balm.
+
+**Shared:** hand and toe warmers; refillable water bottles for everyone; lotion and saline nose spray for the dry air; a small first aid kit, kids' pain reliever, and motion-sickness meds for the canyon drive; gallon zip bags for wet gloves and socks; downloaded shows for the plane.
+
+<Note type="warn" label="Buy by early December">
+  New Orleans stores carry almost no winter gear, and kids' sizes sell out online by January. Order
+  in November, try everything on together with base layers underneath, and return what doesn't fit
+  while there's still time.
+</Note>
+
+### Before you go: prep the kids
+
+- **Do a full dress rehearsal at home.** Base layers, snow pants, jacket, mittens, gaiter, goggles — it takes longer than you'd think, and kids need practice getting mittens on and zipping jackets themselves.
+- **Talk about what snow is like:** cold, wet when it melts, slippery. Falling down is normal and doesn't hurt much.
+- **Set a meeting spot rule** for every place you go: "If you get separated, stay where you are and find an adult in a uniform."
+- **Put a parent's phone number** on a card in every kid's jacket pocket.
+
+</div>
+
+</Section>
+
+<Section id="eat" num="13" title="Eating and local flavor" subtitle="With eight people and tired kids, plan on breakfasts and most dinners at the condos. Eat out for lunches, a few dinners and the sleigh-ride night.">
+
+<div class="measure">
+
+### Easy with kids
+
+| Place                                                                                                     | Where                            | Estimate for 8 | Why                                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------- |
+| [Hana Ramen Bar](https://www.theinfatuation.com/park-city/reviews/hana-ramen-bar)                         | Kimball Junction                 | $170–230       | Tonkotsu broth simmered for days and house-made noodles. ~$20 a bowl; kids reportedly eat every bite.             |
+| [Koyoté](https://townlift.com/2026/09/slcs-michelin-recommended-koyote-ramen-to-open-park-city-location/) | Kimball Junction                 | $180–250       | Salt Lake's Michelin-recognized ramen shop, opening a Park City location around October 2026 — confirm it's open. |
+| Yuma Ramen                                                                                                | Near the Park City Mountain base | $180–220       | Fukuoka-style tonkotsu, walkable from the condos.                                                                 |
+| Loco Lizard Cantina                                                                                       | Kimball Junction                 | $150–220       | Family Mexican since 1999 — easy with a big group.                                                                |
+| Red Rock Junction                                                                                         | Redstone Center                  | $180–260       | Brewery and restaurant with a kids' menu                                                                          |
+| Grub Steak                                                                                                | Prospector area                  | $350–500       | Dinner only. An unusually good kids' menu, including steak and ribs.                                              |
+| Five5eeds                                                                                                 | Off Main                         | $170–240       | Australian breakfast and lunch, known for pancakes. Go on a weekday to avoid the wait.                            |
+| Java Cow                                                                                                  | Main Street                      | $50–70         | Ice cream after the museum                                                                                        |
+
+### Notable Park City restaurants
+
+Three Park City restaurants were named in the first Michelin Guide for the American Southwest this year ([TownLift](https://townlift.com/2026/08/three-park-city-restaurants-earn-spots-in-inaugural-michelin-guide-southwest/)).
+
+| Place                                                                                                                              | Where                   | Estimate       | What it is                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | -------------- | ---------------------------------------------------------------------------------------- |
+| **Matilda** _(Michelin recommended)_                                                                                               | Park City               | $250–400 for 8 | Pizza and Italian from the Five5eeds team — the Michelin pick that works best with kids. |
+| **[Handle](https://townlift.com/2026/09/after-a-decade-in-park-city-handle-earns-michelin-recognition/)** _(Michelin recommended)_ | Old Town                | $500–750 for 8 | Lively spot with an elevated comfort-food menu that changes with the seasons.            |
+| **The Nelson Cottage by High West** _(Michelin recommended)_                                                                       | Park Ave                | $200–300/adult | A prix-fixe tasting menu with guided whiskey pairings — an adults-only night out.        |
+| High West Saloon                                                                                                                   | Park Ave, Old Town      | $300–450 for 8 | The restaurant of Utah's well-known whiskey distillery, at the bottom of the Town Lift.  |
+| Snowed Inn sleigh dinner                                                                                                           | Park City Mountain base | ~$700 for 8    | Already in the plan Thursday ([Activities](#activities))                                 |
+
+### Utah foods to try
+
+- **Fry sauce** — Utah's signature dip (ketchup and mayo, sometimes with barbecue sauce), served with fries almost everywhere. Arctic Circle is the classic chain.
+- **Dirty soda** — soda mixed with cream, flavored syrups and fruit. Swig and Sodalicious are the big chains, both on the Salt Lake side of the airport drive.
+- **Utah scones** — not a British scone. Fried bread dough, puffy and hot, served with honey butter.
+- **Funeral potatoes** — a cheesy potato casserole with a crunchy topping, named for the church potluck meals served after funerals.
+- **Green Jell-O** — Utah's official state snack since 2001, a running local joke.
+- **Pastrami burger** — a cheeseburger piled with pastrami, a Salt Lake specialty at Crown Burgers.
+
+### A Main Street walk
+
+Historic Main Street climbs a steep hill. Ride the free bus to the top and walk down, so the kids aren't climbing — allow 1–2 hours with the museum. Highlights: the **Top of Main Brew Pub** (Utah's first, open since 1986), the **Egyptian Theatre**, the **No Name Saloon**, the **Park City Museum** at 528 Main with the 1885 jail cells still in the basement, historic mine-claim plaques to hunt for, a dozen or more art galleries, and the **Town Lift** at the bottom carrying skiers straight onto Park City Mountain.
+
+### Utah's alcohol rules (for the adults)
+
+Grocery and convenience stores sell beer up to 5% ABV and nothing stronger. Wine, spirits and stronger beer come from state liquor stores, **closed on Sundays**, generally open 11 a.m.–5–10 p.m. Mon–Sat — stock up on Saturday. Restaurants serve drinks only with food; brewpubs can serve beer without it. Bringing alcohol into Utah is technically illegal, so just buy it there. Utah's DUI limit is 0.05%, lower than Louisiana's 0.08% — plan who's driving on any night out.
+
+### Good to know
+
+- **Park City isn't typical Utah.** Most of the state has a strong Latter-day Saint (Mormon) culture. Park City grew up as a rowdy mining town full of saloons, and it's still more of a resort town than the valleys around it.
+- **Moose sometimes wander through town** in winter, especially near trails and creeks. They look calm but can charge — give them lots of space and keep kids well back.
+- **The sun is stronger than it feels.** At 7,000 ft with snow reflecting light, kids burn on cloudy days — sunscreen every morning.
+- **It's one hour behind New Orleans** (Mountain Time). Kids will wake early the first morning, which works fine for a snow day.
+- **Dress is casual everywhere,** including the nice restaurants. Snow boots and fleece are normal at dinner.
+
+</div>
+
+</Section>
+
+<Section id="basics" num="14" title="On the ground" subtitle="The practical details for the week, plus altitude.">
+
+<div class="measure">
+
+### Altitude and kids
+
+The town is about 7,000 ft, and the slopes go higher. Coming from sea level, many people feel some effects in the first day or two: headache, tiredness, a poor first night's sleep, nosebleeds from the dry air. The plan puts two easy days before skiing partly for this. This is general travel advice, not medical advice — ask your pediatrician if a child has asthma or another condition.
+
+- **Water, constantly.** Dry air plus exertion dehydrates kids fast.
+- **Watch the 7-year-old.** Crankiness and not eating can be the first signs of altitude trouble.
+- **Get help if symptoms get worse** instead of better, especially vomiting, confusion, or trouble breathing.
+- A humidifier or a bowl of water in the bedrooms helps with dry noses and sleep.
+
+### Logistics
+
+| Need              | Where                                                                                                                                                                                                   | Notes                                                                                                        |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Arrival groceries | **Whole Foods** and **Smith's** at Kimball Junction                                                                                                                                                     | Right on the drive in from the airport. Smith's has a pharmacy.                                              |
+| Groceries in town | **Fresh Market**, near downtown                                                                                                                                                                         | A traditional grocery for top-up runs during the week                                                        |
+| Hospital / ER     | [Park City Hospital (Intermountain)](https://intermountainhealthcare.org/locations/location-details/park-city-hospital/park-city-hospital/park-city-hospital-emergency-department), 900 Round Valley Dr | Full ER, ~10 min from Old Town. On the slopes, ski patrol handles injuries. For any emergency, call **911**. |
+| Pharmacy          | Smith's, Kimball Junction                                                                                                                                                                               | Bring enough of any prescriptions for the week plus two days                                                 |
+| Road conditions   | [UDOT Traffic](https://udottraffic.utah.gov) website and app                                                                                                                                            | Check before every drive through Parleys Canyon, especially arrival and departure days                       |
+| Free buses        | Park City Transit, with the myStop app for live bus locations                                                                                                                                           | Covers Old Town, Main Street, both resorts and Kimball Junction                                              |
+| Lift access       | Epic app and the Ski Utah pass portal                                                                                                                                                                   | Load the Epic 2-Day Passes and the kids' passports on phones before the trip                                 |
+
+### Documents and money
+
+- **One shared Google Drive folder** for both families, with offline access on every adult phone: flight and condo confirmations, ski school bookings, activity tickets, the insurance policy, and the rental car agreements.
+- **Photo ID for every adult driver**, plus the credit card each car is booked on
+- **Proof of grade for the Ski Utah Passports** (a report card or school ID) in case it's requested
+- **Tip ski instructors** at the end of each lesson day — a tip per child per day is customary, handed to the instructor at pickup.
+
+</div>
+
+</Section>
+
+<Section id="kids" num="15" title="Give every stop a story" subtitle="Read two or three facts in the car before arriving, and the kids engage with the place instead of just standing in it.">
+
+<KidFacts
+  facts={[
+    {
+      place: 'Park City',
+      fact: 'It started as a silver mine town in 1868. There are old mine tunnels under the ski slopes, and a train once carried skiers through a mine shaft — the world\'s only "skier subway".',
+    },
+    {
+      place: 'Olympic bobsled',
+      fact: 'Sleds hit about 80 mph through 15 curves and push 4–5 Gs, more than most roller coasters. Olympians still train on this exact track.',
+    },
+    {
+      place: 'Homestead Crater',
+      fact: 'Hot water from deep underground built this 55-foot dome of rock over 10,000 years. The water is about 65 feet deep and stays bathtub-warm all winter.',
+    },
+    {
+      place: 'The Dungeon',
+      fact: "Park City's 1885 jail held rowdy miners. It was so awful that when a toilet was added in 1906, the newspaper said it was finally fit for human beings. The last prisoners left in 1966.",
+    },
+    {
+      place: 'Sled dogs',
+      fact: 'Many of the local sled dogs are rescues. Running and pulling is what huskies love most, so the sled gives them a job.',
+    },
+    {
+      place: 'The snow',
+      fact: 'Utah\'s license plates brag about "The Greatest Snow on Earth". The air is so dry that the snow is light and fluffy — try making a snowball and see if it holds.',
+    },
+  ]}
+/>
+
+</Section>
+
+<Section id="decide" num="16" title="Decisions">
+
+<div class="measure">
+
+### Made
+
+- **Dates:** Fri Feb 5 – Fri Feb 12. Both families are on the same school calendar.
+- **Budget:** about $18,000 per family ([section 10](#money))
+- **Lodging:** two neighboring condos near the Park City Mountain base ([section 05](#stay))
+- **Getting around:** two guaranteed-AWD SUVs ([section 04](#travel))
+- **Skiing:** two days, everyone in full-day group lessons at Park City Mountain ([section 06](#ski))
+
+### Still open
+
+1. **Who are the four drivers?** Each needs to be listed on the rental agreement.
+2. **Which travel insurance plan?** Pick a CFAR plan on Squaremouth and buy it the day of the first deposit ([section 11](#insure)).
+3. **Which swaps, if any?** Look over [Activities](#activities) and [Places to swap in](#places) and flag anything you'd trade into the base week.
+
+</div>
+
+</Section>
