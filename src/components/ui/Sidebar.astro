@@ -41,95 +41,100 @@ const schoolLinks = [
 ];
 ---
 
-<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+  ☰
+</button>
 
 <aside class="sidebar" id="sidebar">
-  <a class="brand" href="/">Hai Le <span>HQ</span></a>
+  <a class="brand" href="/">
+    Hai Le <span>HQ</span>
+  </a>
   <nav>
-    <a class="nav-link" href="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</a>
+    <a class="nav-link" href="/" aria-current={pathname === '/' ? 'page' : undefined}>
+      Home
+    </a>
 
     <button class="nav-group-toggle" id="travelToggle" aria-expanded="true">
       Travel
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-        ><path d="M9 6l6 6-6 6"></path></svg
-      >
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M9 6l6 6-6 6"></path>
+      </svg>
     </button>
     <div class="nav-group open" id="travelGroup">
-      {
-        travelLinks.map((l) => (
-          <a href={l.href} aria-current={pathname.startsWith(l.href) ? 'page' : undefined}>
-            {l.label}
-          </a>
-        ))
-      }
+      {travelLinks.map((l) => (
+        <a href={l.href} aria-current={pathname.startsWith(l.href) ? 'page' : undefined}>
+          {l.label}
+        </a>
+      ))}
     </div>
 
-    {
-      planningGroups.size > 0 && (
-        <>
-          <button class="nav-group-toggle" id="travelPlanningToggle" aria-expanded="true">
-            Travel Planning
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </button>
-          <div class="nav-group open" id="travelPlanningGroup">
-            {[...planningGroups].map(([group, links]) => (
-              <div class="nav-subgroup">
-                <span class="nav-subgroup-label">{group}</span>
-                <div class="nav-subgroup-links">
-                  {links.map((l) => (
-                    <a
-                      href={l.href}
-                      aria-current={pathname.startsWith(l.href) ? 'page' : undefined}
-                    >
-                      {l.label}
-                    </a>
-                  ))}
-                </div>
+    {planningGroups.size > 0 && (
+      <>
+        <button class="nav-group-toggle" id="travelPlanningToggle" aria-expanded="true">
+          Travel Planning
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+            <path d="M9 6l6 6-6 6" />
+          </svg>
+        </button>
+        <div class="nav-group open" id="travelPlanningGroup">
+          {[...planningGroups].map(([group, links]) => (
+            <div class="nav-subgroup">
+              <span class="nav-subgroup-label">{group}</span>
+              <div class="nav-subgroup-links">
+                {links.map((l) => (
+                  <a href={l.href} aria-current={pathname.startsWith(l.href) ? 'page' : undefined}>
+                    {l.label}
+                  </a>
+                ))}
               </div>
-            ))}
-          </div>
-        </>
-      )
-    }
+            </div>
+          ))}
+        </div>
+      </>
+    )}
 
     <button class="nav-group-toggle" id="schoolToggle" aria-expanded="true">
       School
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-        ><path d="M9 6l6 6-6 6"></path></svg
-      >
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M9 6l6 6-6 6"></path>
+      </svg>
     </button>
     <div class="nav-group open" id="schoolGroup">
-      {
-        schoolLinks.map((l) => (
-          <a
-            href={l.href}
-            aria-current={!l.external && pathname.startsWith(l.href) ? 'page' : undefined}
-          >
-            {l.label}
-            {l.external && (
-              <span class="ext" aria-hidden="true">
-                ↗
-              </span>
-            )}
-          </a>
-        ))
-      }
+      {schoolLinks.map((l) => (
+        <a
+          href={l.href}
+          aria-current={!l.external && pathname.startsWith(l.href) ? 'page' : undefined}
+        >
+          {l.label}
+          {l.external && (
+            <span class="ext" aria-hidden="true">
+              ↗
+            </span>
+          )}
+        </a>
+      ))}
     </div>
   </nav>
   <div class="sidebar-foot">hailehq.com</div>
 </aside>
 
 <script>
+  // The CSS max-height-transition trick needs a target height. A hardcoded
+  // one clips silently once a group's content grows past it (Travel just
+  // did, at 12 destinations) — measuring the real content height instead
+  // means it never needs bumping again as more content is added.
   function wireToggle(toggleId: string, groupId: string) {
     const toggle = document.getElementById(toggleId);
     const group = document.getElementById(groupId);
     if (!toggle || !group) return;
+    if (toggle.getAttribute('aria-expanded') === 'true') {
+      group.style.maxHeight = `${group.scrollHeight}px`;
+    }
     toggle.addEventListener('click', () => {
       const open = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!open));
       group.classList.toggle('open', !open);
+      group.style.maxHeight = open ? '0px' : `${group.scrollHeight}px`;
     });
   }
   wireToggle('travelToggle', 'travelGroup');
