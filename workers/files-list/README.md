@@ -50,16 +50,13 @@ Example: `5th Grade/Social Studies/Unit 2 Ch 1 — Ghana Empire/vocabulary.pdf` 
 Once a subject has more than a handful of files, add the chapter folder — that's the fix for a
 cluttered subject list, not a new filter or a schema change.
 
-### Never upload these here
+### Public bucket
 
-This bucket is public with no auth — anyone with the URL can read anything in it. Study-pack output
-sometimes includes files that must stay private:
+This bucket is public with no auth — anyone with the URL can read anything in it. `*_KEY.pdf`
+answer keys (practice test / writing practice) are fine to drop in here now, same as everything
+else from a study-pack run.
 
-- Anything named `*_KEY.pdf` (practice test / writing practice answer keys).
-- `test.json` and its stimulus images, from a `*_practice_test_web.zip` — the answers and `why`
-  text sit in plain JSON. These belong in the `practice.hailehq.com` project's own repo (a separate
-  Vercel project), which grades server-side and never ships the key to the browser. Not this bucket.
-
-Everything else from a study-pack run (vocabulary, GRAPES/CER guides, the parent cheat sheet, the
-plain practice-test PDF with no answers, the read-aloud HTML, the student-facing writing-practice
-PDF) is safe to publish here.
+`test.json` and its stimulus images, from a `*_practice_test_web.zip`, are the one exception —
+not for privacy, but because they belong to a different system: the `practice.hailehq.com` project
+(a separate Vercel project) grades them server-side and reads the test file directly from its own
+repo, so they need to live there, not here.
