@@ -171,8 +171,12 @@ em {
   max-height: 0;
   transition: max-height 0.22s ease;
 }
+/* No-JS fallback only — with JS, Sidebar.astro's script overrides this with
+   an inline max-height measured from the group's real content, so it never
+   clips no matter how long a list gets. This cap just needs to comfortably
+   cover any realistic sidebar list for the fallback case. */
 .nav-group.open {
-  max-height: 400px;
+  max-height: 2000px;
 }
 .nav-group a {
   padding: 8px 12px;
