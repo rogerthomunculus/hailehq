@@ -55,11 +55,10 @@ cluttered subject list, not a new filter or a schema change.
 This bucket is public with no auth — anyone with the URL can read anything in it. Study-pack output
 sometimes includes files that must stay private:
 
-- Anything named `*_KEY.pdf` (practice test / writing practice answer keys).
 - `test.json` and its stimulus images, from a `*_practice_test_web.zip` — the answers and `why`
   text sit in plain JSON. These belong in the `practice.hailehq.com` project's own repo (a separate
   Vercel project), which grades server-side and never ships the key to the browser. Not this bucket.
 
 Everything else from a study-pack run (vocabulary, GRAPES/CER guides, the parent cheat sheet, the
-plain practice-test PDF with no answers, the read-aloud HTML, the student-facing writing-practice
-PDF) is safe to publish here.
+plain practice-test PDF with no answers, answer keys (`*_KEY.pdf`), the read-aloud HTML, the
+student-facing writing-practice PDF) is safe to publish here.
